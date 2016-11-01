@@ -1,0 +1,43 @@
+// variables
+// --------------------
+@color-primary:    #0275d8;
+@color-gray:       #d3d3d8;
+@color-gray-light: lighten(@color-gray, 10%);
+@color-yellow:     #fde965;
+@color-heading:    #42444e;
+@color-paragraph:  #50525e;
+@color-muted:      lighten(@color-paragraph, 15%);
+
+@radius-default: 3px;
+@border-width-default: 2px;
+@rem-base: 16px;
+
+// typography
+// --------------------
+@font-size-h1: 2rem;
+@font-size-h2: 1.8rem;
+@font-size-h3: 1.6rem;
+@font-size-h4: 1.4rem;
+@font-size-h5: 1.2rem;
+@font-size-h6: 1rem;
+@font-size-p:  1rem;
+@font-size-lead: @font-size-h4;
+
+@line-height-base: 1.5;
+
+@font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+@font-family-serif: Georgia, "Times New Roman", Times, serif;
+@font-family-mono-space: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// buttons
+// --------------------
+@button-font-size: @rem-base * 0.8;
+@button-line-height: 1.5;
+@button-padding-x: @rem-base;
+@button-padding-y: (@rem-base / 2);
+@button-border-width: 1px;
+@button-computed-height: floor((@button-font-size * @button-line-height)) + (@button-padding-y * 2) + (@button-border-width * 2);
+
+// screen size breakpoint: // used by forms, to break lines
+// --------------------
+@breakpoint-sm: 768px;

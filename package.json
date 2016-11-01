@@ -1,0 +1,38 @@
+{
+  "name": "hyper-reset",
+  "version": "1.0.0",
+  "description": "Modern CSS reset",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heyallan/hyper-reset.git",
+    "home": "https://github.com/heyallan/hyper-reset/"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "markdown"
+  ],
+  "author": {
+    "name": "Allan Moreno",
+    "username": "heyallan",
+    "email": "hello@heyallan.com",
+    "url": "http://heyallan.com",
+    "twitter": "heyallanmoreno"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heyallan/hyper-reset/issues"
+  },
+  "homepage": "https://heyallan.github.io/hyper-reset/",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-header": "^1.8.8",
+    "gulp-less": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

@@ -1,0 +1,135 @@
+fieldset {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border: 1px solid @color-gray;
+  border-radius: @radius-default;
+}
+
+label {
+  padding-right: 0.5rem;
+  vertical-align: top;
+  padding-top: @button-padding-y - 1px;
+  padding-bottom: @button-padding-y - 1px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// boxed inputs
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="month"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="file"],
+select,
+select[multiple],
+textarea {
+  padding: 0.5rem 1rem;
+  min-height: @button-computed-height;
+  border: 1px solid @color-gray;
+  border-radius: @radius-default;
+  outline: none;
+  font-size: 1rem;
+  &:focus {
+    border-color: @color-primary;
+  }
+}
+
+// complex controls
+select:not([multiple]),
+input[type="color"] {
+  height: 2.2rem;
+}
+input[type="range"] {
+  margin: 0;
+  height: 2rem;
+}
+input[type="file"]:hover {
+  cursor: pointer;
+}
+input[type="search"] {
+  -webkit-appearance: none;
+}
+textarea {
+  padding: 1rem;
+  height: auto;
+  font-family: inherit; // remove monospace font in Firefox
+}
+
+// form layout
+// ---------------
+// small screens -> full width blocks
+fieldset {
+  label {
+    display: block;
+    width: 100%;
+  }
+  input[type="date"],
+  input[type="time"],
+  input[type="week"],
+  input[type="month"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="url"],
+  input[type="file"],
+
+  input[type="range"],
+  input[type="color"],
+
+  select,
+  select[multiple],
+  textarea {
+    display: block;
+    width: 100%;
+  }
+}
+
+// medium screens and up -> inline justified
+@media (min-width: @breakpoint-sm) {
+  fieldset {
+    label {
+      display: inline-block;
+      width: auto;
+      min-width: 25%;
+    }
+    input[type="date"],
+    input[type="time"],
+    input[type="week"],
+    input[type="month"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="url"],
+    input[type="file"],
+
+    input[type="range"],
+    input[type="color"],
+
+    select,
+    select[multiple],
+    textarea {
+      display: inline-block;
+      width: calc(75% ~"-" 5px); // substract border width and text space
+    }
+  }
+} // end of media query

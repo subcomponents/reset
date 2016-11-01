@@ -1,0 +1,104 @@
+html {
+  font-size: @rem-base;
+  font-family: @font-family-sans-serif;
+  color: @color-paragraph;
+  line-height: @line-height-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: @color-heading;
+}
+
+h1 {
+  font-size: @font-size-h1;
+}
+h2 {
+  font-size: @font-size-h2;
+}
+h3 {
+  font-size: @font-size-h3;
+}
+h4 {
+  font-size: @font-size-h4;
+}
+h5 {
+  font-size: @font-size-h5;
+}
+h6 {
+  font-size: @font-size-h6;
+}
+
+p b:only-child {
+  font-weight: 300;
+  font-size: @font-size-lead;
+  line-height: @line-height-base - 0.1;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  margin: 0 0 1rem 0;
+  padding: 0.5rem 1.5rem;
+  border-left: @border-width-default solid @color-primary;
+  color: @color-muted;
+  p:last-child {
+    margin-bottom: 0;
+  }
+  cite {
+    color: @color-primary;
+  }
+}
+
+blockquote,
+address,
+cite,
+var {
+  font-family: @font-family-serif;
+}
+
+abbr[title] {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+sub,
+sup {
+  // prevent `sub` and `sup` from affecting the line height
+  font-size: 75%;
+  line-height: 0;
+}
+
+mark {
+  background-color: @color-yellow;
+  color: @color-paragraph;
+  padding: 0 4px;
+}
+
+del {
+  color: @color-muted;
+}
+
+dt {
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid @color-gray;
+}
+
+a {
+  text-decoration: none;
+  color: @color-primary;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}

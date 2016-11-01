@@ -1,0 +1,26 @@
+table {
+  // make it responsive
+  display: block; // block instead of table for overflow to scroll
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  // styling
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+  caption {
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+}
+thead {
+  border-bottom: @border-width-default solid @color-primary;
+}
+tbody tr {
+  border-bottom: 1px solid @color-gray;
+}
+th,
+td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}

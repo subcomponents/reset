@@ -1,0 +1,41 @@
+// all code
+code,
+kbd,
+samp,
+pre, {
+  font-family: @font-family-mono-space;
+}
+
+// inline
+code,
+kbd,
+samp {
+  color: @color-primary;
+  font-size: 95%;
+  padding: 0.1em 0.3em;
+  border-radius: @radius-default;
+  background: @color-gray-light;
+}
+
+// blocks
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+
+  overflow-x: scroll;
+  tab-size: 2;
+
+  font-size: 1rem;
+  text-align: left;
+  color: @color-paragraph;
+
+  border-radius: @radius-default;
+  background-color: @color-gray-light;
+  code {
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    background-color: transparent;
+  }
+}

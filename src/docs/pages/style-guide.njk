@@ -1,0 +1,415 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+  <div id="top" role="document">
+
+    {% include "header.njk" %}
+
+    <main role="main">
+
+      <section>
+        {% include "sub-nav-style-guide.njk" %}
+      </section>
+
+      <section>
+        <h1 id="typography">Typography</h1>
+        <article>
+          <h2 id="typography-headings">Headings</h2>
+          <h1 style="display:inline-block;">Heading1</h1>
+          <h2 style="display:inline-block;">Heading2</h2>
+          <h3 style="display:inline-block;">Heading3</h3>
+          <h4 style="display:inline-block;">Heading4</h4>
+          <h5 style="display:inline-block;">Heading5</h5>
+          <h6 style="display:inline-block;">Heading6</h6>
+        </article>
+        <article>
+          <h2 id="typography-paragraph">Paragraph</h2>
+          <p>The HTML (p) element (or HTML Paragraph Element) represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p>
+        </article>
+        <article>
+          <h2 id="typography-lead">Lead</h2>
+          <p><b>The lead paragraph (p>b) represents a span of text stylistically different from normal text, without conveying any special importance or relevance. It's commonly used to mark the lead sentence of each paragraph of an article.</b></p>
+        </article>
+        <article>
+          <h2 id="typography-blockquote">Blockquote</h2>
+          <blockquote>
+            <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
+            <cite><a href="#!">Said no one, ever.</a></cite>
+          </blockquote>
+        </article>
+        <article>
+          <h2 id="typography-address">Address</h2>
+          <address>
+            Written by the editorial and news team:<br/>
+            Contact author at info@editorial.com<br/>
+            Mail us at PO Box 123, Citysville<br/>
+            Tel +1 212 3131
+          </address>
+        </article>
+        <article>
+          <h2 id="typography-lists">Lists</h2>
+          <h3>Definition list</h3>
+          <dl>
+            <dt>Definition Term</dt>
+            <dd>This is a definition description</dd>
+            <dt>Definition Term</dt>
+            <dd>This is a definition description</dd>
+          </dl>
+          <h3>Ordered List</h3>
+          <ol>
+            <li>List item
+              <ol>
+                <li>Subitem</li>
+                <li>Subitem</li>
+              </ol>
+            </li>
+            <li>List item</li>
+            <li>List item</li>
+          </ol>
+          <h3>Unordered List</h3>
+          <ul>
+            <li>List item
+              <ul>
+                <li>Subitem</li>
+                <li>Subitem</li>
+              </ul>
+            </li>
+            <li>List item</li>
+            <li>List item</li>
+          </ul>
+        </article>
+        <article>
+          <h2 id="typography-hr">Horizontal rule</h2>
+          <hr>
+        </article>
+        <article>
+          <h2 id="typography-table">Table</h2>
+          <table>
+            <caption>Caption for the current table</caption>
+            <thead>
+              <tr>
+                <th>Table Heading 1</th>
+                <th>Table Heading 2</th>
+                <th>Table Heading 3</th>
+                <th>Table Heading 4</th>
+                <th>Table Heading 5</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Table Footer 1</th>
+                <th>Table Footer 2</th>
+                <th>Table Footer 3</th>
+                <th>Table Footer 4</th>
+                <th>Table Footer 5</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article>
+          <h2 id="typography-code">Code</h2>
+          <h2>Inline code</h2>
+          <p><strong>Keyboard input:</strong> <kbd>Cmd+Shift+Enter</kbd></p>
+          <p><strong>Inline code:</strong> <code>&lt;p&gt;paragraph&lt;/p&gt;</code></p>
+          <p><strong>Sample output:</strong> <samp>Sample output from computer program</samp></p>
+          <h3>Preformatted text</h3>
+<pre>.ninja {
+  color: black;
+  visibility: hidden;
+}</pre>
+<pre><code>.ninja {
+  color: black;
+  visibility: hidden;
+}</code></pre>
+        </article>
+        <article>
+          <h2 id="typography-inline">Inline elements</h2>
+          <p><a href="#!">Anchor element defines a hyperlink to a location</a></p>
+          <p><strong>Strong is used to indicate strong importance</strong></p>
+          <p><em>Emphasis element marks text that has stress emphasis</em></p>
+          <p><b><em>B</em> element is stylistically different text from normal text</b></p>
+          <p><i>Italic element is text that is offset from the normal text</i></p>
+          <p><u>Underline element is text with an unarticulated, though explicitly rendered, non-textual annotation</u></p>
+          <p><del>Deleted text element represents a range of text that has been deleted from a document</del></p>
+          <p><ins>Inserted text elementrepresents a range of text that has been added to a document</ins></p>
+          <p><s>Strikethrough element renders text with a strikethrough</s></p>
+          <p>Superscript<sup>(1)</sup> element defines a span of text that should be displayed higher and often smaller</p>
+          <p>Subscript<sub>(2)</sub> element defines a span of text that should be displayed lower and often smaller</p>
+          <p><small>Small element makes the text font size one size smaller</small></p>
+          <p><abbr title="abbreviation">Abbr.</abbr> element represents an abbreviation and optionally provides a full description for it</p>
+          <p><q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">Quote element indicates that the enclosed text is a short inline quotation</q></p>
+          <p><cite>Citation element represents a reference to a creative work</cite></p>
+          <p><dfn>Definition element</dfn> represents the defining instance of a term</p>
+          <p><mark>Mark element represents highlighted text</mark></p>
+          <p>Variable <var>var</var> element represents a variable in a mathematical expression or a programming context</p>
+          <p>Time element (<time>20:00</time>) represents time on 24-hour clock, or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
+          <p><a href="#top">[Top]</a></p>
+        </article>
+      </section>
+
+      <section>
+        <h1 id="embedded-content">Embedded content</h1>
+        <article>
+          <h2 id="embedded-images">Images</h2>
+          <h3>Inline image</h3>
+          <p><img src="https://unsplash.it/550/350/?image=961" alt="Image"></p>
+          <h3>Figure > image</h3>
+          <figure><img src="https://unsplash.it/550/350/?image=961" alt="Image"></figure>
+          <h3>Figure > image + figcaption</h3>
+          <figure>
+            <img src="https://unsplash.it/550/350/?image=961" alt="Image">
+            <figcaption>Here is a caption for this image.</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h2 id="embedded-audio">Audio</h2>
+          <audio controls width="600">
+            <source src="interlude.mp3">
+            <source src="interlude.ogg">
+          </audio>
+        </article>
+        <article>
+          <h2 id="embedded-video">Video</h2>
+          <video controls width="600">
+            <source src="timelapse.mp4" type="video/mp4">
+            <source src="timelapse.ogv" type="video/ogg">
+            Your browser does not support the <code>video</code> element.
+          </video>
+          <h2 id="embedded-iframe">Iframe</h2>
+          <iframe width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic" frameborder="0" allowfullscreen></iframe>
+          <h2 id="embedded-object">Object</h2>
+          <object width="550" height="350" data="https://www.youtube.com/embed/zxT0wknZxic"></object>
+          <h2 id="embedded-embed">Embed</h2>
+          <embed width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic">
+        </article>
+        <article>
+          <h2 id="embedded-canvas">Canvas</h2>
+          <canvas id="canvas" width="550" height="350">canvas</canvas>
+          <script type="application/javascript">
+            (function draw() {
+              var canvas = document.getElementById("canvas");
+              if (canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "rgb(230, 230, 250)";
+                ctx.fillRect(0, 0, 550, 350);
+                ctx.fillStyle = "rgb(200, 0, 0)";
+                ctx.fillRect(20, 20, 150, 150);
+                ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+                ctx.fillRect(50, 50, 150, 150);
+              }
+            })();
+          </script>
+        </article>
+        <article>
+          <h2 id="embedded-svg">Inline SVG</h2>
+          <svg width="550" height="350" viewBox="0 0 550 350" preserveAspectRatio="xMinYMin">
+            <rect x="0" y="0" width="550" height="350" fill= "rgb(230, 230, 250)"/>
+            <circle cx="95" cy="95" r="75" fill="rgb(200, 0, 0)"></circle>
+            <circle cx="115" cy="115" r="75" fill="rgba(0, 0, 200, 0.5)"></circle>
+          </svg>
+        </article>
+        <article>
+          <h2 id="embedded-meter">Meter</h2>
+          <meter value="75" min="0" max="100">2 out of 10</meter>
+        </article>
+        <article>
+          <h2 id="embedded-progress">Progress</h2>
+          <progress value="75" max="100">Progress</progress>
+        </article>
+        <p><a href="#top">[Top]</a></p>
+      </section>
+
+      <section>
+        <h1 id="forms">Forms</h1>
+        <article>
+          <h2>Inline</h2>
+          <form>
+            <p>
+              <label for="input-inline">Inline label</label>
+              <input id="input-inline" type="text" placeholder="Inline text field">
+              <button type="submit">Button Submit</button>
+            </p>
+          </form>
+          <h2>Justified (fieldsets)</h2>
+          <form>
+            <fieldset id="form-inputs">
+              <legend>Input fields</legend>
+              <p>
+                <label for="input-text">Text input</label>
+                <input id="input-text" type="text" placeholder="Enter your text">
+              </p>
+              <p>
+                <label for="input-password">Password input</label>
+                <input id="input-password" type="password" placeholder="Enter your password">
+              </p>
+              <p>
+                <label for="input-url">URL input</label>
+                <input id="input-url" type="url" placeholder="http://website.com">
+              </p>
+              <p>
+                <label for="input-email">Email input</label>
+                <input id="input-email" type="email" placeholder="name@email.com">
+              </p>
+              <p>
+                <label for="input-tel">Telephone input</label>
+                <input id="input-tel" type="tel" placeholder="(999) 999-9999">
+              </p>
+              <p>
+                <label for="input-search">Search input</label>
+                <input id="input-search" type="search" placeholder="Enter search term">
+              </p>
+              <p>
+                <label for="input-number">Number input</label>
+                <input id="input-number" type="number" placeholder="Enter a number">
+              </p>
+            </fieldset>
+            <fieldset id="form-html5-inputs">
+              <legend>HTML5 inputs</legend>
+              <p>
+                <label for="ic">Color input</label>
+                <input type="color" id="ic" value="#0269c2">
+              </p>
+              <p>
+                <label for="ir">Range input</label>
+                <input type="range" id="ir" value="10">
+              </p>
+              <p>
+                <label for="idd">Date input</label>
+                <input type="date" id="idd" value="1970-01-01">
+              </p>
+              <p>
+                <label for="it">Time input</label>
+                <input type="time" id="it" value="1970-01-01">
+              </p>
+              <p>
+                <label for="idm">Month input</label>
+                <input type="month" id="idm" value="1970-01">
+              </p>
+              <p>
+                <label for="idw">Week input</label>
+                <input type="week" id="idw" value="1970-W01">
+              </p>
+              <p>
+                <label for="idt">Datetime input</label>
+                <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+              </p>
+              <p>
+                <label for="idtl">Datetime-local input</label>
+                <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+              </p>
+              <p>
+                <label for="if">File input</label>
+                <input id="if" type="file">
+              </p>
+            </fieldset>
+            <fieldset id="form-textarea">
+              <legend>Textarea</legend>
+              <p>
+                <label for="textarea">Textarea</label>
+                <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+              </p>
+            </fieldset>
+            <fieldset id="form-select">
+              <legend>Select</legend>
+              <p>
+                <label for="select">Select</label>
+                <select id="select">
+                  <optgroup label="Option Group">
+                    <option>Option One</option>
+                    <option>Option Two</option>
+                    <option>Option Three</option>
+                  </optgroup>
+                </select>
+              </p>
+            </fieldset>
+            <fieldset id="form-select-multiple">
+              <legend>Select multiple</legend>
+              <p>
+                <label for="select-multiple">Select</label>
+                <select multiple id="select-multiple">
+                  <optgroup label="Option Group">
+                    <option>Select multiple option one</option>
+                    <option>Select multiple option two</option>
+                    <option>Select multiple option three</option>
+                    <option>Select multiple option four</option>
+                    <option>Select multiple option five</option>
+                    <option>Select multiple option six</option>
+                    <option>Select multiple option seven</option>
+                    <option>Select multiple option eight</option>
+                  </optgroup>
+                </select>
+              </p>
+            </fieldset>
+            <fieldset id="form-checkboxs">
+              <legend>Checkboxes</legend>
+              <label for="checkbox1"><input id="checkbox1" name="group-checkbox" type="checkbox" checked="checked"> A choice is an act of selecting or making a decision when faced with two or more possibilities</label><br/>
+              <label for="checkbox2"><input id="checkbox2" name="group-checkbox" type="checkbox"> A choice is an act of selecting or making a decision when faced with two or more possibilities</label><br/>
+              <label for="checkbox3"><input id="checkbox3" name="group-checkbox" type="checkbox"> A choice is an act of selecting or making a decision when faced with two or more possibilities</label><br/>
+            </fieldset>
+            <fieldset id="form-radios">
+              <legend>Radio buttons</legend>
+              <label for="radio1"><input id="radio1" name="group-radio" type="radio" checked="checked"> An option is a thing that is or may be chosen</label><br/>
+              <label for="radio2"><input id="radio2" name="group-radio" type="radio"> An option is a thing that is or may be chosen</label><br/>
+              <label for="radio3"><input id="radio3" name="group-radio" type="radio"> An option is a thing that is or may be chosen</label><br/>
+            </fieldset>
+            <fieldset id="form-buttons">
+              <legend>Buttons</legend>
+              <p>
+                <input type="submit" value="Input Submit">
+                <input type="button" value="Input Button">
+                <input type="reset" value="Input Reset">
+                <input type="submit" value="Input Disabled" disabled>
+              </p>
+              <p>
+                <button type="submit">Button Submit</button>
+                <button type="button">Button Button</button>
+                <button type="reset">Button Reset</button>
+                <button type="submit" disabled>Button Disabled</button>
+              </p>
+            </fieldset>
+          </form>
+        </article>
+        <p><a href="#top">[Top]</a></p>
+      </section>
+    </main>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
+  <script type="text/javascript">
+    anchors.options = {placement:'left'};
+    anchors.add('h1[id],h2[id]');
+  </script>
+  <style>.anchorjs-link:hover{border:0;text-decoration:none;}</style>
+
+{% endblock %}
