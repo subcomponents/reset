@@ -1,7 +1,7 @@
 {
   "name": "hyper-reset",
-  "version": "1.0.0",
-  "description": "Modern CSS reset",
+  "version": "1.0.1",
+  "description": "A hyper reset for static websites",
   "repository": {
     "type": "git",
     "url": "https://github.com/heyallan/hyper-reset.git",
