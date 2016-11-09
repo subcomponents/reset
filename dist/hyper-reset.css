@@ -1,9 +1,4 @@
-/**
- * hyper-reset
- * https://github.com/heyallan/hyper-rese#readme
- * License MIT Copyright (c) 2016-2016
- */
-html {
+/** hyper-reset | https://heyallan.github.io/hyper-reset */ html {
   box-sizing: border-box;
 }
 html * {

@@ -7,12 +7,7 @@ var rename       = require('gulp-rename');
 var header       = require('gulp-header');
 var nunjucks     = require('gulp-nunjucks-render');
 var pkgJson      = require('./package.json');
-var banner = ['/**',
-  ' * <%= package.name %>',
-  ' * <%= package.homepage %>',
-  ' * License <%= package.license %> Copyright (c) 2016-<%= new Date().getFullYear() %>',
-  ' */',
-  ''].join('\n');
+var banner       = ['/** <%= package.name %> | <%= package.demo.url %> */ '];
 
 gulp.task('styles', function() {
   return gulp.src('src/less/bundle.less')

@@ -7,7 +7,7 @@
 
 ## Docs
 
-Visit the project website to see demo or documentation
+Visit the project website to see demo and/or documentation
 
 ## Contribute
 
