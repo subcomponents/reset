@@ -7,14 +7,14 @@
 
 ## Docs
 
-Visit the project website to see demo/documentation
+Visit the project website to see demo or documentation
 
 ## Contribute
 
 Be my guest:
 
 - 😱 Open issue, describe bug, suggest solution
-- 😊 Fork, clone, edit, push, send pull request (ask first)
+- 😊 Fork, clone, edit, push, send pull request
 
 ## MIT License
 
