@@ -1,0 +1,212 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+  <div id="top" role="document">
+
+    {% include "header.njk" %}
+
+    <main role="main">
+
+      <section>
+        {% include "nav-style-guide.njk" %}
+      </section>
+
+      <section>
+        <h1 id="typography">Typography</h1>
+        <article>
+          <h2 id="typography-headings">Headings</h2>
+          <h1 style="display:inline-block;">Heading1,</h1>
+          <h2 style="display:inline-block;">Heading2,</h2>
+          <h3 style="display:inline-block;">Heading3,</h3>
+          <h4 style="display:inline-block;">Heading4,</h4>
+          <h5 style="display:inline-block;">Heading5,</h5>
+          <h6 style="display:inline-block;">Heading6</h6>
+        </article>
+        <article>
+          <h2 id="typography-paragraph">Paragraph</h2>
+          <p>The HTML (p) element (or HTML Paragraph Element) represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p>
+        </article>
+        <article>
+          <h2 id="typography-lead">Lead</h2>
+          <p><b>The lead paragraph (p>b) represents a span of text stylistically different from normal text, without conveying any special importance or relevance. It's commonly used to mark the lead sentence of each paragraph of an article.</b></p>
+        </article>
+        <article>
+          <h2 id="typography-blockquote">Blockquote</h2>
+          <blockquote>
+            <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
+            <cite><a href="#!">Said no one, ever.</a></cite>
+          </blockquote>
+        </article>
+        <article>
+          <h2 id="typography-address">Address</h2>
+          <address>
+            Written by the editorial and news team:<br/>
+            Contact author at info@editorial.com<br/>
+            Mail us at PO Box 123, Citysville<br/>
+            Tel +1 212 3131
+          </address>
+        </article>
+        <article>
+          <h2 id="typography-lists">Lists</h2>
+          <h3>Definition list</h3>
+          <dl>
+            <dt>Definition Term</dt>
+            <dd>This is a definition description</dd>
+            <dt>Definition Term</dt>
+            <dd>This is a definition description</dd>
+          </dl>
+          <h3>Ordered List</h3>
+          <ol>
+            <li>List item
+              <ol>
+                <li>Subitem</li>
+                <li>Subitem</li>
+              </ol>
+            </li>
+            <li>List item</li>
+            <li>List item</li>
+          </ol>
+          <h3>Unordered List</h3>
+          <ul>
+            <li>List item
+              <ul>
+                <li>Subitem</li>
+                <li>Subitem</li>
+              </ul>
+            </li>
+            <li>List item</li>
+            <li>List item</li>
+          </ul>
+        </article>
+        <article>
+          <h2 id="typography-hr">Horizontal rule</h2>
+          <hr>
+        </article>
+        <article>
+          <h2 id="typography-table">Table</h2>
+          <table>
+            <caption>Caption for the current table</caption>
+            <thead>
+              <tr>
+                <th>Table Heading 1</th>
+                <th>Table Heading 2</th>
+                <th>Table Heading 3</th>
+                <th>Table Heading 4</th>
+                <th>Table Heading 5</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Table Footer 1</th>
+                <th>Table Footer 2</th>
+                <th>Table Footer 3</th>
+                <th>Table Footer 4</th>
+                <th>Table Footer 5</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article>
+          <h2 id="typography-code">Code</h2>
+          <h2>Inline code</h2>
+          <p><strong>Keyboard input:</strong> <kbd>Cmd+Shift+Enter</kbd></p>
+          <p><strong>Inline code:</strong> <code>&lt;p&gt;paragraph&lt;/p&gt;</code></p>
+          <p><strong>Sample output:</strong> <samp>Sample output from computer program</samp></p>
+          <h3>Preformatted text</h3>
+          <p><code>pre</code></p>
+<pre>.ninja {
+  color: black;
+  visibility: hidden;
+}</pre>
+<p><code>pre>code</code></p>
+<pre><code>.ninja {
+  color: black;
+  visibility: hidden;
+}</code></pre>
+        </article>
+        <article>
+          <h2 id="typography-inline">Inline elements</h2>
+          <hr>
+          <p>
+            <strong>Example:</strong> Inline elements can contain paragraphs,
+            with <a href="#">links</a>,
+            <strong>important</strong> or <em>emphasised</em> words,
+            <code>code snippets</code>,
+            <abbr title="abbreviations">abbr</abbr>,
+            <q>short quotes</q>,
+            <cite>citations</cite>,
+            <mark>highlighted text</mark>,
+            <kbd>keyboard inputs</kbd>,
+            <s>strikethrough</s>,
+            <del>deleted</del> and <ins>inserted</ins> elements,
+            <samp>sample text</samp>,
+            <small>small text</small>,
+            and
+            words with<sub>sub</sub> and<sup>sup</sup> text.
+          </p>
+          <hr>
+          <p><a href="#!">Anchor element defines a hyperlink to a location</a></p>
+          <p><strong>Strong is used to indicate strong importance</strong></p>
+          <p><em>Emphasis element marks text that has stress emphasis</em></p>
+          <p><b>Bold element is stylistically different text from normal text</b></p>
+          <p><i>Italic element is text that is offset from the normal text</i></p>
+          <p><u>Underline element is text with an unarticulated, though explicitly rendered, non-textual annotation</u></p>
+          <p><del>Deleted text element represents a range of text that has been deleted from a document</del></p>
+          <p><ins>Inserted text elementrepresents a range of text that has been added to a document</ins></p>
+          <p><s>Strikethrough element renders text with a strikethrough</s></p>
+          <p>Superscript<sup>(sup)</sup> element defines a span of text that should be displayed higher and often smaller</p>
+          <p>Subscript<sub>(sub)</sub> element defines a span of text that should be displayed lower and often smaller</p>
+          <p><small>Small element makes the text font size one size smaller</small></p>
+          <p><abbr title="abbreviation">Abbr.</abbr> element represents an abbreviation and optionally provides a full description for it</p>
+          <p><q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">Quote element indicates that the enclosed text is a short inline quotation</q></p>
+          <p><cite>Citation element represents a reference to a creative work</cite></p>
+          <p><dfn>Definition element</dfn> represents the defining instance of a term</p>
+          <p><mark>Mark element represents highlighted text</mark></p>
+          <p>Variable <var>var</var> element represents a variable in a mathematical expression or a programming context</p>
+          <p>Time element (<time>20:00</time>) <code>&lt;time&gt;20:00&lt;/time&gt;</code> represents time on 24-hour clock, or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
+          <p><a href="#top">[Top]</a></p>
+        </article>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
+  <script type="text/javascript">
+    anchors.options = {placement:'left'};
+    anchors.add('h1[id],h2[id]');
+  </script>
+  <style>.anchorjs-link:hover{border:0;text-decoration:none;}</style>
+
+{% endblock %}

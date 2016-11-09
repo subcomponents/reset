@@ -1,6 +1,5 @@
 <header role="banner">
   <h1>
-    {# Logo glyphs:⦵⚝∅▵◒○∴⧨⬔◮ #}
     <svg width="38" height="30" viewBox="0 0 38 30" style="margin-top:5px;transform:translateY(4px);">
       <defs>
         <linearGradient id="gradient">
@@ -12,7 +11,7 @@
         ◮
       </text>
     </svg>
-    {% raw %}{{% endraw %}{{ package.name }}{% raw %}}{% endraw %}
+    {% raw %} {{ {% endraw %}{{ package.name }}{% raw %} }} {% endraw %}
   </h1>
-  {% include "nav-global.njk" %}
+  {% include "nav-primary.njk" %}
 </header>

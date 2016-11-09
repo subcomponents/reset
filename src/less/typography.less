@@ -46,6 +46,7 @@ blockquote {
   padding: 0.5rem 1.5rem;
   border-left: @border-width-default solid @color-primary;
   color: @color-muted;
+  font-size: 1.1em;
   p:last-child {
     margin-bottom: 0;
   }
@@ -64,6 +65,7 @@ var {
 abbr[title] {
   text-decoration: none;
   border-bottom: 1px dotted;
+  cursor: help;
 }
 
 sub,
@@ -73,18 +75,22 @@ sup {
   line-height: 0;
 }
 
+ins,
+del,
 mark {
-  background-color: @color-yellow;
-  color: @color-paragraph;
-  padding: 0 4px;
+  padding: 2px 4px;
 }
-
+ins {
+  color: #2ac261;
+  background-color: #f3fcf4;
+}
 del {
-  color: @color-muted;
+  color: #FF4B4B;
+  background-color: #FFF0F0;
 }
-
-dt {
-  font-weight: bold;
+mark {
+  color: #6d5538;
+  background-color: @color-yellow;
 }
 
 hr {

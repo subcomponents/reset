@@ -1,11 +1,10 @@
 {
   "name": "hyper-reset",
-  "version": "1.0.6",
-  "description": "A hyper reset for static websites",
+  "version": "1.1.0",
+  "description": "CSS hyper reset",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heyallan/hyper-reset.git",
-    "home": "https://github.com/heyallan/hyper-reset/"
+    "url": "git+https://github.com/heyallan/hyper-reset.git"
   },
   "keywords": [
     "html",
@@ -14,16 +13,23 @@
   ],
   "author": {
     "name": "Allan Moreno",
-    "username": "heyallan",
     "email": "hello@heyallan.com",
-    "url": "http://heyallan.com",
-    "twitter": "heyallanmoreno"
+    "twitter": {
+      "url": "https://twitter.com/heyallanmoreno",
+      "username": "heyallanmoreno"
+    }
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/heyallan/hyper-reset/issues"
   },
-  "homepage": "https://heyallan.github.io/hyper-reset/",
+  "repo": {
+    "url": "https://github.com/heyallan/hyper-reset/"
+  },
+  "demo": {
+    "url": "https://heyallan.github.io/hyper-reset/"
+  },
+  "homepage": "https://github.com/heyallan/hyper-rese#readme",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",

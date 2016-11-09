@@ -1,10 +1,10 @@
 html {
   box-sizing: border-box;
-}
-* {
-  box-sizing: inherit;
-  &::before, &::after {
+  * {
     box-sizing: inherit;
+    &::before, &::after {
+      box-sizing: inherit;
+    }
   }
 }
 
@@ -12,21 +12,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-}
-
-ul, ol {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-left: 1.1rem;
-  li > ul,
-  li > ol {
-    padding-left: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-dd {
-  margin-left: 1rem;
 }
 
 // block semantic elements
@@ -41,14 +26,10 @@ figure,
 figcaption {
   display: block;
   margin-bottom: 1rem; // vertical rhythm
-  > *:last-child {
-    margin-bottom: 0; // mitigate non-collapsing margins (because flexbox doesn't auto collapse adjacent margins)
-  }
 }
 
 // inline semantic elements
-time,
-mark {
+time {
   display: inline-block;
 }
 
@@ -97,6 +78,5 @@ figure {
   margin: 0 0 1rem 0;
 }
 figcaption {
-  font-family: @font-family-serif;
   color: @color-muted;
 }

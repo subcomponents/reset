@@ -6,7 +6,7 @@ fieldset {
 }
 
 label {
-  padding-right: 0.5rem;
+  display: inline-block;
   padding-top: @button-padding-y - 1px;
   padding-bottom: @button-padding-y - 1px;
   &:hover {
@@ -43,7 +43,7 @@ textarea {
   }
 }
 
-// complex controls
+// special controls
 select:not([multiple]),
 input[type="color"] {
   height: 2.2rem;
@@ -69,67 +69,64 @@ textarea {
 // ---------------
 // small screens -> full width blocks
 fieldset {
-  label {
-    display: block;
-    width: 100%;
-  }
-  input[type="date"],
-  input[type="time"],
-  input[type="week"],
-  input[type="month"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="url"],
-  input[type="file"],
-
-  input[type="range"],
-  input[type="color"],
-
-  select,
-  select[multiple],
-  textarea {
-    display: block;
-    width: 100%;
+  // flexbox container
+  > p {
+    // label
+    > label:first-child {
+      display: block;
+    }
+    // fields
+    > input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+    > select,
+    > textarea {
+      display: block;
+      width: 100%;
+    }
+    // help text
+    > label + input:not([type="submit"]):not([type="button"]):not([type="reset"]) + label,
+    > label + select + label,
+    > label + textarea + label {
+      display: block;
+    }
   }
 }
 
 // medium screens and up -> inline justified
 @media (min-width: @breakpoint-sm) {
   fieldset {
-    label {
-      display: inline-block;
-      width: auto;
-      min-width: 25%;
-    }
-    input[type="date"],
-    input[type="time"],
-    input[type="week"],
-    input[type="month"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="text"],
-    input[type="url"],
-    input[type="file"],
-
-    input[type="range"],
-    input[type="color"],
-
-    select,
-    select[multiple],
-    textarea {
-      display: inline-block;
-      width: calc(75% ~"-" 5px); // substract border width and text space
+    > p {
+      // clearfix
+      &:after, &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      // label
+      > label:first-child {
+        float: left;
+        width: 30%;
+      }
+      // fields
+      > input:not([type="submit"]):not([type="button"]):not([type="reset"]):nth-child(2),
+      > select:nth-child(2),
+      > textarea:nth-child(2) {
+        float: left;
+        width: 70%;
+      }
+      // help text
+      > label + input:not([type="submit"]):not([type="button"]):not([type="reset"]) + label,
+      > label + select + label,
+      > label + textarea + label {
+        float: none;
+        display: block;
+        clear: both;
+        &:before {
+          position: relative;
+          display: inline-block;
+          content: "";
+          width: 30%;
+        }
+      }
     }
   }
 } // end of media query

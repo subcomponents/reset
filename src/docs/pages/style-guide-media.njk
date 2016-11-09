@@ -1,0 +1,97 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+  <div id="top" role="document">
+
+    {% include "header.njk" %}
+
+    <main role="main">
+
+      <section>
+        {% include "nav-style-guide.njk" %}
+      </section>
+
+      <section>
+        <h1 id="media-content">Media</h1>
+        <article>
+          <h2 id="media-images">Images</h2>
+          <h3>Inline image</h3>
+          <p><img src="https://unsplash.it/550/350/?image=961" alt="Image"></p>
+          <h3>Figure > image</h3>
+          <figure><img src="https://unsplash.it/550/350/?image=961" alt="Image"></figure>
+          <h3>Figure > image + figcaption</h3>
+          <figure>
+            <img src="https://unsplash.it/550/350/?image=961" alt="Image">
+            <figcaption>Here is a caption for this image.</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h2 id="media-audio">Audio</h2>
+          <audio controls width="600">
+            <source src="interlude.mp3">
+            <source src="interlude.ogg">
+          </audio>
+        </article>
+        <article>
+          <h2 id="media-video">Video</h2>
+          <video controls width="600">
+            <source src="timelapse.mp4" type="video/mp4">
+            <source src="timelapse.ogv" type="video/ogg">
+            Your browser does not support the <code>video</code> element.
+          </video>
+          <h2 id="media-iframe">Iframe</h2>
+          <iframe width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic" frameborder="0" allowfullscreen></iframe>
+          <h2 id="media-object">Object</h2>
+          <object width="550" height="350" data="https://www.youtube.com/embed/zxT0wknZxic"></object>
+          <h2 id="media-embed">Embed</h2>
+          <embed width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic">
+        </article>
+        <article>
+          <h2 id="media-canvas">Canvas</h2>
+          <canvas id="canvas" width="550" height="350">canvas</canvas>
+          <script type="application/javascript">
+            (function draw() {
+              var canvas = document.getElementById("canvas");
+              if (canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "rgb(230, 230, 250)";
+                ctx.fillRect(0, 0, 550, 350);
+                ctx.fillStyle = "rgb(200, 0, 0)";
+                ctx.fillRect(20, 20, 150, 150);
+                ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+                ctx.fillRect(50, 50, 150, 150);
+              }
+            })();
+          </script>
+        </article>
+        <article>
+          <h2 id="media-svg">Inline SVG</h2>
+          <svg width="550" height="350" viewBox="0 0 550 350" preserveAspectRatio="xMinYMin">
+            <rect x="0" y="0" width="550" height="350" fill= "rgb(230, 230, 250)"/>
+            <circle cx="95" cy="95" r="75" fill="rgb(200, 0, 0)"></circle>
+            <circle cx="115" cy="115" r="75" fill="rgba(0, 0, 200, 0.5)"></circle>
+          </svg>
+        </article>
+        <article>
+          <h2 id="media-meter">Meter</h2>
+          <meter value="75" min="0" max="100">2 out of 10</meter>
+        </article>
+        <article>
+          <h2 id="media-progress">Progress</h2>
+          <progress value="75" max="100">Progress</progress>
+        </article>
+        <p><a href="#top">[Top]</a></p>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
+  <script type="text/javascript">
+    anchors.options = {placement:'left'};
+    anchors.add('h1[id],h2[id]');
+  </script>
+  <style>.anchorjs-link:hover{border:0;text-decoration:none;}</style>
+
+{% endblock %}
