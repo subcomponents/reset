@@ -387,7 +387,7 @@ button {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 20, 0.1);
-  background-color: rgba(0, 0, 20, 0.37);
+  background-color: rgba(0, 0, 20, 0.38);
 }
 input[type=button]:hover:not([disabled]),
 input[type=reset]:hover:not([disabled]),
@@ -402,7 +402,7 @@ input[type=reset]:active:not([disabled]),
 input[type=submit]:active:not([disabled]),
 button:active:not([disabled]) {
   border-color: rgba(0, 0, 20, 0.1);
-  background-color: rgba(0, 0, 20, 0.32);
+  background-color: rgba(0, 0, 20, 0.33);
 }
 input[type=button][disabled],
 input[type=reset][disabled],
