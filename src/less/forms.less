@@ -1,7 +1,9 @@
 fieldset {
   margin: 0 0 1rem 0;
   padding: 1rem;
-  border: 1px solid @color-gray;
+  border-width: 1px;
+  border-style: solid;
+  border-color: fade(@border-color, 20%);
   border-radius: @radius-default;
 }
 
@@ -34,12 +36,15 @@ select[multiple],
 textarea {
   padding: 0.5rem 1rem;
   min-height: @button-computed-height;
-  border: 1px solid @color-gray;
+  border-width: 1px;
+  border-style: solid;
+  border-color: fade(@border-color, 20%);
   border-radius: @radius-default;
+  background-clip: padding-box;
   outline: none;
   font-size: 1rem;
   &:focus {
-    border-color: @color-primary;
+    border-color: fade(@border-color, 40%);
   }
 }
 

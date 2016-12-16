@@ -5,21 +5,24 @@ button {
   display: inline-block;
   padding: @button-padding-y @button-padding-x;
   border-radius: @radius-default;
-  border: @button-border-width solid #d4d4d4;
   vertical-align: middle;
   font-size: @button-font-size;
   line-height: @button-line-height;
   cursor: pointer;
-  background-color: #ebebeb;
-  background-image: linear-gradient(#f4f4f4, #ebebeb);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+
+  border-width: @button-border-width;
+  border-style: solid;
+  border-color:     @border-color;
+  background-color: fade(@border-color,10%);
+  background-image: linear-gradient(fade(@border-color,5%),fade(@border-color,15%));
+
   &:hover:not([disabled]),
   &:focus:not([disabled]),
   &:active:not([disabled]) {
-    border-color: darken(@color-primary, 5%);
-    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
-    color: #fff;
-    background-color: @color-primary;
-    background-image: linear-gradient(lighten(@color-primary, 10%), @color-primary);
+    border-color:     @border-color;
+    background-color: fade(@border-color,15%);
+    background-image: linear-gradient(fade(@border-color,10%),fade(@border-color,20%));
   }
   &[disabled] {
     color: @color-muted;

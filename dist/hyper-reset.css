@@ -82,7 +82,7 @@ thead {
   border-bottom: 2px solid #0275d8;
 }
 tbody tr {
-  border-bottom: 1px solid #d3d3d8;
+  border-bottom: 1px solid rgba(0, 0, 5, 0.1);
 }
 th,
 td {
@@ -181,7 +181,7 @@ mark {
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-top: 1px solid #d3d3d8;
+  border-top: 1px solid rgba(0, 0, 5, 0.1);
 }
 a {
   text-decoration: none;
@@ -234,7 +234,7 @@ pre {
   text-align: left;
   color: #50525e;
   border-radius: 3px;
-  background-color: #eeeef0;
+  background-color: rgba(0, 0, 56, 0.1);
 }
 pre code {
   padding: 0;
@@ -245,7 +245,9 @@ pre code {
 fieldset {
   margin: 0 0 1rem 0;
   padding: 1rem;
-  border: 1px solid #d3d3d8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 5, 0.2);
   border-radius: 3px;
 }
 label {
@@ -275,8 +277,11 @@ select[multiple],
 textarea {
   padding: 0.5rem 1rem;
   min-height: 37px;
-  border: 1px solid #d3d3d8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 5, 0.2);
   border-radius: 3px;
+  background-clip: padding-box;
   outline: none;
   font-size: 1rem;
 }
@@ -297,7 +302,7 @@ input[type="file"]:focus,
 select:focus,
 select[multiple]:focus,
 textarea:focus {
-  border-color: #0275d8;
+  border-color: rgba(0, 0, 5, 0.4);
 }
 select:not([multiple]),
 input[type="color"] {
@@ -373,13 +378,16 @@ button {
   display: inline-block;
   padding: 8px 16px;
   border-radius: 3px;
-  border: 1px solid #d4d4d4;
   vertical-align: middle;
   font-size: 12.8px;
   line-height: 1.5;
   cursor: pointer;
-  background-color: #ebebeb;
-  background-image: linear-gradient(#f4f4f4, #ebebeb);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 5, 0.1);
+  background-color: rgba(0, 0, 5, 0.1);
+  background-image: linear-gradient(rgba(0, 0, 5, 0.05), rgba(0, 0, 5, 0.15));
 }
 input[type=button]:hover:not([disabled]),
 input[type=reset]:hover:not([disabled]),
@@ -393,11 +401,9 @@ input[type=button]:active:not([disabled]),
 input[type=reset]:active:not([disabled]),
 input[type=submit]:active:not([disabled]),
 button:active:not([disabled]) {
-  border-color: #0267bf;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  color: #fff;
-  background-color: #0275d8;
-  background-image: linear-gradient(#108ffd, #0275d8);
+  border-color: rgba(0, 0, 5, 0.1);
+  background-color: rgba(0, 0, 5, 0.15);
+  background-image: linear-gradient(rgba(0, 0, 5, 0.1), rgba(0, 0, 5, 0.2));
 }
 input[type=button][disabled],
 input[type=reset][disabled],
