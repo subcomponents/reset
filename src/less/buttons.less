@@ -9,23 +9,21 @@ button {
   font-size: @button-font-size;
   line-height: @button-line-height;
   cursor: pointer;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
   border-width: @button-border-width;
   border-style: solid;
   border-color:     @border-color;
-  background-color: fade(@border-color,10%);
-  background-image: linear-gradient(fade(@border-color,5%),fade(@border-color,15%));
+  background-color: fade(@border-color,37%);
 
   &:hover:not([disabled]),
   &:focus:not([disabled]),
   &:active:not([disabled]) {
     border-color:     @border-color;
-    background-color: fade(@border-color,15%);
-    background-image: linear-gradient(fade(@border-color,10%),fade(@border-color,20%));
+    background-color: fade(@border-color,32%);
   }
   &[disabled] {
-    color: @color-muted;
+    color: #fff;
     cursor: not-allowed;
     opacity: 0.7;
   }

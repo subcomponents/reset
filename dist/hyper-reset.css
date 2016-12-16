@@ -82,7 +82,7 @@ thead {
   border-bottom: 2px solid #0275d8;
 }
 tbody tr {
-  border-bottom: 1px solid rgba(0, 0, 5, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 20, 0.1);
 }
 th,
 td {
@@ -181,7 +181,7 @@ mark {
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-top: 1px solid rgba(0, 0, 5, 0.1);
+  border-top: 1px solid rgba(0, 0, 20, 0.1);
 }
 a {
   text-decoration: none;
@@ -234,7 +234,7 @@ pre {
   text-align: left;
   color: #50525e;
   border-radius: 3px;
-  background-color: rgba(0, 0, 56, 0.1);
+  background-color: rgba(0, 0, 71, 0.1);
 }
 pre code {
   padding: 0;
@@ -247,7 +247,7 @@ fieldset {
   padding: 1rem;
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 5, 0.2);
+  border-color: rgba(0, 0, 20, 0.2);
   border-radius: 3px;
 }
 label {
@@ -279,7 +279,7 @@ textarea {
   min-height: 37px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 5, 0.2);
+  border-color: rgba(0, 0, 20, 0.2);
   border-radius: 3px;
   background-clip: padding-box;
   outline: none;
@@ -302,7 +302,7 @@ input[type="file"]:focus,
 select:focus,
 select[multiple]:focus,
 textarea:focus {
-  border-color: rgba(0, 0, 5, 0.4);
+  border-color: rgba(0, 0, 20, 0.4);
 }
 select:not([multiple]),
 input[type="color"] {
@@ -382,12 +382,12 @@ button {
   font-size: 12.8px;
   line-height: 1.5;
   cursor: pointer;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 5, 0.1);
-  background-color: rgba(0, 0, 5, 0.1);
-  background-image: linear-gradient(rgba(0, 0, 5, 0.05), rgba(0, 0, 5, 0.15));
+  border-color: rgba(0, 0, 20, 0.1);
+  background-color: rgba(0, 0, 20, 0.37);
 }
 input[type=button]:hover:not([disabled]),
 input[type=reset]:hover:not([disabled]),
@@ -401,15 +401,14 @@ input[type=button]:active:not([disabled]),
 input[type=reset]:active:not([disabled]),
 input[type=submit]:active:not([disabled]),
 button:active:not([disabled]) {
-  border-color: rgba(0, 0, 5, 0.1);
-  background-color: rgba(0, 0, 5, 0.15);
-  background-image: linear-gradient(rgba(0, 0, 5, 0.1), rgba(0, 0, 5, 0.2));
+  border-color: rgba(0, 0, 20, 0.1);
+  background-color: rgba(0, 0, 20, 0.32);
 }
 input[type=button][disabled],
 input[type=reset][disabled],
 input[type=submit][disabled],
 button[disabled] {
-  color: rgba(80, 82, 94, 0.7);
+  color: #fff;
   cursor: not-allowed;
   opacity: 0.7;
 }
