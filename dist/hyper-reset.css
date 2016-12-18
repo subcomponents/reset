@@ -144,6 +144,9 @@ blockquote p:last-child {
 blockquote cite {
   color: #0275d8;
 }
+small {
+  font-size: 85%;
+}
 address {
   font-style: normal;
 }
