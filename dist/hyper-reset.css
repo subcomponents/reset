@@ -144,8 +144,11 @@ blockquote p:last-child {
 blockquote cite {
   color: #0275d8;
 }
+address {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-style: normal;
+}
 blockquote,
-address,
 cite,
 var {
   font-family: Georgia, "Times New Roman", Times, serif;
