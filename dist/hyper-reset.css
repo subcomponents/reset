@@ -375,6 +375,7 @@ fieldset > p > label + textarea + label {
     width: 30%;
   }
 }
+.btn,
 input[type=button],
 input[type=reset],
 input[type=submit],
@@ -393,14 +394,17 @@ button {
   border-color: rgba(0, 0, 20, 0.1);
   background-color: rgba(0, 0, 20, 0.38);
 }
+.btn:hover:not([disabled]),
 input[type=button]:hover:not([disabled]),
 input[type=reset]:hover:not([disabled]),
 input[type=submit]:hover:not([disabled]),
 button:hover:not([disabled]),
+.btn:focus:not([disabled]),
 input[type=button]:focus:not([disabled]),
 input[type=reset]:focus:not([disabled]),
 input[type=submit]:focus:not([disabled]),
 button:focus:not([disabled]),
+.btn:active:not([disabled]),
 input[type=button]:active:not([disabled]),
 input[type=reset]:active:not([disabled]),
 input[type=submit]:active:not([disabled]),
@@ -408,6 +412,7 @@ button:active:not([disabled]) {
   border-color: rgba(0, 0, 20, 0.1);
   background-color: rgba(0, 0, 20, 0.33);
 }
+.btn[disabled],
 input[type=button][disabled],
 input[type=reset][disabled],
 input[type=submit][disabled],
