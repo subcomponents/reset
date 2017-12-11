@@ -255,8 +255,8 @@ fieldset {
 }
 label {
   display: inline-block;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: -0.5rem;
+  padding-bottom: -0.5rem;
 }
 label:hover {
   cursor: pointer;
@@ -279,7 +279,7 @@ select,
 select[multiple],
 textarea {
   padding: 0.5rem 1rem;
-  min-height: 19rem;
+  min-height: 4rem;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 20, 0.2);
@@ -398,7 +398,7 @@ input[type=reset],
 input[type=submit],
 button {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border-radius: 3px;
   vertical-align: middle;
   font-size: 0.8rem;
