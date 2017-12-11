@@ -279,7 +279,6 @@ select,
 select[multiple],
 textarea {
   padding: 0.5rem 1rem;
-  min-height: 4rem;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 20, 0.2);
