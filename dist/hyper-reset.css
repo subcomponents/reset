@@ -279,7 +279,7 @@ select,
 select[multiple],
 textarea {
   padding: 0.5rem 1rem;
-  min-height: 37px;
+  min-height: 19rem;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 20, 0.2);
@@ -401,7 +401,7 @@ button {
   padding: 8px 16px;
   border-radius: 3px;
   vertical-align: middle;
-  font-size: 12.8px;
+  font-size: 0.8rem;
   line-height: 1.5;
   cursor: pointer;
   color: #fff;
