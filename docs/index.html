@@ -14,20 +14,7 @@
   <div id="top" role="document">
 
     <header role="banner">
-  <h1>
-    <svg width="38" height="30" viewBox="0 0 38 30" style="margin-top:5px;transform:translateY(4px);">
-      <defs>
-        <linearGradient id="gradient">
-          <stop offset="0%"  stop-color="#3498db"/>
-          <stop offset="70%" stop-color="#9b59b6"/>
-        </linearGradient>
-      </defs>
-      <text x="0" y="40" fill="url(#gradient)" style="font-weight:700;font-size:60px;">
-        ◮
-      </text>
-    </svg>
-     {{ hyper-reset }} 
-  </h1>
+  <h1> {{ hyper-reset }} </h1>
   <nav role="navigation">
   <a href="./">Home</a>
   /
@@ -51,9 +38,9 @@
       <article>
         <section>
           <h2>Purpose</h2>
-          <p>Style static pages, markdown generated pages, <abbr title="What you see is what you get">WYSIWYG</abbr> generated pages, or any page where CSS classes are inaccesible or unwanted.<p>
-          <p>This library makes it possible to style whole websites created with <em>text-to-html</em> generators.</p>
-          <p>This library <strong>IS NOT</strong> intended to replace the use of CSS classes, but to provide a presentable layer of bare elements. <strong>Use where appropriate</strong>.</p>
+          <p>Provide basic styles for default HTML elements.<p>
+          <p>This library makes it possible to style statically generated pages, like <em>text-to-html, markdown-to-html</em>, or any page where CSS classes are inaccessible, or not a priority yet.</p>
+          <p>This library <strong>IS NOT</strong> intended to replace the use of CSS classes, but to provide a decent layer of bare elements before further styling. <strong>Use where appropriate</strong>.</p>
         </section>
         <section>
           <h2>Installation</h2>
@@ -62,11 +49,11 @@
 <p>CDN Development (always latest):</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/hyper-reset/dist/hyper-reset.min.css&quot;/&gt;</code></pre>
 <p>CDN Production (specific release):</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/hyper-reset@1.1.16/dist/hyper-reset.min.css&quot;/&gt;</code></pre>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/hyper-reset@1.1.18/dist/hyper-reset.min.css&quot;/&gt;</code></pre>
 <p>NPM package:</p>
 <pre><code>$ npm install --save-dev hyper-reset</code></pre>
 <p>CSS import:</p>
-<pre><code>@import url(&quot;https://unpkg.com/hyper-reset@1.1.16/dist/hyper-reset.min.css&quot;);</code></pre>
+<pre><code>@import url(&quot;https://unpkg.com/hyper-reset@1.1.18/dist/hyper-reset.min.css&quot;);</code></pre>
         </section>
         <section>
           <h2>Browser support</h2>

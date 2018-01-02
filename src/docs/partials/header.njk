@@ -1,17 +1,4 @@
 <header role="banner">
-  <h1>
-    <svg width="38" height="30" viewBox="0 0 38 30" style="margin-top:5px;transform:translateY(4px);">
-      <defs>
-        <linearGradient id="gradient">
-          <stop offset="0%"  stop-color="#3498db"/>
-          <stop offset="70%" stop-color="#9b59b6"/>
-        </linearGradient>
-      </defs>
-      <text x="0" y="40" fill="url(#gradient)" style="font-weight:700;font-size:60px;">
-        ◮
-      </text>
-    </svg>
-    {% raw %} {{ {% endraw %}{{ package.name }}{% raw %} }} {% endraw %}
-  </h1>
+  <h1>{% raw %} {{ {% endraw %}{{ package.name }}{% raw %} }} {% endraw %}</h1>
   {% include "nav-primary.njk" %}
 </header>
