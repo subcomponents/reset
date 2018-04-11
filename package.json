@@ -1,6 +1,6 @@
 {
   "name": "hyper-reset",
-  "version": "1.1.18",
+  "version": "1.1.19",
   "description": "CSS hyper reset",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   "demo": {
     "url": "https://heyallan.github.io/hyper-reset"
   },
-  "homepage": "https://github.com/heyallan/hyper-rese#readme",
+  "homepage": "https://github.com/heyallan/hyper-reset#readme",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",
