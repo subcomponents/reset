@@ -23,6 +23,8 @@ nav,
 figure,
 figcaption {
   display: block;
+}
+nav {
   margin-bottom: 1rem;
 }
 time {
