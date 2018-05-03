@@ -48,39 +48,48 @@
         <h1 id="media-content">Media</h1>
         <article>
           <h2 id="media-images">Images</h2>
-          <h3>Inline image</h3>
+          <h3>Image</h3>
+          <p><code>img</code></p>
           <p><img src="https://unsplash.it/550/350/?image=961" alt="Image"></p>
-          <h3>Figure > image</h3>
+          <h3>Figure</h3>
+          <p><code>figure>img</code></p>
           <figure><img src="https://unsplash.it/550/350/?image=961" alt="Image"></figure>
-          <h3>Figure > image + figcaption</h3>
+          <h3>Figcaption</h3>
+          <p><code>figure>(img+figcaption)</code></p>
           <figure>
             <img src="https://unsplash.it/550/350/?image=961" alt="Image">
             <figcaption>Here is a caption for this image.</figcaption>
           </figure>
         </article>
         <article>
-          <h2 id="media-audio">Audio</h2>
+          <h2 id="media-audio">Native audio</h2>
+          <p><code>audio>source[src=file.mp3]</code></p>
           <audio controls width="600">
             <source src="interlude.mp3">
             <source src="interlude.ogg">
           </audio>
         </article>
         <article>
-          <h2 id="media-video">Video</h2>
+          <h2 id="media-video">Native video</h2>
+          <p><code>video>source[src=file.mp4]</code></p>
           <video controls width="600">
             <source src="timelapse.mp4" type="video/mp4">
             <source src="timelapse.ogv" type="video/ogg">
             Your browser does not support the <code>video</code> element.
           </video>
           <h2 id="media-iframe">Iframe</h2>
+          <p><code>iframe[src=url]</code></p>
           <iframe width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic" frameborder="0" allowfullscreen></iframe>
           <h2 id="media-object">Object</h2>
+          <p><code>object[data=url]</code></p>
           <object width="550" height="350" data="https://www.youtube.com/embed/zxT0wknZxic"></object>
           <h2 id="media-embed">Embed</h2>
+          <p><code>embed[src=url]</code></p>
           <embed width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic">
         </article>
         <article>
           <h2 id="media-canvas">Canvas</h2>
+          <p><code>canvas[props]</code></p>
           <canvas id="canvas" width="550" height="350">canvas</canvas>
           <script type="application/javascript">
             (function draw() {
@@ -99,6 +108,7 @@
         </article>
         <article>
           <h2 id="media-svg">Inline SVG</h2>
+          <p><code>svg[props]</code></p>
           <svg width="550" height="350" viewBox="0 0 550 350" preserveAspectRatio="xMinYMin">
             <rect x="0" y="0" width="550" height="350" fill= "rgb(230, 230, 250)"/>
             <circle cx="95" cy="95" r="75" fill="rgb(200, 0, 0)"></circle>
@@ -107,10 +117,12 @@
         </article>
         <article>
           <h2 id="media-meter">Meter</h2>
+          <p><code>meter[props]</code></p>
           <meter value="75" min="0" max="100">2 out of 10</meter>
         </article>
         <article>
           <h2 id="media-progress">Progress</h2>
+          <p><code>progress[props]</code></p>
           <progress value="75" max="100">Progress</progress>
         </article>
         <p><a href="#top">[Top]</a></p>

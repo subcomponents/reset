@@ -1,28 +1,29 @@
-// .btn inlcuded to facilitate 3th party integration
 .btn,
 input[type=button],
 input[type=reset],
 input[type=submit],
 button {
   display: inline-block;
-  padding: @button-padding-y @button-padding-x;
-  border-radius: @radius-default;
-  vertical-align: middle;
-  font-size: @button-font-size;
-  line-height: @button-line-height;
-  cursor: pointer;
+  padding: var(--button-padding-y) var(--button-padding-x);
+
+  border-radius: var(--button-border-rarius);
+  border-width:  var(--button-border-width);
+  border-style:  solid;
+  border-color:  var(--button-border-color);
+  background-color: var(--button-bg-color);
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+
   color: #fff;
+  font-size:   var(--button-font-size);
+  line-height: var(--button-line-height);
   text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-  border-width: @button-border-width;
-  border-style: solid;
-  border-color: @border-color;
-  background-color: fade(@border-color,38%);
+
+  cursor: pointer;
 
   &:hover:not([disabled]),
   &:focus:not([disabled]),
   &:active:not([disabled]) {
-    border-color: @border-color;
-    background-color: fade(@border-color,33%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));
   }
   &[disabled] {
     color: #fff;
@@ -31,6 +32,6 @@ button {
   }
 }
 
-.btn:hover {
+a.btn:hover {
   text-decoration: none;
 }

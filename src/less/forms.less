@@ -1,16 +1,16 @@
 fieldset {
   margin: 0 0 1rem 0;
   padding: 1rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: fade(@border-color, 20%);
-  border-radius: @radius-default;
+  border-style:  solid;
+  border-width:  var(--input-border-width);
+  border-color:  var(--color-gray-light);
+  border-radius: var(--border-radius-default);
 }
 
 label {
   display: inline-block;
-  padding-top: @button-padding-y - 1px;
-  padding-bottom: @button-padding-y - 1px;
+  padding-top:    ~"calc(var(--button-padding-y) - 1px)";
+  padding-bottom: ~"calc(var(--button-padding-y) - 1px)";
   &:hover {
     cursor: pointer;
   }
@@ -35,15 +35,16 @@ select,
 select[multiple],
 textarea {
   padding: 0.5rem 1rem;
-  border-width: 1px;
   border-style: solid;
-  border-color: fade(@border-color, 20%);
-  border-radius: @radius-default;
+  border-width: var(--input-border-width);
+  border-color: var(--color-gray-light);
+  border-radius: var(--input-border-radius);
   background-clip: padding-box;
-  outline: none;
-  font-size: 1rem;
+  font-size: var(--rem-default);
+  line-height: var(--input-line-height);
+  // outline: none;
   &:focus {
-    border-color: fade(@border-color, 40%);
+    // border-color: var(--input-border-color-active);
   }
 }
 

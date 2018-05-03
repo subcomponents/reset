@@ -1,8 +1,8 @@
 html {
-  font-size: @rem-base;
-  font-family: @font-family-sans-serif;
-  color: @color-paragraph;
-  line-height: @line-height-base;
+  font-size:   var(--font-size-p);
+  font-family: var(--font-family-sans-serif);
+  color:       var(--color-paragraph);
+  line-height: var(--line-height-default);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,27 +11,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: @font-size-h1;
+  font-size: var(--font-size-h1);
 }
 h2 {
-  font-size: @font-size-h2;
+  font-size: var(--font-size-h2);
 }
 h3 {
-  font-size: @font-size-h3;
+  font-size: var(--font-size-h3);
 }
 h4 {
-  font-size: @font-size-h4;
+  font-size: var(--font-size-h4);
 }
 h5 {
-  font-size: @font-size-h5;
+  font-size: var(--font-size-h5);
 }
 h6 {
-  font-size: @font-size-h6;
+  font-size: var(--font-size-h6);
 }
 
-p b:only-child {
+p>b:only-child {
   font-weight: 300;
-  font-size: @font-size-lead;
+  font-size: var(--font-size-lead);
 }
 
 p {
@@ -39,17 +39,27 @@ p {
   margin-bottom: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 blockquote {
   margin: 0 0 1rem 0;
   padding: 0.5rem 1.5rem;
-  border-left: @border-width-default solid @color-primary;
-  color: @color-muted;
+  border-left: var(--border-width-default) solid var(--blockquote-border-color);
+  color: var(--color-muted);
   font-size: 1.1em;
   p:last-child {
     margin-bottom: 0;
   }
   cite {
-    color: @color-primary;
+    color: var(--color-primary);
   }
 }
 
@@ -59,12 +69,13 @@ small {
 
 address {
   font-style: normal;
+  margin-bottom: 1rem;
 }
 
 blockquote,
 cite,
 var {
-  font-family: @font-family-serif;
+  font-family: var(--font-family-serif);
 }
 
 abbr[title] {
@@ -83,33 +94,23 @@ sup {
 ins,
 del,
 mark {
-  padding: 2px 4px;
+  padding: var(--inline-text-padding);
+  border-radius: var(--border-radius-default);
 }
 ins {
-  color: #2ac261;
-  background-color: #f3fcf4;
+  color: var(--color-green);
+  background-color: var(--color-green-light);
 }
 del {
-  color: #FF4B4B;
-  background-color: #FFF0F0;
+  color: var(--color-red);
+  background-color: var(--color-red-light);
 }
 mark {
-  color: #6d5538;
-  background-color: @color-yellow;
+  background-color: var(--color-yellow);
 }
 
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-top: 1px solid @color-gray;
-}
-
-a {
-  text-decoration: none;
-  color: @color-primary;
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-  }
+  border-top: 1px solid var(--color-gray);
 }

@@ -1,44 +1,70 @@
-// variables
-// --------------------
-@color-primary:    rgb(2,117,216);
-@color-secondary:  rgb(155,77,202);
-@color-gray:       rgba(0,0,20,0.1);
-@color-gray-light: lighten(@color-gray, 10%);
-@color-yellow:     rgb(253,233,101);
-@color-paragraph:  rgb(66,68,78);
-@color-muted:      fade(@color-paragraph, 70%);
+:root {
+  // colors
+  --color-primary:        hsla(208, 98%, 43%, 1);
+  --color-secondary:      hsla(235, 10%, 25%, 1);
+  --color-gray:           hsla(240, 100%, 4%, 0.1);
+  --color-gray-light:     hsla(240, 100%, 14%, 0.1);
+  --color-green:          hsla(142, 64%, 46%, 1);
+  --color-green-light:    hsla(127, 60%, 95%, 1);
+  --color-red:            hsla(0, 100%, 65%, 1);
+  --color-red-light:      hsla(0, 100%, 97%, 1);
+  --color-yellow:         hsla(52, 97%, 69%, 1);
+  --color-paragraph:      hsla(230, 8%, 28%, 1);
+  --color-muted:          hsla(230, 8%, 28%, 0.7);
 
-@radius-default: 3px;
-@border-width-default: 2px;
-@border-color: @color-gray;
-@rem-base: 16px;
+  // theming
+  --link-color:              var(--color-primary);
+  --button-color:            var(--color-primary);
+  --blockquote-border-color: var(--color-primary);
+  --thead-border-color:      var(--color-primary);
+  --input-active-color:      var(--color-primary);
 
-// typography
-// --------------------
-@font-size-h1: 2rem;
-@font-size-h2: 1.8rem;
-@font-size-h3: 1.6rem;
-@font-size-h4: 1.4rem;
-@font-size-h5: 1.2rem;
-@font-size-h6: 1rem;
-@font-size-p:  1rem;
-@font-size-lead: @font-size-h4;
+  // scaffolding
 
-@line-height-base: 1.5;
+  // borders
+  --border-width-default:  2px;
+  --border-color-default:  var(--color-gray);
+  --border-radius-default: 2px;
 
-@font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-@font-family-serif:      Georgia, "Times New Roman", Times, serif;
-@font-family-mono-space: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  // typography
+  --rem-default:         16px;
+  --line-height-default: 1.5;
+  --inline-text-padding: 2px 4px;
 
-// buttons
-// --------------------
-@button-font-size: 0.8rem;
-@button-line-height: 1.5;
-@button-padding-x: 1rem;
-@button-padding-y: (1rem / 2);
-@button-border-width: 1px;
-@button-computed-height: floor((@button-font-size * @button-line-height)) + (@button-padding-y * 2) + (@button-border-width * 2);
+  // font size
+  --font-size-h1: ~"calc(var(--rem-default) * 2)";
+  --font-size-h2: ~"calc(var(--rem-default) * 1.8)";
+  --font-size-h3: ~"calc(var(--rem-default) * 1.6)";
+  --font-size-h4: ~"calc(var(--rem-default) * 1.4)";
+  --font-size-h5: ~"calc(var(--rem-default) * 1.2)";
+  --font-size-h6: ~"calc(var(--rem-default) * 1)";
+  --font-size-p:  ~"calc(var(--rem-default) * 1)";
+  --font-size-lead: var(--font-size-h4);
 
-// screen size breakpoint: // used by forms, to break lines
-// --------------------
+  // font families
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-serif:      Georgia, "Times New Roman", Times, serif;
+  --font-family-mono-space: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  // input fields
+  --input-line-height:   var(--line-height-default);
+  --input-border-width:  var(--border-width-default);
+  --input-border-color:  var(--color-gray-light);
+  --input-border-radius: var(--border-radius-default);
+
+  // input active
+  --input-border-color-active: var(--input-active-color);
+
+  // buttons
+  --button-font-size:     var(--rem-default);
+  --button-line-height:   var(--line-height-default);
+  --button-padding-x:     var(--rem-default);
+  --button-padding-y:     ~"calc(var(--rem-default) / 2)";
+  --button-border-width:  var(--input-border-width);
+  --button-border-rarius: var(--border-radius-default);
+  --button-border-color:  transparent;
+  --button-bg-color:      var(--button-color);
+}
+
+// form grups beakpoint
 @breakpoint-sm: 768px;

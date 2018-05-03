@@ -3,15 +3,28 @@ code,
 kbd,
 samp,
 pre, {
-  font-family: @font-family-mono-space;
+  font-family: var(--font-family-mono-space);
+}
+
+// default code
+code,
+pre {
+  background-color: var(--color-gray-light);
 }
 
 // inline
 code,
 kbd,
 samp {
-  color: @color-secondary;
-  font-size: 95%;;
+  padding: var(--inline-text-padding);
+  border-radius: var(--border-radius-default);
+  font-size: 95%;
+}
+
+kbd > kbd {
+  font-family: monospace;
+  border: var(--border-width-default), solid, currentColor;
+  white-space: nowrap;
 }
 
 // blocks
@@ -25,10 +38,10 @@ pre {
 
   font-size: 1rem;
   text-align: left;
-  color: @color-paragraph;
+  color: var(--color-paragraph);
 
-  border-radius: @radius-default;
-  background-color: @color-gray-light;
+  border-radius: var(--border-radius-default);
+  background-color: var(--color-gray-light);
   code {
     padding: 0;
     color: inherit;

@@ -29,10 +29,12 @@
         </article>
         <article>
           <h2 id="typography-lead">Lead</h2>
-          <p><b>The lead paragraph <code>p>b</code> represents a span of text stylistically different from normal text, without conveying any special importance or relevance. It's commonly used to mark the lead sentence of each paragraph of an article.</b></p>
+          <p><code>p>b:only-child</code></p>
+          <p><b>The lead paragraph represents a span of text stylistically different from normal text, without conveying any special importance or relevance. It's commonly used to mark the lead sentence of each paragraph of an article.</b></p>
         </article>
         <article>
           <h2 id="typography-blockquote">Blockquote</h2>
+          <p><code>blockquote>p+cite</code></p>
           <blockquote>
             <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
             <cite><a href="#!">Said no one, ever.</a></cite>
@@ -40,6 +42,7 @@
         </article>
         <article>
           <h2 id="typography-address">Address</h2>
+          <p><code>address</code></p>
           <address>
             Written by the editorial and news team:<br/>
             Contact author at info@editorial.com<br/>
@@ -50,6 +53,7 @@
         <article>
           <h2 id="typography-lists">Lists</h2>
           <h3>Definition list</h3>
+          <p><code>dl>(dt+dd)+(dt+dd)</code></p>
           <dl>
             <dt>Definition Term</dt>
             <dd>This is a definition description</dd>
@@ -57,6 +61,7 @@
             <dd>This is a definition description</dd>
           </dl>
           <h3>Ordered List</h3>
+          <p><code>ol>li</code></p>
           <ol>
             <li>List item
               <ol>
@@ -68,6 +73,7 @@
             <li>List item</li>
           </ol>
           <h3>Unordered List</h3>
+          <p><code>ul>li</code></p>
           <ul>
             <li>List item
               <ul>
@@ -140,15 +146,16 @@
         <article>
           <h2 id="typography-code">Code</h2>
           <h2>Inline code</h2>
-          <p><strong>Keyboard input:</strong> <kbd>Cmd+Shift+Enter</kbd></p>
-          <p><strong>Inline code:</strong> <code>&lt;p&gt;paragraph&lt;/p&gt;</code></p>
-          <p><strong>Sample output:</strong> <samp>Sample output from computer program</samp></p>
+          <p><code>code</code> Inline code: <code>.el { --color-primary: #000; }</code></p>
+          <p><code>kbd</code> Keyboard input: <kbd>$ npm install --save-dev hyper-reset</kbd></p>
+          <p><code>samp</code> Sample output: <samp>$ hyper-reset has been successfully installed</samp></p>
+          <p><code>kbd>kbd</code> Keystrokes: <kbd><kbd>Cmd ⌘</kbd> <kbd>Shift ⇧</kbd> <kbd>Alt ⌥</kbd></kbd></p>
           <h3>Preformatted text</h3>
           <p><code>pre</code></p>
-<pre>.ninja {
-  color: black;
-  visibility: hidden;
-}</pre>
+<pre>ninja:
+  - color: black
+  - visibility: hidden
+</pre>
 <p><code>pre>code</code></p>
 <pre><code>.lego {
   display: block;
@@ -159,16 +166,17 @@
           <h2 id="typography-inline">Inline elements</h2>
           <hr>
           <p>
-            <strong>Example:</strong> Inline elements can contain paragraphs,
-            with <a href="#">links</a>,
+            Inline elements can contain paragraphs
+            with <a href="#!">links</a>,
             <strong>important</strong> or <em>emphasised</em> words,
             <code>code snippets</code>,
             <abbr title="abbreviations">abbr</abbr>,
             <q>short quotes</q>,
             <cite>citations</cite>,
             <mark>highlighted text</mark>,
-            <kbd>keyboard inputs</kbd>,
-            <s>strikethrough</s>,
+            keyboard inputs <kbd>$ npm install</kbd>,
+            or actual keystrokes <kbd><kbd>Cmd ⌘</kbd></kbd>,
+            even <s>strikethrough</s>,
             <del>deleted</del> and <ins>inserted</ins> elements,
             <samp>sample text</samp>,
             <small>small text</small>,
@@ -176,25 +184,25 @@
             words with<sub>sub</sub> and<sup>sup</sup> text.
           </p>
           <hr>
-          <p><a href="#!">Anchor element defines a hyperlink to a location</a></p>
-          <p><strong>Strong is used to indicate strong importance</strong></p>
-          <p><em>Emphasis element marks text that has stress emphasis</em></p>
-          <p><b>Bold element is stylistically different text from normal text</b></p>
-          <p><i>Italic element is text that is offset from the normal text</i></p>
-          <p><u>Underline element is text with an unarticulated, though explicitly rendered, non-textual annotation</u></p>
-          <p><del>Deleted text element represents a range of text that has been deleted from a document</del></p>
-          <p><ins>Inserted text elementrepresents a range of text that has been added to a document</ins></p>
-          <p><s>Strikethrough element renders text with a strikethrough</s></p>
-          <p>Superscript<sup>(sup)</sup> element defines a span of text that should be displayed higher and often smaller</p>
-          <p>Subscript<sub>(sub)</sub> element defines a span of text that should be displayed lower and often smaller</p>
-          <p><small>Small element makes the text font size one size smaller</small></p>
-          <p><abbr title="abbreviation">Abbr.</abbr> element represents an abbreviation and optionally provides a full description for it</p>
-          <p><q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">Quote element indicates that the enclosed text is a short inline quotation</q></p>
-          <p><cite>Citation element represents a reference to a creative work</cite></p>
-          <p><dfn>Definition element</dfn> represents the defining instance of a term</p>
-          <p><mark>Mark element represents highlighted text</mark></p>
-          <p>Variable <var>var</var> element represents a variable in a mathematical expression or a programming context</p>
-          <p>Time element (<time>20:00</time>) <code>&lt;time&gt;20:00&lt;/time&gt;</code> represents time on 24-hour clock, or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
+          <p><code>a</code> <a href="#!">Anchor defines a hyperlink to a location</a></p>
+          <p><code>strong</code> <strong>Strong is used to indicate strong importance</strong></p>
+          <p><code>em</code> <em>Emphasis marks text that has stress emphasis</em></p>
+          <p><code>b</code> <b>Bold is stylistically different text from normal text</b></p>
+          <p><code>i</code> <i>Italic is text that is offset from the normal text</i></p>
+          <p><code>u</code> <u>Underline is text with an unarticulated, though explicitly rendered, non-textual annotation</u></p>
+          <p><code>del</code> <del>Deleted represents a range of text that has been deleted from a document</del></p>
+          <p><code>ins</code> <ins>Inserted represents a range of text that has been added to a document</ins></p>
+          <p><code>s</code> <s>Strikethrough renders text with a strikethrough</s></p>
+          <p><code>sup</code> Superscript<sup>(sup)</sup> defines a span of text that should be displayed higher and often smaller</p>
+          <p><code>sub</code> Subscript<sub>(sub)</sub> defines a span of text that should be displayed lower and often smaller</p>
+          <p><code>small</code> <small>Small makes the text font size one size smaller</small></p>
+          <p><code>abbr</code> <abbr title="abbreviation">Abbr.</abbr> represents an abbreviation and optionally provides a full description for it</p>
+          <p><code>q</code> <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">Quote indicates that the enclosed text is a short inline quotation</q></p>
+          <p><code>cite</code> <cite>Citation represents a reference to a creative work</cite></p>
+          <p><code>dfn</code> <dfn>Definition</dfn> represents the defining instance of a term</p>
+          <p><code>mark</code> <mark>Mark represents highlighted text</mark></p>
+          <p><code>var</code> <var>Var</var> represents a variable in a mathematical expression or a programming context</p>
+          <p><code>time</code> Time represents time on 24-hour clock (<time>22:00</time>), or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
           <p><a href="#top">[Top]</a></p>
         </article>
       </section>
