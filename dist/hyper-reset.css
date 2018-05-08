@@ -8,8 +8,8 @@
   --color-red: #ff4d4d;
   --color-red-light: #fff0f0;
   --color-yellow: #fde863;
-  --color-paragraph: #42444d;
-  --color-muted: rgba(66, 68, 77, 0.7);
+  --color-text-default: #42444d;
+  --color-text-muted: rgba(66, 68, 77, 0.7);
   --link-color: var(--color-primary);
   --button-color: var(--color-primary);
   --blockquote-border-color: var(--color-primary);
@@ -27,11 +27,11 @@
   --font-size-h4: calc(var(--rem-default) * 1.4);
   --font-size-h5: calc(var(--rem-default) * 1.2);
   --font-size-h6: calc(var(--rem-default) * 1);
-  --font-size-p: calc(var(--rem-default) * 1);
+  --font-size-default: calc(var(--rem-default) * 1);
   --font-size-lead: var(--font-size-h4);
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-family-serif: Georgia, "Times New Roman", Times, serif;
-  --font-family-mono-space: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: -apple-system, /* safari mac */ BlinkMacSystemFont, /* chrome mac */ Roboto, /* android */ "Helvetica Neue", /* mac */ Arial, /* win */ sans-serif;
+  --font-family-serif: Georgia, /* win mac */ Times, /* mac */ "Times New Roman", /* win */ serif;
+  --font-family-mono-space: SFMono-Regular, Menlo, Monaco, /* mac sans-serif */ Consolas, /* win sans serif */ Courier, /* mac slab serif */ "Courier New", /* win slab serif */ monospace;
   --input-line-height: var(--line-height-default);
   --input-border-width: var(--border-width-default);
   --input-border-color: var(--color-gray-light);
@@ -46,15 +46,10 @@
   --button-border-color: transparent;
   --button-bg-color: var(--button-color);
 }
-html {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-}
-html * {
-  box-sizing: inherit;
-}
-html *::before,
-html *::after {
-  box-sizing: inherit;
 }
 html,
 body {
@@ -112,7 +107,7 @@ figure {
   margin: 0 0 1rem 0;
 }
 figcaption {
-  color: var(--color-muted);
+  color: var(--color-text-muted);
 }
 table {
   display: block;
@@ -139,9 +134,9 @@ td {
   text-align: left;
 }
 html {
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-default);
   font-family: var(--font-family-sans-serif);
-  color: var(--color-paragraph);
+  color: var(--color-text-default);
   line-height: var(--line-height-default);
 }
 h1,
@@ -172,7 +167,7 @@ h6 {
   font-size: var(--font-size-h6);
 }
 p > b:only-child {
-  font-weight: 300;
+  font-weight: 400;
   font-size: var(--font-size-lead);
 }
 p {
@@ -192,7 +187,7 @@ blockquote {
   margin: 0 0 1rem 0;
   padding: 0.5rem 1.5rem;
   border-left: var(--border-width-default) solid var(--blockquote-border-color);
-  color: var(--color-muted);
+  color: var(--color-text-muted);
   font-size: 1.1em;
 }
 blockquote p:last-child {
@@ -210,7 +205,9 @@ address {
 }
 blockquote,
 cite,
-var {
+var,
+dfn,
+i {
   font-family: var(--font-family-serif);
 }
 abbr[title] {
@@ -282,9 +279,10 @@ samp {
   font-size: 95%;
 }
 kbd > kbd {
-  font-family: monospace;
+  padding: 1px 3px;
   border: var(--border-width-default), solid, currentColor;
   white-space: nowrap;
+  font-family: Courier, "Courier New", monospace;
 }
 pre {
   margin-top: 0;
@@ -295,7 +293,7 @@ pre {
        tab-size: 2;
   font-size: 1rem;
   text-align: left;
-  color: var(--color-paragraph);
+  color: var(--color-text-default);
   border-radius: var(--border-radius-default);
   background-color: var(--color-gray-light);
 }
@@ -346,6 +344,26 @@ textarea {
   background-clip: padding-box;
   font-size: var(--rem-default);
   line-height: var(--input-line-height);
+  outline: none;
+}
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="file"]:focus,
+select:focus,
+select[multiple]:focus,
+textarea:focus {
+  border-color: var(--input-active-color);
 }
 select:not([multiple]),
 input[type="color"] {

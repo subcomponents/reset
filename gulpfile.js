@@ -24,7 +24,7 @@ gulp.task('styles', function() {
 })
 
 gulp.task('docs', function() {
-  return gulp.src('src/docs/pages/*.njk')
+  return gulp.src('src/docs/pages/**/*.njk')
     .pipe(nunjucks({
       path: 'src/docs/partials/',
       data: {package: pkgJson}

@@ -4,18 +4,16 @@
 
   <div id="top" role="document">
 
-    {% include "header.njk" %}
-
     <main role="main">
       <article>
         <section>
           <p><b>Basic styles for default HTML elements</b></p>
-          <p>This library provides basic styles for default HTML elements, which is specially useful for statically generated pages, like <em>markdown-to-html</em>, or any HTML page without classes.</p>
+          <p>This library provides basic styles for default HTML elements, this is specially useful for statically generated pages, like <em>markdown-to-html</em>, documentation pages, or any basic HTML document.</p>
           <p>This library <strong>IS NOT</strong> intended to replace the use of CSS classes but to provide a presentable layer of default elements before further styling. <strong>Use where appropriate</strong>.</p>
         </section>
         <section>
           <h2>Installation</h2>
-<p>CDN Development (always latest):</p>
+<p>CDN Development (redirect to latest):</p>
 <pre><code>https://unpkg.com/{{ package.name }}/dist/{{ package.name }}.min.css</code></pre>
 <p>CDN Production (specific release):</p>
 <pre><code>https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.name }}.min.css</code></pre>
@@ -25,13 +23,7 @@
 <pre><code>@import url(&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.name }}.min.css&quot;);</code></pre>
         </section>
       </article>
-      <footer>
-        <hr>
-        <p>
-          <a href="https://twitter.com/intent/tweet/?&text={{ package.description | urlencode }}%20»&url={{ package.demo.url }}&via={{ package.author.twitter.url }}"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" alt="Tweet this" /></a>
-          <a href="{{ package.repo.url }}"><img src="https://img.shields.io/github/stars/heyallan/{{ package.name }}.svg?style=social&label=Stars&maxAge=2592000" alt="Fork me on GitHub" /></a>
-        </p>
-      </footer>
+
     </main><!-- role main -->
   </div><!-- role document  -->
 

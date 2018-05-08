@@ -1,11 +1,7 @@
-html {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  * {
-    box-sizing: inherit;
-    &::before, &::after {
-      box-sizing: inherit;
-    }
-  }
 }
 
 html,
@@ -80,5 +76,5 @@ figure {
   margin: 0 0 1rem 0;
 }
 figcaption {
-  color: var(--color-muted);
+  color: var(--color-text-muted);
 }
