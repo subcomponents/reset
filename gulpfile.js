@@ -7,6 +7,8 @@ var rename       = require('gulp-rename');
 var header       = require('gulp-header');
 var nunjucks     = require('gulp-nunjucks-render');
 var pkgJson      = require('./package.json');
+var argv         = require('yargs').argv;
+var baseURL      = (argv.production === undefined) ? '' : pkgJson.demo.url;
 var banner       = ['/** <%= package.name %> | <%= package.demo.url %> */ '];
 
 gulp.task('styles', function() {
@@ -27,7 +29,10 @@ gulp.task('docs', function() {
   return gulp.src('src/docs/pages/**/*.njk')
     .pipe(nunjucks({
       path: 'src/docs/partials/',
-      data: {package: pkgJson}
+      data: {
+        package: pkgJson,
+        baseURL: baseURL
+      },
     }))
     .pipe(gulp.dest('docs/'));
 })
