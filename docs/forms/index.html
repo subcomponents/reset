@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>hyper-reset - CSS hyper reset</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://heyallan.github.io/hyper-reset/hyper-reset.min.css"/>
+    <link rel="stylesheet" href="/hyper-reset.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/hyper-auto-layout/dist/hyper-auto-layout.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/hyper-properties/dist/hyper-properties.min.css"/>
   </head>
@@ -15,11 +15,11 @@
   <nav role="navigation">
   <a href="">Home</a>
   ·
-  <a href="https://heyallan.github.io/hyper-reset/typography/">Typography</a>
+  <a href="/typography/">Typography</a>
   ·
-  <a href="https://heyallan.github.io/hyper-reset/media/">Media</a>
+  <a href="/media/">Media</a>
   ·
-  <a href="https://heyallan.github.io/hyper-reset/forms/">Forms</a>
+  <a href="/forms/">Forms</a>
   ·
   <a href="https://github.com/heyallan/hyper-reset">Repository</a>
   ·
@@ -42,7 +42,7 @@
         <h1 id="forms">Forms</h1>
         <article>
           <h2>Horizontal</h2>
-          <p><code>p>label+input</code></p>
+          <p><code>p>(label+input)</code></p>
           <form>
             <p>
               <label for="inline-input-text">Text field</label>
@@ -53,16 +53,20 @@
             </p>
           </form>
           <h2>Vertical</h2>
-          <p><code>p((label)+br+(input)+br+(label))</code></p>
+          <p><code>p>(label+input+label)</code></p>
           <form>
             <p>
-              <label for="default-input-text">Text field</label><br/>
-              <input id="default-input-text" type="text" placeholder="Enter your text"><br>
+              <label for="default-input-text">Text field</label>
+              <br/>
+              <input id="default-input-text" type="text" placeholder="Enter your text">
+              <br/>
               <label for="default-input-text">Help text</label>
             </p>
             <p>
-              <label for="default-input-email">Email field</label><br/>
-              <input id="default-input-email" type="email" placeholder="Enter your email"><br/>
+              <label for="default-input-email">Email field</label>
+              <br/>
+              <input id="default-input-email" type="email" placeholder="Enter your email">
+              <br/>
               <label for="default-input-email">Help text</label>
             </p>
             <p>
