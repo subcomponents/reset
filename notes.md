@@ -40,4 +40,4 @@ github.com/hypercss/layout/
 ## NPM Page
 npm.org/package/@hypercss/layout/
 ## Unpkg Page
-unpkg.com/@hypercss/layout/@1.0.2/dist/layout.min.css
+unpkg.com/@hypercss/layout@0.0.0/dist/layout.min.css
