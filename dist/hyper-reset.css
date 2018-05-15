@@ -1,4 +1,5 @@
-/** hyper-reset | https://heyallan.github.io/hyper-reset */ :root {
+/** hyper-reset | https://heyallan.github.io/hyper-reset */
+:root {
   --color-primary: #0275d9;
   --color-secondary: #393a46;
   --color-gray: rgba(0, 0, 20, 0.1);
@@ -20,6 +21,7 @@
   --border-radius-default: 2px;
   --rem-default: 16px;
   --line-height-default: 1.5;
+  --line-height-heading: 1.2;
   --inline-text-padding: 2px 4px;
   --font-size-h1: calc(var(--rem-default) * 2);
   --font-size-h2: calc(var(--rem-default) * 1.8);
@@ -147,6 +149,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 1rem;
+  line-height: var(--line-height-heading);
 }
 h1 {
   font-size: var(--font-size-h1);
@@ -169,6 +172,7 @@ h6 {
 p > b:only-child {
   font-weight: 400;
   font-size: var(--font-size-lead);
+  line-height: var(--line-height-heading);
 }
 p {
   margin-top: 0;
@@ -238,7 +242,6 @@ mark {
   background-color: var(--color-yellow);
 }
 hr {
-  margin-top: 1rem;
   margin-bottom: 1rem;
   border-top: 1px solid var(--color-gray);
 }
@@ -290,6 +293,7 @@ pre {
   padding: 1rem 1.5rem;
   overflow-x: scroll;
   -moz-tab-size: 2;
+    -o-tab-size: 2;
        tab-size: 2;
   font-size: 1rem;
   text-align: left;

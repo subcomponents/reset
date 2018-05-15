@@ -1,7 +1,7 @@
 {
   "name": "hyper-reset",
-  "version": "1.3.1",
-  "description": "CSS hyper reset",
+  "version": "1.4.0",
+  "description": "CSS framework without classes",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heyallan/hyper-reset.git"
@@ -9,37 +9,37 @@
   "keywords": [
     "html",
     "css",
-    "markdown"
+    "static",
+    "hyper"
   ],
   "author": {
-    "name": "Allan Moreno",
-    "email": "hello@heyallan.com",
+    "username": "heyallan",
     "twitter": {
-      "url": "https://twitter.com/heyallanmoreno",
-      "username": "heyallanmoreno"
+      "username": "heyallanmoreno",
+      "url": "https://twitter.com/heyallanmoreno"
     }
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/heyallan/hyper-reset/issues"
   },
+  "homepage": "https://heyallan.github.io/hyper-reset",
   "repo": {
     "url": "https://github.com/heyallan/hyper-reset"
   },
   "demo": {
     "url": "https://heyallan.github.io/hyper-reset"
   },
-  "homepage": "https://github.com/heyallan/hyper-reset#readme",
+  "keyword": "reset",
   "devDependencies": {
-    "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-header": "^1.8.12",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-header": "^2.0.5",
     "gulp-less": "^3.5.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-nunjucks-render": "^2.2.2",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.12.1",
+    "gulp-sourcemaps": "^2.6.4",
     "yargs": "^11.0.0"
   }
 }
