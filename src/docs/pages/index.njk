@@ -1,27 +1,28 @@
-{% extends "base.njk" %}
+{% extends "template-default.njk" %}
 
 {% block content %}
 
     <main role="main">
-      <article>
-        <section>
-          <p><b>{{ package.description }}</b></p>
-          <p>This library provides basic styles for default HTML elements, this is specially useful for statically generated pages, like <em>markdown-to-html</em>, documentation pages, or any basic HTML document.</p>
-          <p>This library <strong>IS NOT</strong> intended to replace the use of CSS classes but to provide a presentable layer of default elements before further styling. <strong>Use where appropriate</strong>.</p>
-        </section>
-        <section>
-          <h2>Installation</h2>
-<p>CDN Development (redirect to latest):</p>
-<pre><code>https://unpkg.com/{{ package.name }}/dist/{{ package.name }}.min.css</code></pre>
-<p>CDN Production (specific release):</p>
-<pre><code>https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.name }}.min.css</code></pre>
-<p>NPM package:</p>
-<pre><code>$ npm install --save-dev {{ package.name }}</code></pre>
-<p>CSS import:</p>
-<pre><code>@import url(&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.name }}.min.css&quot;);</code></pre>
-        </section>
-      </article>
-
+      <section>
+        <p><b>{{ package.description }}</b></p>
+        <figure><img src="{{ baseURL }}/screenshot.png?t={{ timestamp }}" alt="screen shot"></figure>
+      </section>
+      <section>
+        <h2>Abstract</h2>
+        <p>These library provides default styles for default elements. Specially useful for statically generated sites, like <em>markdown-to-html</em>, documentation sites, demo sites, and as HTML foundation.</p>
+        <p>This library <strong>IS NOT</strong> intended to replace the use of CSS classes but to provide a presentable layer of elements before further styling. <strong>Use where appropriate</strong>.</p>
+      </section>
+      <section>
+        <h2>Installation</h2>
+        <p>CDN Development (redirect to latest):</p>
+        <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
+        <p>CDN Production (specific release):</p>
+        <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
+        <p>NPM package:</p>
+        <pre><code>$ npm install --save-dev {{ package.name }}</code></pre>
+        <p>CSS import:</p>
+        <pre><code>@import url(&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css&quot;);</code></pre>
+      </section>
     </main><!-- role main -->
 
 {% endblock %}

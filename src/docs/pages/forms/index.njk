@@ -1,11 +1,8 @@
-{% extends "base.njk" %}
+{% extends "template-default.njk" %}
 
 {% block content %}
 
-  <div id="top" role="document">
-
     <main role="main">
-
       <section>
         <h1 id="forms">Forms</h1>
         <article>
@@ -42,7 +39,7 @@
             </p>
           </form>
           <h2>Fieldsets</h2>
-          <p><code>fieldset>p(label+input+label)</code></p>
+          <p><code>fieldset>p>(label+input+label)</code></p>
           <form>
             <fieldset id="form-inputs">
               <legend>Input fields</legend>
@@ -196,6 +193,5 @@
         </article>
       </section>
     </main>
-  </div>
 
 {% endblock %}
