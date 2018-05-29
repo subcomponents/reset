@@ -1,9 +1,9 @@
 # hyper-reset
 
-> CSS hyper reset
+> CSS framework without classes
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-[![Support](https://www.paypal.me/heyallan/10)
+![License][LicenseBadgeURL]
+[![Donate][DonateBadgeURL]][DonateURL]
 
 ## Docs
 
@@ -19,3 +19,7 @@ Be my guest:
 ## MIT License
 
 The MIT License is a permissive license. It lets you do anything you want with the code as long as you provide attribution back to the author and don’t hold him/her liable. jQuery, .NET Core, and Rails use the MIT License.
+
+[LicenseBadgeURL]: https://img.shields.io/badge/License-MIT-blue.svg
+[DonateBadgeURL]: https://img.shields.io/badge/Support_Active-Development-blue.svg
+[DonateURL]: https://www.paypal.me/heyallan/10
