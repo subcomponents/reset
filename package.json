@@ -1,10 +1,10 @@
 {
-  "name": "hyper-reset",
-  "version": "1.5.1",
+  "name": "hyper-reset-css",
+  "version": "1.5.2",
   "description": "CSS framework without classes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyallan/hyper-reset.git"
+    "url": "git+https://github.com/heyallan/hyper-reset-css.git"
   },
   "keywords": [
     "html",
@@ -22,14 +22,15 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyallan/hyper-reset/issues"
+    "url": "https://github.com/heyallan/hyper-reset-css/issues"
   },
-  "homepage": "https://heyallan.github.io/hyper-reset",
+  "homepage": "https://heyallan.github.io/hyper-reset-css",
+  "main": "dist/reset.min.css",
   "repo": {
-    "url": "https://github.com/heyallan/hyper-reset"
+    "url": "https://github.com/heyallan/hyper-reset-css"
   },
   "demo": {
-    "url": "https://heyallan.github.io/hyper-reset"
+    "url": "https://heyallan.github.io/hyper-reset-css"
   },
   "keyword": "reset",
   "scope": "@hypercss",

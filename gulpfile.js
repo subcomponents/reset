@@ -15,11 +15,11 @@ gulp.task('css', function() {
   return gulp.src('src/less/bundle.less')
     .pipe(less())
     .pipe(autoprefix())
-    .pipe(rename(pkgJson.name + '.css'))
+    .pipe(rename(pkgJson.keyword + '.css'))
     .pipe(header(banner, { package: pkgJson }))
     .pipe(gulp.dest('dist')) // <-- deliver expanded for dist
     .pipe(minify())
-    .pipe(rename(pkgJson.name + '.min.css'))
+    .pipe(rename(pkgJson.keyword + '.min.css'))
     .pipe(header(banner, { package: pkgJson }))
     .pipe(gulp.dest('dist')) // <-- deliver compressed for dist
     .pipe(gulp.dest('docs')) // <-- deliver extra copy for docs
@@ -35,6 +35,6 @@ gulp.task('html', function() {
 })
 
 gulp.task('default', ['css', 'html'], function() {
-  gulp.watch('src/less/*', ['css']),
+  gulp.watch('src/less/*', ['css', 'html']),
   gulp.watch('src/docs/**/*', ['html'])
 })
