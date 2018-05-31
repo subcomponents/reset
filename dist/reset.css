@@ -89,8 +89,7 @@ video {
   max-width: 100%;
 }
 img,
-canvas,
-video {
+canvas {
   height: auto;
 }
 svg {
@@ -101,12 +100,14 @@ embed,
 object,
 iframe {
   max-width: 100%;
-  max-height: 75vw;
   border: 0;
   margin-bottom: 1rem;
 }
 figure {
-  margin: 0 0 1rem 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
 }
 figcaption {
   color: var(--color-text-muted);
