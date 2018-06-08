@@ -29,7 +29,7 @@ gulp.task('html', function() {
   return gulp.src('src/docs/pages/**/*.njk')
     .pipe(nunjucks({
       path: 'src/docs/partials',
-      data: { package: pkgJson, baseURL: baseURL, timestamp: Date.now() }
+      data: { package: pkgJson, baseURL: baseURL }
     }))
     .pipe(gulp.dest('docs'));
 })
