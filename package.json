@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/heyallan/hyper-reset-css.git"
   },
-  "abstract": "Default styles for default elements. Specially useful for styling statically generated sites, like <em>markdown-to-html</em>, documentation sites, demos, and etc. It can be used as a reset on any website. It will provide a presentable layer of elements on which to build upon.",
+  "abstract": "Provides default styles for default elements. Specially useful for working with statically generated sites, like markdown-to-html, documentation sites, demos, etc. It can also be used as a reset on any branded website. It will provide a presentable layer of standard elements on which to build upon.",
   "keywords": [
     "css",
     "hyper",
