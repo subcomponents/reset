@@ -1,17 +1,16 @@
 {
   "name": "hyper-reset-css",
-  "version": "1.5.5",
-  "description": "CSS framework without classes",
+  "version": "1.6.0",
+  "description": "CSS reset",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heyallan/hyper-reset-css.git"
   },
+  "abstract": "Default styles for default elements. Specially useful for styling statically generated sites, like <em>markdown-to-html</em>, documentation sites, demos, and etc. It can be used as a reset on any website. It will provide a presentable layer of elements on which to build upon.",
   "keywords": [
-    "html",
     "css",
-    "reset",
     "hyper",
-    "atomic"
+    "reset"
   ],
   "author": {
     "username": "heyallan",
@@ -29,20 +28,16 @@
   "repo": {
     "url": "https://github.com/heyallan/hyper-reset-css"
   },
-  "demo": {
-    "url": "https://heyallan.github.io/hyper-reset-css"
-  },
   "keyword": "reset",
-  "scope": "@hypercss",
+  "scope": "@metacss",
   "devDependencies": {
+    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-header": "^2.0.5",
     "gulp-less": "^3.5.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-nunjucks-render": "^2.2.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "yargs": "^11.0.0"
+    "gulp-rename": "^1.2.2"
   }
 }

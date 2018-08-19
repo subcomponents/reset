@@ -4,16 +4,12 @@
 
   <main role="main">
     <section>
-      <h1 id="media-content">Media</h1>
+      <h1 id="media">Media (embedded content)</h1>
       <article>
-        <h2 id="media-images">Images</h2>
-        <h3>Image</h3>
+        <h2 id="image">Image</h2>
         <p><code>img</code></p>
         <p><img src="https://unsplash.it/550/350/?image=961" alt="Image"></p>
         <h3>Figure</h3>
-        <p><code>figure>img</code></p>
-        <figure><img src="https://unsplash.it/550/350/?image=961" alt="Image"></figure>
-        <h3>Figcaption</h3>
         <p><code>figure>(img+figcaption)</code></p>
         <figure>
           <img src="https://unsplash.it/550/350/?image=961" alt="Image">
@@ -21,38 +17,52 @@
         </figure>
       </article>
       <article>
-        <h2 id="media-audio">Native audio</h2>
+        <h2 id="audio">Audio</h2>
         <p><code>audio</code></p>
         <audio controls>
           <source src="coffeehouse.mp3" type="audio/mpeg">
           <source src="coffeehouse.ogg" type="audio/ogg">
         </audio>
+        <br><br>
       </article>
       <article>
-        <h2 id="media-video">Native video</h2>
+        <h2 id="video">Video</h2>
         <p><code>video</code></p>
         <video width="480" height="270" controls poster="chromecast.jpg">
           <source src="chromecast.webm" type="video/webm">
           <source src="chromecast.mp4" type="video/mp4">
           Your browser does not support the <code>video</code> element.
         </video>
-        <h2 id="media-iframe">Iframe</h2>
-        <p><code>iframe</code></p>
-        <iframe width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic" frameborder="0" allowfullscreen></iframe>
-        <h2 id="media-object">Object</h2>
-        <p><code>object</code></p>
-        <object width="550" height="350" data="https://www.youtube.com/embed/zxT0wknZxic"></object>
-        <h2 id="media-embed">Embed</h2>
-        <p><code>embed</code></p>
-        <embed width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic">
+        <br><br>
       </article>
       <article>
-        <h2 id="media-canvas">Canvas</h2>
+        <h2 id="iframe">iframe</h2>
+        <p><code>iframe</code></p>
+        <iframe width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic"></iframe>
+      </article>
+      <article>
+        <h2 id="aspect-ratio">Aspect ratio</h2>
+        <p><code>figure[style="--aspect-ratio:16/9"] > iframe</code></p>
+        <p>Default is <code>16/9</code>, accepts any fraction</p>
+        <figure style="--aspect-ratio:16/9;">
+          <iframe src="https://www.youtube.com/embed/zxT0wknZxic"></iframe>
+        </figure>
+      </article>
+      <article>
+        <h2 id="embed">Embed</h2>
+        <p><code>embed</code></p>
+        <embed width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic">
+        <h2 id="object">Object</h2>
+        <p><code>object</code></p>
+        <object width="550" height="350" data="https://www.youtube.com/embed/zxT0wknZxic"></object>
+      </article>
+      <article>
+        <h2 id="canvas">Canvas</h2>
         <p><code>canvas</code></p>
-        <canvas id="canvas" width="550" height="350">canvas</canvas>
+        <canvas id="canvasDemo" width="550" height="350">canvas</canvas>
         <script type="application/javascript">
           (function draw() {
-            var canvas = document.getElementById("canvas");
+            var canvas = document.getElementById("canvasDemo");
             if (canvas.getContext) {
               var ctx = canvas.getContext("2d");
               ctx.fillStyle = "rgb(230, 230, 250)";
@@ -64,9 +74,7 @@
             }
           })();
         </script>
-      </article>
-      <article>
-        <h2 id="media-svg">Inline SVG</h2>
+        <h2 id="svg">Inline SVG</h2>
         <p><code>svg</code></p>
         <svg width="550" height="350" viewBox="0 0 550 350" preserveAspectRatio="xMinYMin">
           <rect x="0" y="0" width="550" height="350" fill= "rgb(230, 230, 250)"/>
@@ -75,14 +83,15 @@
         </svg>
       </article>
       <article>
-        <h2 id="media-meter">Meter</h2>
+        <h2 id="meter">Meter</h2>
         <p><code>meter</code></p>
         <meter value="75" min="0" max="100">2 out of 10</meter>
       </article>
       <article>
-        <h2 id="media-progress">Progress</h2>
+        <h2 id="progress">Progress</h2>
         <p><code>progress</code></p>
         <progress value="75" max="100">Progress</progress>
+        <p></p>
       </article>
     </section>
   </main>

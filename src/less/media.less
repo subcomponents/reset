@@ -9,37 +9,60 @@ video {
 
 img,
 canvas,
-audio,
 video {
   max-width: 100%;
-}
-
-img,
-canvas {
   height: auto;
 }
 
-// embedded documents
 svg {
-  // requires attributes: [width="<a>"], [height="<b>"], [viewBox="0 0 <a> <b>"], [preserveAspectRatio="xMinYMin"]
   max-width: 100%;
-  height: 100%;
 }
 
-embed,
+iframe,
 object,
-iframe {
+embed {
   max-width: 100%;
-  border: 0;
   margin-bottom: 1rem;
+  border: 0;
 }
 
 figure {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 1rem;
-  margin-left: 0;
+  margin: 0 0 1rem 0;
 }
 figcaption {
   color: var(--color-text-muted);
+}
+
+// aspect ratio - container
+[style*="--aspect-ratio"] {
+  position: relative;
+}
+
+// aspect ratio - size definition
+[style*="--aspect-ratio"]:before {
+  float: left;
+  content: "";
+  padding-top: ~"calc(100% / (var(--aspect-ratio)))";
+}
+
+// aspect ratio - clearfix
+[style*="--aspect-ratio"]:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// aspect ratio - embedded element
+[style*="--aspect-ratio"] iframe,
+[style*="--aspect-ratio"] video,
+[style*="--aspect-ratio"] object,
+[style*="--aspect-ratio"] embed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
 }

@@ -12,6 +12,9 @@
   --color-text-default:   hsla(230, 8%, 28%, 1);
   --color-text-muted:     hsla(230, 8%, 28%, 0.7);
 
+  // default aspect ratio
+  --aspect-ratio: 16/9;
+
   // theming
   --link-color:              var(--color-primary);
   --button-color:            var(--color-primary);
@@ -51,8 +54,8 @@
       Arial,              /* win */
       sans-serif;
   --font-family-serif:
-      Georgia, /* win mac */
-      Times,   /* mac */
+      Georgia,           /* win and mac */
+      Times,             /* mac */
       "Times New Roman", /* win */
       serif;
   --font-family-mono-space:
@@ -81,6 +84,3 @@
   --button-border-color:  transparent;
   --button-bg-color:      var(--button-color);
 }
-
-// form grups beakpoint
-@breakpoint-sm: 768px;

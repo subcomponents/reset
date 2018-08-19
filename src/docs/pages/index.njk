@@ -2,27 +2,26 @@
 
 {% block content %}
 
-    <main role="main">
-      <section>
-        <p><b>{{ package.description }}</b></p>
-        <figure><img src="{{ baseURL }}/screenshot.png" alt="screen shot"></figure>
-      </section>
-      <section>
-        <h2>Abstract</h2>
-        <p>These library provides default styles for default elements. Specially useful for statically generated sites, like <em>markdown-to-html</em>, documentation sites, demo sites, or as a reset for any project.</p>
-        <p>This library <strong>IS NOT</strong> intended to replace the use of CSS classes but to provide a presentable layer of elements before further styling. <strong>Use where appropriate</strong>.</p>
-      </section>
-      <section>
-        <h2>Installation</h2>
-        <p>CDN Development (redirect to latest):</p>
-        <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
-        <p>CDN Production (specific release):</p>
-        <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
-        <p>NPM package:</p>
-        <pre><code>$ npm install --save-dev {{ package.name }}</code></pre>
-        <p>CSS import:</p>
-        <pre><code>@import url(&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css&quot;);</code></pre>
-      </section>
-    </main><!-- role main -->
+  <main role="main">
+    <section>
+      <p><b>{{ package.description }}</b></p>
+      <figure><img src="./screenshot.png" alt="screen shot"></figure>
+    </section>
+    <section>
+      <h2>Abstract</h2>
+      <p>{{ package.abstract | safe }}</p>
+    </section>
+    <section>
+      <h2>Installation</h2>
+      <p>CDN Development (redirect to latest):</p>
+      <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}@latest/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
+      <p>CDN Production (specific release):</p>
+      <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
+      <p>NPM package:</p>
+      <pre><code>$ npm install --save-dev {{ package.name }}</code></pre>
+      <p>CSS import:</p>
+      <pre><code>@import url(&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css&quot;);</code></pre>
+    </section>
+  </main><!-- role main -->
 
 {% endblock %}
