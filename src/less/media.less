@@ -38,11 +38,13 @@ figcaption {
 }
 
 // aspect ratio - container
+figure.video,
 [style*="--aspect-ratio"] {
   position: relative;
 }
 
 // aspect ratio - size definition
+figure.video:before,
 [style*="--aspect-ratio"]:before {
   float: left;
   content: "";
@@ -50,6 +52,7 @@ figcaption {
 }
 
 // aspect ratio - clearfix
+figure.video:after,
 [style*="--aspect-ratio"]:after {
   content: "";
   display: block;
@@ -57,6 +60,8 @@ figcaption {
 }
 
 // aspect ratio - embedded element
+figure.video iframe,
+figure.video video,
 [style*="--aspect-ratio"] iframe,
 [style*="--aspect-ratio"] video,
 [style*="--aspect-ratio"] object,

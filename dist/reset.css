@@ -36,6 +36,8 @@
   --font-family-sans-serif: -apple-system, /* safari mac */ BlinkMacSystemFont, /* chrome mac */ Roboto, /* android */ "Helvetica Neue", /* mac */ Arial, /* win */ sans-serif;
   --font-family-serif: Georgia, /* win and mac */ Times, /* mac */ "Times New Roman", /* win */ serif;
   --font-family-mono-space: SFMono-Regular, Menlo, Monaco, /* mac sans-serif */ Consolas, /* win sans serif */ Courier, /* mac slab serif */ "Courier New", /* win slab serif */ monospace;
+  --font-family-body: var(--font-family-sans-serif);
+  --font-family-heading: var(--font-family-sans-serif);
   --input-line-height: var(--line-height-default);
   --input-border-width: var(--border-width-default);
   --input-border-color: var(--color-gray-light);
@@ -110,19 +112,24 @@ figure {
 figcaption {
   color: var(--color-text-muted);
 }
+figure.video,
 [style*="--aspect-ratio"] {
   position: relative;
 }
+figure.video:before,
 [style*="--aspect-ratio"]:before {
   float: left;
   content: "";
   padding-top: calc(100% / (var(--aspect-ratio)));
 }
+figure.video:after,
 [style*="--aspect-ratio"]:after {
   content: "";
   display: block;
   clear: both;
 }
+figure.video iframe,
+figure.video video,
 [style*="--aspect-ratio"] iframe,
 [style*="--aspect-ratio"] video,
 [style*="--aspect-ratio"] object,
@@ -165,6 +172,7 @@ html {
   font-family: var(--font-family-sans-serif);
   color: var(--color-text-default);
   line-height: var(--line-height-default);
+  font-family: var(--font-family-body);
 }
 h1,
 h2,
@@ -175,6 +183,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: var(--line-height-heading);
+  font-family: var(--font-family-heading);
 }
 h1 {
   font-size: var(--font-size-h1);
