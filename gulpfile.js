@@ -10,7 +10,7 @@ var browserSync  = require('browser-sync').create();
 var banner       = ['/** <%= package.repo.url %> */\n\n'];
 
 gulp.task('css', function() {
-  return gulp.src('./src/less/bundle.less')
+  return gulp.src('./src/less/bundle.css')
     .pipe(less())
     .pipe(autoprefix())
     .pipe(rename(pkgJson.keyword + '.css'))
