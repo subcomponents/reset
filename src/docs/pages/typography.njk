@@ -3,196 +3,206 @@
 {% block content %}
 
   <main role="main">
-    <section>
-      <h1 id="typography">Typography</h1>
-      <article id="typography-headings">
-        <h1 style="display:inline-block;">Heading 1</h1>
-        <h2 style="display:inline-block;">Heading 2</h2>
-        <h3 style="display:inline-block;">Heading 3</h3>
-        <h4 style="display:inline-block;">Heading 4</h4>
-        <h5 style="display:inline-block;">Heading 5</h5>
-        <h6 style="display:inline-block;">Heading 6</h6>
-      </article>
-      <article>
-        <h2 id="typography-paragraph">Paragraph</h2>
-        <p>The HTML <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p>
-      </article>
-      <article>
-        <h2 id="typography-blockquote">Blockquote</h2>
-        <p><code>blockquote>p+cite</code></p>
-        <blockquote>
-          <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
-          <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">The block quotation element</a> by Mozilla MDN</cite>
-        </blockquote>
-      </article>
-      <article>
-        <h2 id="typography-address">Address</h2>
-        <p><code>address</code></p>
-        <address>
-          Written by the editorial and news team:<br/>
-          Contact author at info@example.com<br/>
-          Mail us at PO Box 123, Citysville<br/>
-          Tel +1 212 3131
-        </address>
-      </article>
-      <article>
-        <h2 id="typography-lists">Lists</h2>
-        <h3>Description list</h3>
-        <p><code>dl>(dt+dd+dd+dd)</code></p>
-        <dl>
-          <dt>De·scrip·tion Term A</dt>
-          <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
-          <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
-          <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
-        </dl>
-        <p><code>dl>(dt+dt+dt+dd)</code></p>
-        <dl>
-          <dt>De·scrip·tion Term A</dt>
-          <dt>De·scrip·tion Term B</dt>
-          <dt>De·scrip·tion Term C</dt>
-          <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
-        </dl>
-        <h3>Ordered list</h3>
-        <p><code>ol>li</code></p>
-        <ol>
-          <li>List item
-            <ol>
-              <li>Subitem</li>
-              <li>Subitem</li>
-            </ol>
-          </li>
-          <li>List item</li>
-          <li>List item</li>
-        </ol>
-        <h3>Unordered list</h3>
-        <p><code>ul>li</code></p>
-        <ul>
-          <li>List item
-            <ul>
-              <li>Subitem</li>
-              <li>Subitem</li>
-            </ul>
-          </li>
-          <li>List item</li>
-          <li>List item</li>
-        </ul>
-      </article>
-      <article>
-        <h2 id="typography-hr">Horizontal rule</h2>
-        <hr>
-      </article>
-      <article>
-        <h2 id="typography-table">Table</h2>
-        <table>
-          <caption>Caption for the current table</caption>
-          <thead>
-            <tr>
-              <th>Table Heading</th>
-              <th>Table Heading</th>
-              <th>Table Heading</th>
-              <th>Table Heading</th>
-              <th>Table Heading</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th>Table Footer</th>
-              <th>Table Footer</th>
-              <th>Table Footer</th>
-              <th>Table Footer</th>
-              <th>Table Footer</th>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-            </tr>
-            <tr>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-            </tr>
-            <tr>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-            </tr>
-            <tr>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-              <td>Table Cell</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-      <article>
-        <h2 id="typography-code">Code</h2>
-        <h3>Inline code</h3>
-        <p><code>code</code> Inline snippet: <code>{a, b, c}</code></p>
-        <p><code>kbd</code> Keyboard input: <kbd>$ npm install --save-dev hyper-reset</kbd></p>
-        <p><code>samp</code> Sample output: <samp>&gt; hyper-reset has been successfully installed</samp></p>
-        <p><code>kbd>kbd</code> Keystrokes: <kbd><kbd>Cmd ⌘</kbd> <kbd>Shift ⇧</kbd> <kbd>Alt ⌥</kbd></kbd></p>
-        <h3>Preformatted text</h3>
-        <p><code>pre</code></p>
+    <h1 id="typography">Typography</h1>
+    <article>
+      <h2 id="typography-headings">Headings</h2>
+      <h1>1. The quick brown fox jumps over the lazy designer</h1>
+      {# <p>The <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p> #}
+      <hr>
+      <h2>2. The quick brown fox jumps over the lazy designer</h2>
+      {# <p>The <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p> #}
+      <hr>
+      <h3>3. The quick brown fox jumps over the lazy designer</h3>
+      {# <p>The <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p> #}
+      <hr>
+      <h4>4. The quick brown fox jumps over the lazy designer</h4>
+      {# <p>The <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p> #}
+      <hr>
+      <h5>5. The quick brown fox jumps over the lazy designer</h5>
+      {# <p>The <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p> #}
+      <hr>
+      <h6>6. The quick brown fox jumps over the lazy designer</h6>
+      {# <p>The <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p> #}
+    </article>
+    <article>
+      <h2 id="typography-paragraph">Paragraph</h2>
+      <p>The <code>p</code> element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.</p>
+    </article>
+    <article>
+      <h2 id="typography-blockquote">Blockquote</h2>
+      <p><code>blockquote>p+cite</code></p>
+      <blockquote>
+        <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
+        <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">The block quotation element</a> by Mozilla MDN</cite>
+      </blockquote>
+    </article>
+    <article>
+      <h2 id="typography-address">Address</h2>
+      <p><code>address</code></p>
+      <address>
+        Written by the editorial and news team:<br/>
+        Contact author at info@example.com<br/>
+        Mail us at PO Box 123, Citysville<br/>
+        Tel +1 212 3131
+      </address>
+    </article>
+    <article>
+      <h2 id="typography-lists">Lists</h2>
+      <h3>Description list</h3>
+      <p><code>dl>(dt+dd+dd+dd)</code></p>
+      <dl>
+        <dt>De·scrip·tion Term A</dt>
+        <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
+        <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
+        <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
+      </dl>
+      <p><code>dl>(dt+dt+dt+dd)</code></p>
+      <dl>
+        <dt>De·scrip·tion Term A</dt>
+        <dt>De·scrip·tion Term B</dt>
+        <dt>De·scrip·tion Term C</dt>
+        <dd>[dih-skrip-shuh n] <small><i>(noun)</i></small> Description detail</dd>
+      </dl>
+      <h3>Ordered list</h3>
+      <p><code>ol>li</code></p>
+      <ol>
+        <li>List item
+          <ol>
+            <li>Subitem</li>
+            <li>Subitem</li>
+          </ol>
+        </li>
+        <li>List item</li>
+        <li>List item</li>
+      </ol>
+      <h3>Unordered list</h3>
+      <p><code>ul>li</code></p>
+      <ul>
+        <li>List item
+          <ul>
+            <li>Subitem</li>
+            <li>Subitem</li>
+          </ul>
+        </li>
+        <li>List item</li>
+        <li>List item</li>
+      </ul>
+    </article>
+    <article>
+      <h2 id="typography-hr">Horizontal rule</h2>
+      <hr>
+    </article>
+    <article>
+      <h2 id="typography-table">Table</h2>
+      <table>
+        <caption>Caption for the current table</caption>
+        <thead>
+          <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Table Footer</th>
+            <th>Table Footer</th>
+            <th>Table Footer</th>
+            <th>Table Footer</th>
+            <th>Table Footer</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+          </tr>
+          <tr>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+          </tr>
+          <tr>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+          </tr>
+          <tr>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+            <td>Table Cell</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article>
+      <h2 id="typography-code">Code</h2>
+      <h3>Inline code</h3>
+      <p><code>code</code> Inline snippet: <code>{a, b, c}</code></p>
+      <p><code>kbd</code> Keyboard input: <kbd>$ npm install --save-dev hyper-reset</kbd></p>
+      <p><code>samp</code> Sample output: <samp>&gt; hyper-reset has been successfully installed</samp></p>
+      <p><code>kbd>kbd</code> Keystrokes: <kbd><kbd>Cmd ⌘</kbd> <kbd>Shift ⇧</kbd> <kbd>Alt ⌥</kbd></kbd></p>
+      <h3>Preformatted text</h3>
+      <p><code>pre</code></p>
 <pre>.ninja {
   color: black;
   visibility: hidden;
 }
 </pre>
-        <p><code>pre>code</code></p>
+      <p><code>pre>code</code></p>
 <pre><code>.lego {
   display: block;
   color: red;
 }</code></pre>
-      </article>
-      <article>
-        <h2 id="typography-inline">Inline elements</h2>
-        <p>
-          Inline elements can contain
-          <a href="#!">links</a>,
-          <strong>important</strong> or <em>emphasised</em> words,
-          <code>code snippets</code>,
-          <abbr title="abbreviations">abbr</abbr>,
-          <q>short quotes</q>,
-          <cite>citations</cite>,
-          <mark>highlighted text</mark>
-          also <s>strikethrough</s>,
-          <del>deleted</del> and <ins>inserted</ins> elements,
-          <small>small text</small>,
-          and
-          words with<sub>sub</sub> and<sup>sup</sup> text.
-        </p>
-        <p><code>a</code> <a href="#!">Anchor defines a hyperlink to a location</a></p>
-        <p><code>strong</code> <strong>Strong is used to indicate strong importance</strong></p>
-        <p><code>em</code> <em>Emphasis marks text that has stress emphasis</em></p>
-        <p><code>b</code> <b>Bold is stylistically different from normal text</b> (not to be confused with <code>strong</code>)</p>
-        <p><code>i</code> <i>Italic is offset from the normal text</i> (not to be confused with <code>em</code>)</p>
-        <p><code>u</code> <u>Underline is text with an unarticulated, though explicitly rendered, non-textual annotation</u></p>
-        <p><code>del</code> <del>Deleted represents a range of text that has been deleted from a document</del></p>
-        <p><code>ins</code> <ins>Inserted represents a range of text that has been added to a document</ins></p>
-        <p><code>s</code> <s>Strikethrough renders text with a strikethrough</s></p>
-        <p><code>sup</code> Superscript<sup>(sup)</sup> defines a span of text that should be displayed higher and often smaller</p>
-        <p><code>sub</code> Subscript<sub>(sub)</sub> defines a span of text that should be displayed lower and often smaller</p>
-        <p><code>small</code> <small>Small makes the text font size one size smaller</small></p>
-        <p><code>abbr</code> <abbr title="abbreviation">Abbr.</abbr> represents an abbreviation and optionally provides a full description for it</p>
-        <p><code>q</code> <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">Quote indicates that the enclosed text is a short inline quotation</q></p>
-        <p><code>cite</code> <cite>Citation represents a reference to a creative work</cite></p>
-        <p><code>dfn</code> <dfn>Definition</dfn> represents the defining instance of a term</p>
-        <p><code>mark</code> <mark>Mark represents highlighted text</mark></p>
-        <p><code>var</code> <var>Var</var> represents a variable in a mathematical expression or a programming context</p>
-        <p><code>time</code> Time represents time on 24-hour clock (<time>22:00</time>), or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
-      </article>
-    </section>
+    </article>
+    <article>
+      <h2 id="typography-inline">Inline elements</h2>
+      <p>
+        Inline elements can contain
+        <a href="#!">links</a>,
+        <strong>important</strong> or <em>emphasised</em> words,
+        <code>code snippets</code>,
+        <abbr title="abbreviations">abbr</abbr>,
+        <q>short quotes</q>,
+        <cite>citations</cite>,
+        <mark>highlighted text</mark>
+        also <s>strikethrough</s>,
+        <del>deleted</del> and <ins>inserted</ins> elements,
+        <small>small text</small>,
+        and
+        words with<sub>sub</sub> and<sup>sup</sup> text.
+      </p>
+      <p><code>a</code> <a href="#!">Anchor defines a hyperlink to a location</a></p>
+      <p><code>strong</code> <strong>Strong is used to indicate strong importance</strong></p>
+      <p><code>em</code> <em>Emphasis marks text that has stress emphasis</em></p>
+      <p><code>b</code> <b>Bold is stylistically different from normal text</b> (not to be confused with <code>strong</code>)</p>
+      <p><code>i</code> <i>Italic is offset from the normal text</i> (not to be confused with <code>em</code>)</p>
+      <p><code>u</code> <u>Underline is text with an unarticulated, though explicitly rendered, non-textual annotation</u></p>
+      <p><code>del</code> <del>Deleted represents a range of text that has been deleted from a document</del></p>
+      <p><code>ins</code> <ins>Inserted represents a range of text that has been added to a document</ins></p>
+      <p><code>s</code> <s>Strikethrough renders text with a strikethrough</s></p>
+      <p><code>sup</code> Superscript<sup>(sup)</sup> defines a span of text that should be displayed higher and often smaller</p>
+      <p><code>sub</code> Subscript<sub>(sub)</sub> defines a span of text that should be displayed lower and often smaller</p>
+      <p><code>small</code> <small>Small makes the text font size one size smaller</small></p>
+      <p><code>abbr</code> <abbr title="abbreviation">Abbr.</abbr> represents an abbreviation and optionally provides a full description for it</p>
+      <p><code>q</code> <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">Quote indicates that the enclosed text is a short inline quotation</q></p>
+      <p><code>cite</code> <cite>Citation represents a reference to a creative work</cite></p>
+      <p><code>dfn</code> <dfn>Definition</dfn> represents the defining instance of a term</p>
+      <p><code>mark</code> <mark>Mark represents highlighted text</mark></p>
+      <p><code>var</code> <var>Var</var> represents a variable in a mathematical expression or a programming context</p>
+      <p><code>time</code> Time represents time on 24-hour clock (<time>22:00</time>), or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
+    </article>
   </main>
 
 {% endblock %}

@@ -7,7 +7,7 @@ var header       = require('gulp-header');
 var nunjucks     = require('gulp-nunjucks-render');
 var pkgJson      = require('./package.json');
 var browserSync  = require('browser-sync').create();
-var banner       = ['/** (C) License <%= package.license %> | <%= package.repo.url %> */\n\n'];
+var banner       = ['/** <%= package.repo.url %> */\n\n'];
 
 gulp.task('css', function() {
   return gulp.src('./src/less/bundle.less')

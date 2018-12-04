@@ -10,7 +10,6 @@ body {
   padding: 0;
 }
 
-// block elements
 main,
 section,
 article,
@@ -27,7 +26,6 @@ nav {
   margin-bottom: 1rem;
 }
 
-// inline elements
 time {
   display: inline-block;
 }

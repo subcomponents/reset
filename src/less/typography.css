@@ -13,23 +13,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
 }
 
-h1 {
-  font-size: var(--font-size-h1);
-}
-h2 {
-  font-size: var(--font-size-h2);
-}
-h3 {
-  font-size: var(--font-size-h3);
-}
-h4 {
-  font-size: var(--font-size-h4);
-}
-h5 {
-  font-size: var(--font-size-h5);
-}
-h6 {
-  font-size: var(--font-size-h6);
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1.0rem; }
+
+@media (min-width: 768px) {
+  h1 { font-size: var(--font-size-h1); }
+  h2 { font-size: var(--font-size-h2); }
+  h3 { font-size: var(--font-size-h3); }
+  h4 { font-size: var(--font-size-h4); }
+  h5 { font-size: var(--font-size-h5); }
+  h6 { font-size: var(--font-size-h6); }
 }
 
 p {
@@ -40,22 +37,22 @@ p {
 a {
   text-decoration: none;
   color: var(--link-color);
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-  }
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
 }
 
 blockquote {
   margin: 0 0 1rem 0;
   padding: 0.5rem 1.5rem;
   border-left: var(--border-width-default) solid var(--blockquote-border-color);
-  // color: var(--color-text-muted);
-  font-size: 1.1em;
-  p:last-child {
-    margin-bottom: 0;
-  }
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 small {
@@ -82,7 +79,7 @@ abbr[title] {
 
 sub,
 sup {
-  // prevent `sub` and `sup` from affecting the line height
+  /* prevent `sub` and `sup` from affecting the line height */
   font-size: 75%;
   line-height: 0;
 }

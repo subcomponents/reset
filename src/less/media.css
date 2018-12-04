@@ -18,9 +18,6 @@ svg {
   max-width: 100%;
   fill: currentColor;
 }
-path {
-  fill: currentColor;
-}
 
 iframe,
 object,
@@ -37,21 +34,21 @@ figcaption {
   color: var(--color-text-muted);
 }
 
-// aspect ratio - container
+/* aspect ratio - container */
 figure.video,
 [style*="--aspect-ratio"] {
   position: relative;
 }
 
-// aspect ratio - size definition
+/* aspect ratio - size definition */
 figure.video:before,
 [style*="--aspect-ratio"]:before {
   float: left;
   content: "";
-  padding-top: ~"calc(100% / (var(--aspect-ratio)))";
+  padding-top: calc(100% / (var(--aspect-ratio)));
 }
 
-// aspect ratio - clearfix
+/* aspect ratio - clearfix */
 figure.video:after,
 [style*="--aspect-ratio"]:after {
   content: "";
@@ -59,7 +56,7 @@ figure.video:after,
   clear: both;
 }
 
-// aspect ratio - embedded element
+/* aspect ratio - embedded element */
 figure.video iframe,
 figure.video video,
 [style*="--aspect-ratio"] iframe,

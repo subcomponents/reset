@@ -1,17 +1,15 @@
 table {
-  // make it responsive
-  display: block; // block instead of table for overflow to scroll
+  display: block;
   max-width: 100%;
   overflow-x: auto;
   white-space: nowrap;
-  // styling
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 1rem;
-  caption {
-    padding: 0.5rem 1rem;
-    text-align: left;
-  }
+}
+table caption {
+  padding: 0.5rem 1rem;
+  text-align: left;
 }
 thead {
   border-bottom: var(--border-width-default) solid var(--thead-border-color);

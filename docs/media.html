@@ -76,7 +76,6 @@
       <article>
         <h2 id="aspect-ratio">Aspect ratio</h2>
         <p><code>figure[style="--aspect-ratio:16/9"] > iframe</code></p>
-        <p>Default is <code>16/9</code>, accepts any fraction</p>
         <figure style="--aspect-ratio:16/9;">
           <iframe src="https://www.youtube.com/embed/zxT0wknZxic"></iframe>
         </figure>
@@ -150,7 +149,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
 <script type="text/javascript">
-  anchors.options = {placement:'left', icon: '#'};
+  anchors.options = { placement:'left', icon: '#', visible:'always' };
   anchors.add('h1[id],h2[id],h3[id]');
 </script>
 <style>.anchorjs-link:hover{border:0;text-decoration:none;}</style>

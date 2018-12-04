@@ -1,5 +1,5 @@
 :root {
-  // colors
+  /* colors */
   --color-primary:        hsla(208, 98%, 43%, 1);
   --color-secondary:      hsla(235, 10%, 25%, 1);
   --color-gray:           hsla(240, 100%, 4%, 0.1);
@@ -12,60 +12,58 @@
   --color-text-default:   hsla(0, 0, 0, 1);
   --color-text-muted:     hsla(230, 8%, 28%, 0.7);
 
-  // default aspect ratio
+  /* default media aspect ratio */
   --aspect-ratio: 16/9;
 
-  // accent colors
+  /* accent colors */
   --link-color:              var(--color-primary);
   --button-color:            var(--color-primary);
   --blockquote-border-color: var(--color-primary);
   --thead-border-color:      var(--color-primary);
   --input-active-color:      var(--color-primary);
 
-  // scaffolding
+  /* scaffolding */
 
-  // borders
+  /* borders */
   --border-width-default:  2px;
   --border-color-default:  var(--color-gray);
   --border-radius-default: 2px;
 
-  // typography
-  --rem-default:         16px;
-  --line-height-default: 1.5;
-  --line-height-heading: 1.2;
+  /* typography */
+  --line-height-default: 1.625;
+  --line-height-heading: 1.3;
   --inline-text-padding: 2px 4px;
 
-  // font size
-  --font-size-h1: ~"calc(var(--rem-default) * 2)";
-  --font-size-h2: ~"calc(var(--rem-default) * 1.8)";
-  --font-size-h3: ~"calc(var(--rem-default) * 1.6)";
-  --font-size-h4: ~"calc(var(--rem-default) * 1.4)";
-  --font-size-h5: ~"calc(var(--rem-default) * 1.2)";
-  --font-size-h6: ~"calc(var(--rem-default) * 1)";
-  --font-size-default: ~"calc(var(--rem-default) * 1)";
-  --font-size-lead: var(--font-size-h4);
+  /* font size default */
+  --font-size-default: 18px;
 
-  // font families
+  --font-size-h1: 1.8rem;
+  --font-size-h2: 1.7rem;
+  --font-size-h3: 1.6rem;
+  --font-size-h4: 1.5rem;
+  --font-size-h5: 1.4rem;
+  --font-size-h6: 1.3rem;
+
+  /* font families */
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-serif: Charter, Utopia, Georgia, Times, "Times New Roman", serif;
   --font-family-mono-space: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   --font-family-body: var(--font-family-sans-serif);
   --font-family-heading: var(--font-family-sans-serif);
 
-  // input fields
+  /* input fields */
   --input-line-height:   var(--line-height-default);
   --input-border-width:  var(--border-width-default);
   --input-border-color:  var(--color-gray-light);
   --input-border-radius: var(--border-radius-default);
 
-  // input active
+  /* input active */
   --input-border-color-active: var(--input-active-color);
 
-  // buttons
-  --button-font-size:     var(--rem-default);
+  /* buttons */
   --button-line-height:   var(--line-height-default);
-  --button-padding-x:     var(--rem-default);
-  --button-padding-y:     ~"calc(var(--rem-default) / 2)";
+  --button-padding-x:     1rem;
+  --button-padding-y:     calc(1rem / 2);
   --button-border-width:  var(--input-border-width);
   --button-border-rarius: var(--border-radius-default);
   --button-border-color:  transparent;

@@ -1,0 +1,114 @@
+fieldset {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border-style:  solid;
+  border-width:  var(--input-border-width);
+  border-color:  var(--color-gray);
+  border-radius: var(--border-radius-default);
+}
+
+label {
+  display: inline-block;
+  padding-top:    calc(var(--button-padding-y) - 1px);
+  padding-bottom: calc(var(--button-padding-y) - 1px);
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+/* boxed inputs */
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="month"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="file"],
+input[type="color"],
+select,
+select[multiple],
+textarea {
+  padding: 0.5rem 1rem;
+  border-style: solid;
+  border-width: var(--input-border-width);
+  border-color: var(--color-gray);
+  border-radius: var(--input-border-radius);
+  background-clip: padding-box;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: var(--input-line-height);
+  outline: none;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="file"]:focus,
+input[type="color"]:focus,
+select:focus,
+select[multiple]:focus,
+textarea:focus {
+  border-color: var(--input-active-color);
+}
+
+/* special controls */
+select:not([multiple]) {
+  height: 2.2rem;
+}
+input[type="color"] {
+  width: 228px;
+  height: calc(1rem + calc(var(--line-height-default) * 1rem));
+}
+input[type="range"] {
+  margin: 0;
+  height: 2rem;
+}
+input[type="file"]:hover {
+  cursor: pointer;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+[type="search"],
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+textarea {
+  padding: 0.5rem 1rem;
+  height: auto;
+  vertical-align: top;
+}

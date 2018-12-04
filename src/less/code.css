@@ -1,24 +1,23 @@
-// all code
+/* all code */
 code,
 kbd,
 samp,
-pre, {
+pre {
   font-family: var(--font-family-mono-space);
 }
 
-// default code
+/* default code */
 code,
 pre {
   background-color: var(--color-gray-light);
 }
 
-// inline
+/* inline */
 code,
 kbd,
 samp {
   padding: var(--inline-text-padding);
   border-radius: var(--border-radius-default);
-  font-size: 95%;
 }
 
 kbd>kbd {
@@ -28,22 +27,23 @@ kbd>kbd {
   font-family: Courier, "Courier New", monospace;
 }
 
-// blocks
+/* blocks */
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
 
-  overflow-x: scroll;
+  overflow: auto;
   tab-size: 2;
 
   font-size: 1rem;
   text-align: left;
 
   border-radius: var(--border-radius-default);
-  code {
-    padding: 0;
-    font-size: inherit;
-    background-color: transparent;
-  }
+}
+
+pre code {
+  padding: 0;
+  font-size: inherit;
+  background-color: transparent;
 }
