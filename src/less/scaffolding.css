@@ -3,7 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
-
+html {
+  text-size-adjust: 100%;
+}
 html,
 body {
   margin: 0;
