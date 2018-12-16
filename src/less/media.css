@@ -32,6 +32,7 @@ figure {
 }
 figcaption {
   color: var(--color-text-muted);
+  font-size: 0.9em;
 }
 
 /* aspect ratio - container */

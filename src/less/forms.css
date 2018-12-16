@@ -108,6 +108,8 @@ input[type="month"] {
 }
 
 textarea {
+  display: block;
+  margin-bottom: 1rem;
   padding: 0.5rem 1rem;
   height: auto;
   vertical-align: top;
