@@ -1,5 +1,7 @@
 var gulp         = require('gulp');
-var less         = require('gulp-less');
+var postcss      = require('gulp-postcss');
+var nextcss      = require('postcss-preset-env');
+var atImport     = require('postcss-import');
 var autoprefix   = require('gulp-autoprefixer');
 var minify       = require('gulp-minify-css');
 var rename       = require('gulp-rename');
@@ -10,8 +12,8 @@ var browserSync  = require('browser-sync').create();
 var banner       = ['/** <%= package.repo.url %> */\n\n'];
 
 gulp.task('css', function() {
-  return gulp.src('./src/less/bundle.css')
-    .pipe(less())
+  return gulp.src('./src/css/bundle.css')
+    .pipe(postcss([nextcss,atImport]))
     .pipe(autoprefix())
     .pipe(rename(pkgJson.keyword + '.css'))
     .pipe(header(banner, { package: pkgJson }))
@@ -24,7 +26,7 @@ gulp.task('css', function() {
     .pipe(browserSync.stream())
 })
 
-gulp.task('html', function() {
+gulp.task('docs', function() {
   return gulp.src('./src/docs/pages/**/*.njk')
     .pipe(nunjucks({
       path: './src/docs/partials',
@@ -48,9 +50,9 @@ gulp.task('server', function() {
 })
 
 gulp.task('watch', function() {
-  gulp.watch('./src/less/**/*', ['css']);
-  gulp.watch('./src/docs/**/*', ['html']);
+  gulp.watch('./src/css/**/*', ['css']);
+  gulp.watch('./src/docs/**/*', ['docs']);
   gulp.watch('./src/readme/**/*', ['readme']);
 })
 
-gulp.task('default', ['css', 'html', 'readme', 'server', 'watch'])
+gulp.task('default', ['css', 'docs', 'readme', 'server', 'watch'])

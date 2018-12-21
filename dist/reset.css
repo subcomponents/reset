@@ -1,6 +1,5 @@
 /** https://github.com/heyallan/hyper-reset-css */
 
-/* LESS JS imports */
 :root {
   /* colors */
   --color-primary:        hsla(208, 98%, 43%, 1);
@@ -72,7 +71,6 @@
   --button-border-color:  transparent;
   --button-bg-color:      var(--button-color);
 }
-
 *,
 *::before,
 *::after {
@@ -89,7 +87,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 main,
 section,
 article,
@@ -101,15 +98,12 @@ figure,
 figcaption {
   display: block;
 }
-
 nav {
   margin-bottom: 1rem;
 }
-
 time {
   display: inline-block;
 }
-
 img,
 canvas
 svg,
@@ -118,19 +112,16 @@ audio,
 video {
   display: inline-block;
 }
-
 img,
 canvas,
 video {
   max-width: 100%;
   height: auto;
 }
-
 svg {
   max-width: 100%;
   fill: currentColor;
 }
-
 iframe,
 object,
 embed {
@@ -138,7 +129,6 @@ embed {
   margin-bottom: 1rem;
   border: 0;
 }
-
 figure {
   margin: 0 0 1rem 0;
 }
@@ -146,13 +136,11 @@ figcaption {
   color: var(--color-text-muted);
   font-size: 0.9em;
 }
-
 /* aspect ratio - container */
 figure.video,
 [style*="--aspect-ratio"] {
   position: relative;
 }
-
 /* aspect ratio - size definition */
 figure.video:before,
 [style*="--aspect-ratio"]:before {
@@ -160,7 +148,6 @@ figure.video:before,
   content: "";
   padding-top: calc(100% / (var(--aspect-ratio)));
 }
-
 /* aspect ratio - clearfix */
 figure.video:after,
 [style*="--aspect-ratio"]:after {
@@ -168,7 +155,6 @@ figure.video:after,
   display: block;
   clear: both;
 }
-
 /* aspect ratio - embedded element */
 figure.video iframe,
 figure.video video,
@@ -185,7 +171,6 @@ figure.video video,
   height: 100%;
   background-color: black;
 }
-
 table {
   display: block;
   max-width: 100%;
@@ -211,7 +196,6 @@ td {
   text-align: left;
   border: 1px solid var(--color-gray);
 }
-
 html {
   font-size:   var(--font-size-default);
   font-family: var(--font-family-sans-serif);
@@ -219,21 +203,18 @@ html {
   line-height: var(--line-height-default);
   font-family: var(--font-family-body);
 }
-
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: var(--line-height-heading);
   font-family: var(--font-family-heading);
 }
-
 h1 { font-size: 1.5rem; }
 h2 { font-size: 1.4rem; }
 h3 { font-size: 1.3rem; }
 h4 { font-size: 1.2rem; }
 h5 { font-size: 1.1rem; }
 h6 { font-size: 1.0rem; }
-
 @media (min-width: 768px) {
   h1 { font-size: var(--font-size-h1); }
   h2 { font-size: var(--font-size-h2); }
@@ -242,62 +223,51 @@ h6 { font-size: 1.0rem; }
   h5 { font-size: var(--font-size-h5); }
   h6 { font-size: var(--font-size-h6); }
 }
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
 a {
   text-decoration: none;
   color: var(--link-color);
 }
-
 a:hover,
 a:active,
 a:focus {
   text-decoration: underline;
 }
-
 blockquote {
   margin: 0 0 1rem 0;
   padding: 0.5rem 1.5rem;
   border-left: var(--border-width-default) solid var(--blockquote-border-color);
 }
-
 blockquote p:last-child {
   margin-bottom: 0;
 }
-
 small {
   font-size: 85%;
 }
-
 address {
   font-style: normal;
   margin-bottom: 1rem;
 }
-
 cite,
 var,
 dfn,
 i {
   font-family: var(--font-family-serif);
 }
-
 abbr[title] {
   text-decoration: none;
   border-bottom: 1px dotted;
   cursor: help;
 }
-
 sub,
 sup {
   /* prevent `sub` and `sup` from affecting the line height */
   font-size: 75%;
   line-height: 0;
 }
-
 ins,
 del,
 mark {
@@ -315,29 +285,24 @@ del {
 mark {
   background-color: var(--color-yellow);
 }
-
 hr {
   margin-top: 0;
   margin-bottom: 1rem;
   border: 0;
   border-bottom: 1px solid var(--color-gray);
 }
-
 ul, ol {
   margin-top: 0;
   margin-bottom: 1rem;
   padding-left: 1.1rem;
 }
-
 li ul,
 li ol {
   padding-left: 1rem;
   margin-bottom: 0;
 }
-
 dt { font-weight: bold; }
 dd { margin-left: 1rem; }
-
 /* all code */
 code,
 kbd,
@@ -345,13 +310,11 @@ samp,
 pre {
   font-family: var(--font-family-mono-space);
 }
-
 /* default code */
 code,
 pre {
   background-color: var(--color-gray-light);
 }
-
 /* inline */
 code,
 kbd,
@@ -359,14 +322,12 @@ samp {
   padding: var(--inline-text-padding);
   border-radius: var(--border-radius-default);
 }
-
 kbd>kbd {
   padding: 1px 3px;
   border: var(--border-width-default), solid, currentColor;
   white-space: nowrap;
   font-family: Courier, "Courier New", monospace;
 }
-
 /* blocks */
 pre {
   margin-top: 0;
@@ -383,13 +344,11 @@ pre {
 
   border-radius: var(--border-radius-default);
 }
-
 pre code {
   padding: 0;
   font-size: inherit;
   background-color: transparent;
 }
-
 fieldset {
   margin: 0 0 1rem 0;
   padding: 1rem;
@@ -398,17 +357,14 @@ fieldset {
   border-color:  var(--color-gray);
   border-radius: var(--border-radius-default);
 }
-
 label {
   display: inline-block;
   padding-top:    calc(var(--button-padding-y) - 1px);
   padding-bottom: calc(var(--button-padding-y) - 1px);
 }
-
 label:hover {
   cursor: pointer;
 }
-
 /* boxed inputs */
 input[type="date"],
 input[type="time"],
@@ -439,7 +395,6 @@ textarea {
   line-height: var(--input-line-height);
   outline: none;
 }
-
 input[type="date"]:focus,
 input[type="time"]:focus,
 input[type="week"]:focus,
@@ -460,7 +415,6 @@ select[multiple]:focus,
 textarea:focus {
   border-color: var(--input-active-color);
 }
-
 /* special controls */
 select:not([multiple]) {
   height: 2.2rem;
@@ -476,7 +430,6 @@ input[type="range"] {
 input[type="file"]:hover {
   cursor: pointer;
 }
-
 button,
 html [type="button"],
 [type="reset"],
@@ -498,7 +451,6 @@ input[type="month"] {
   font: inherit;
   -webkit-appearance: button;
 }
-
 textarea {
   display: block;
   margin-bottom: 1rem;
@@ -506,7 +458,6 @@ textarea {
   height: auto;
   vertical-align: top;
 }
-
 .btn,
 input[type=button],
 input[type=reset],
@@ -527,7 +478,6 @@ button {
 
   cursor: pointer;
 }
-
 .btn:hover:not([disabled]),
 .btn:focus:not([disabled]),
 .btn:active:not([disabled]),
@@ -545,14 +495,11 @@ button:focus:not([disabled]),
 button:active:not([disabled]) {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));
 }
-
 [disabled] {
   cursor: not-allowed;
   text-decoration: none;
   opacity: 0.7;
 }
-
 a.btn:hover {
   text-decoration: none;
 }
-
