@@ -59,19 +59,17 @@
         <h2 id="canvas">Canvas</h2>
         <p><code>canvas</code></p>
         <canvas id="canvasDemo" width="550" height="350">canvas</canvas>
-        <script type="application/javascript">
-          (function draw() {
-            var canvas = document.getElementById("canvasDemo");
-            if (canvas.getContext) {
-              var ctx = canvas.getContext("2d");
-              ctx.fillStyle = "rgb(230, 230, 250)";
-              ctx.fillRect(0, 0, 550, 350);
-              ctx.fillStyle = "rgb(200, 0, 0)";
-              ctx.fillRect(20, 20, 150, 150);
-              ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-              ctx.fillRect(50, 50, 150, 150);
-            }
-          })();
+        <script>
+          var canvas = document.getElementById('canvasDemo');
+          if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'rgb(230, 230, 250)';
+            ctx.fillRect(0, 0, 550, 350);
+            ctx.fillStyle = 'rgb(200, 0, 0)';
+            ctx.fillRect(20, 20, 150, 150);
+            ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+            ctx.fillRect(50, 50, 150, 150);
+          }
         </script>
         <h2 id="svg">Inline SVG</h2>
         <p><code>svg</code></p>

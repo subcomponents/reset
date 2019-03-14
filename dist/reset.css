@@ -120,7 +120,6 @@ video {
 }
 svg {
   max-width: 100%;
-  fill: currentColor;
 }
 iframe,
 object,
