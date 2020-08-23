@@ -1,33 +1,23 @@
 html {
   font-size:   var(--font-size-default);
-  font-family: var(--font-family-sans-serif);
-  color:       var(--color-text-default);
+  font-family: var(--font-family-body, var(--font-family-default)), var(--font-family-default);
+  color:       var(--color-default);
   line-height: var(--line-height-default);
-  font-family: var(--font-family-body);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: var(--line-height-heading);
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-heading, var(--font-family-body, var(--font-family-default))), var(--font-family-body, var(--font-family-default)), var(--font-family-default);
 }
 
-h1 { font-size: 1.5rem; }
-h2 { font-size: 1.4rem; }
-h3 { font-size: 1.3rem; }
-h4 { font-size: 1.2rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1.0rem; }
-
-@media (min-width: 768px) {
-  h1 { font-size: var(--font-size-h1); }
-  h2 { font-size: var(--font-size-h2); }
-  h3 { font-size: var(--font-size-h3); }
-  h4 { font-size: var(--font-size-h4); }
-  h5 { font-size: var(--font-size-h5); }
-  h6 { font-size: var(--font-size-h6); }
-}
+/* default sizes */
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
+h6 { font-size: var(--font-size-h6); }
 
 p {
   margin-top: 0;
@@ -35,14 +25,11 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: var(--link-color);
+  display: inline-block;
 }
-
-a:hover,
-a:active,
-a:focus {
-  text-decoration: underline;
+a:not(:hover):not(:focus) {
+  text-decoration: none;
 }
 
 blockquote {
@@ -64,13 +51,6 @@ address {
   margin-bottom: 1rem;
 }
 
-cite,
-var,
-dfn,
-i {
-  font-family: var(--font-family-serif);
-}
-
 abbr[title] {
   text-decoration: none;
   border-bottom: 1px dotted;
@@ -84,21 +64,9 @@ sup {
   line-height: 0;
 }
 
-ins,
-del,
 mark {
   padding: var(--inline-text-padding);
   border-radius: var(--border-radius-default);
-}
-ins {
-  color: var(--color-green);
-  background-color: var(--color-green-light);
-}
-del {
-  color: var(--color-red);
-  background-color: var(--color-red-light);
-}
-mark {
   background-color: var(--color-yellow);
 }
 
@@ -106,5 +74,5 @@ hr {
   margin-top: 0;
   margin-bottom: 1rem;
   border: 0;
-  border-bottom: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--border-color-default);
 }

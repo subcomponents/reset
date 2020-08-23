@@ -1,58 +1,56 @@
-var gulp         = require('gulp');
+var { gulp, src, dest, watch, series, parallel } = require('gulp');
 var postcss      = require('gulp-postcss');
-var nextcss      = require('postcss-preset-env');
+var presetEnv    = require('postcss-preset-env');
 var atImport     = require('postcss-import');
-var autoprefix   = require('gulp-autoprefixer');
 var minify       = require('gulp-minify-css');
 var rename       = require('gulp-rename');
 var header       = require('gulp-header');
 var nunjucks     = require('gulp-nunjucks-render');
 var pkgJson      = require('./package.json');
 var browserSync  = require('browser-sync').create();
-var banner       = ['/** <%= package.repo.url %> */\n\n'];
+var banner       = ['/** <%= package.version %> <%= package.repo.url %> */\n'];
 
-gulp.task('css', function() {
-  return gulp.src('./src/css/bundle.css')
-    .pipe(postcss([nextcss,atImport]))
-    .pipe(autoprefix())
+function css() {
+  return src('./src/css/bundle.css')
+    .pipe(postcss([atImport, presetEnv({ preserve: true })]))
     .pipe(rename(pkgJson.keyword + '.css'))
     .pipe(header(banner, { package: pkgJson }))
-    .pipe(gulp.dest('./dist')) // <-- deliver expanded for dist
+    .pipe(dest('./dist')) // <-- deliver expanded for dist
     .pipe(minify())
     .pipe(rename(pkgJson.keyword + '.min.css'))
     .pipe(header(banner, { package: pkgJson }))
-    .pipe(gulp.dest('./dist')) // <-- deliver compressed for dist
-    .pipe(gulp.dest('./docs')) // <-- deliver extra copy for docs
+    .pipe(dest('./dist')) // <-- deliver compressed for dist
+    .pipe(dest('./docs')) // <-- deliver extra copy for docs
     .pipe(browserSync.stream())
-})
+}
 
-gulp.task('docs', function() {
-  return gulp.src('./src/docs/pages/**/*.njk')
+function docs() {
+  return src('./src/docs/pages/**/*.njk')
     .pipe(nunjucks({
       path: './src/docs/partials',
       data: { package: pkgJson }
     }))
-    .pipe(gulp.dest('./docs'))
+    .pipe(dest('./docs'))
     .pipe(browserSync.stream())
-})
+}
 
-gulp.task('readme', function() {
-  return gulp.src('./src/readme/*.njk')
+function readme() {
+  return src('./src/readme/*.njk')
     .pipe(nunjucks({
       ext: '.md',
       data: { package: pkgJson }
     }))
-    .pipe(gulp.dest('./'))
-})
+    .pipe(dest('./'))
+}
 
-gulp.task('server', function() {
+function server() {
   browserSync.init({ server: "./docs", open: false })
-})
+}
 
-gulp.task('watch', function() {
-  gulp.watch('./src/css/**/*', ['css']);
-  gulp.watch('./src/docs/**/*', ['docs']);
-  gulp.watch('./src/readme/**/*', ['readme']);
-})
+function watcher() {
+  watch('./src/css/**/*', series(css, docs));
+  watch('./src/docs/**/*', docs);
+  watch('./src/readme/**/*', readme);
+}
 
-gulp.task('default', ['css', 'docs', 'readme', 'server', 'watch'])
+exports.default = parallel(css, docs, readme, server, watcher);

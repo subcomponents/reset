@@ -6,7 +6,7 @@
       <section>
         <h1 id="forms">Forms</h1>
         <article>
-          <h2>Horizontal</h2>
+          <h2>Inline</h2>
           <p><code>p>(label+input)</code></p>
           <form>
             <p>
@@ -17,7 +17,7 @@
               <button type="submit">Button Submit</button>
             </p>
           </form>
-          <h2>Vertical</h2>
+          <h2>Block</h2>
           <p><code>p>(label+input+label)</code></p>
           <form>
             <p>
@@ -44,99 +44,99 @@
             <fieldset id="form-inputs">
               <legend>Input fields</legend>
               <p>
-                <label for="justified-input-text">Text input</label>
+                <label for="justified-input-text">Text</label>
                 <br/>
                 <input id="justified-input-text" type="text" placeholder="Enter your text">
                 <br/>
-                <label for="justified-input-text">Help text or warning</label>
+                <label for="justified-input-text">Help text</label>
               </p>
               <p>
-                <label for="justified-input-password">Password input</label>
+                <label for="justified-input-password">Password</label>
                 <br/>
                 <input id="justified-input-password" type="password" placeholder="Enter your password">
                 <br/>
-                <label for="justified-input-password">Help text or warning</label>
+                <label for="justified-input-password">Help text</label>
               </p>
               <p>
-                <label for="justified-input-url">URL input</label>
+                <label for="justified-input-url">URL</label>
                 <br/>
                 <input id="justified-input-url" type="url" placeholder="http://website.com">
                 <br/>
-                <label for="justified-input-url">Help text or warning</label>
+                <label for="justified-input-url">Help text</label>
               </p>
               <p>
-                <label for="justified-input-email">Email input</label>
+                <label for="justified-input-email">Email</label>
                 <br/>
                 <input id="justified-input-email" type="email" placeholder="name@email.com">
                 <br/>
-                <label for="justified-input-email">Help text or warning</label>
+                <label for="justified-input-email">Help text</label>
               </p>
               <p>
-                <label for="justified-input-tel">Telephone input</label>
+                <label for="justified-input-tel">Telephone</label>
                 <br/>
                 <input id="justified-input-tel" type="tel" placeholder="(999) 999-9999">
                 <br/>
-                <label for="justified-input-tel">Help text or warning</label>
+                <label for="justified-input-tel">Help text</label>
               </p>
               <p>
-                <label for="justified-input-search">Search input</label>
+                <label for="justified-input-search">Search</label>
                 <br/>
                 <input id="justified-input-search" type="search" placeholder="Enter search term">
                 <br/>
-                <label for="justified-input-search">Help text or warning</label>
+                <label for="justified-input-search">Help text</label>
               </p>
               <p>
-                <label for="justified-input-number">Number input</label>
+                <label for="justified-input-number">Number</label>
                 <br/>
                 <input id="justified-input-number" type="number" placeholder="Enter a number">
                 <br/>
-                <label for="justified-input-number">Help text or warning</label>
+                <label for="justified-input-number">Help text</label>
               </p>
             </fieldset>
             <fieldset id="form-html5-inputs">
               <legend>HTML5 inputs</legend>
               <p>
-                <label for="input-color">Color input</label>
+                <label for="input-color">Color</label>
                 <br/>
                 <input type="color" id="input-color" value="#0269c2">
               </p>
               <p>
-                <label for="input-range">Range input</label>
+                <label for="input-range">Range</label>
                 <br/>
                 <input type="range" id="input-range" value="10">
               </p>
               <p>
-                <label for="input-date">Date input</label>
+                <label for="input-date">Date</label>
                 <br/>
                 <input type="date" id="input-date" value="1970-01-01">
               </p>
               <p>
-                <label for="input-time">Time input</label>
+                <label for="input-time">Time</label>
                 <br/>
                 <input type="time" id="input-time" value="23:59:59">
               </p>
               <p>
-                <label for="input-month">Month input</label>
+                <label for="input-month">Month</label>
                 <br/>
                 <input type="month" id="input-month" value="1970-01">
               </p>
               <p>
-                <label for="input-week">Week input</label>
+                <label for="input-week">Week</label>
                 <br/>
                 <input type="week" id="input-week" value="1970-W01">
               </p>
               <p>
-                <label for="input-datetime">Datetime input</label>
+                <label for="input-datetime">Datetime</label>
                 <br/>
                 <input type="datetime" id="input-datetime" value="1970-01-01T00:00:00Z">
               </p>
               <p>
-                <label for="input-dt-local">Datetime-local input</label>
+                <label for="input-dt-local">Datetime-local</label>
                 <br/>
                 <input type="datetime-local" id="input-dt-local" value="1970-01-01T00:00">
               </p>
               <p>
-                <label for="input-file">File input</label>
+                <label for="input-file">File</label>
                 <br/>
                 <input id="input-file" type="file">
               </p>
@@ -147,8 +147,7 @@
                 <label for="textarea">Textarea</label>
                 <br>
                 <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-                <br>
-                <label for="textarea">Help text or warning</label>
+                <button>Button Submit</button>
               </p>
             </fieldset>
             <fieldset id="form-select">
@@ -164,7 +163,7 @@
                   </optgroup>
                 </select>
                 <br>
-                <label for="select">Help text or warning</label>
+                <label for="select">Help text</label>
               </p>
             </fieldset>
             <fieldset id="form-select-multiple">
@@ -185,7 +184,7 @@
                   </optgroup>
                 </select>
                 <br>
-                <label for="select-multiple">Help text or warning</label>
+                <label for="select-multiple">Help text</label>
               </p>
             </fieldset>
             <fieldset id="form-checkboxs">
@@ -203,19 +202,20 @@
             <fieldset id="form-buttons">
               <legend>Buttons</legend>
               <p>
-                <input type="submit" value="Input Submit">
-                <input type="button" value="Input Button">
-                <input type="reset" value="Input Reset">
-                <input type="submit" value="Input Disabled" disabled>
+                <input type="submit" value="Input (submit)">
+                <input type="button" value="Input (button)">
+                <input type="reset" value="Input (reset)">
+                <input type="submit" value="Input (disabled)" disabled>
               </p>
               <p>
-                <button type="submit">Button Submit</button>
-                <button type="button">Button Button</button>
-                <button type="reset">Button Reset</button>
-                <button type="submit" disabled>Button Disabled</button>
+                <button type="submit">Button (submit)</button>
+                <button type="button">Button (button)</button>
+                <button type="reset">Button (reset)</button>
+                <button type="submit" disabled>Button (disabled)</button>
               </p>
               <p>
-                <a href="#!"><button type="submit">Button Link</button></a>
+                <a href="#!"><button type="button">Link > Button</button></a>
+                <a href="#!" class="button">Link as Button</a>
               </p>
             </fieldset>
           </form>

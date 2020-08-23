@@ -2,28 +2,42 @@
 
 {% block content %}
 
-  <main role="main">
+  <main>
     <section>
       <h1 id="media">Media (embedded content)</h1>
       <article>
         <h2 id="image">Image</h2>
         <p><code>img</code></p>
-        <p><img src="https://unsplash.it/550/350/?image=961" alt="Image"></p>
-        <h3>Figure</h3>
+        <p><img src="550x350.jpg" alt="Example image"></p>
+        <h2>Figure</h2>
         <p><code>figure>(img+figcaption)</code></p>
         <figure>
-          <img src="https://unsplash.it/550/350/?image=961" alt="Image">
-          <figcaption>Here is a caption for this image.</figcaption>
+          <img src="550x350.jpg" alt="Example image inside figure element">
+          <figcaption>The HTML figcaption or Figure Caption element represents a caption or legend describing the rest of the contents of its parent figure element</figcaption>
         </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eveniet voluptate vitae labore eos, ducimus laborum omnis ipsum deserunt, dolorum voluptas, consectetur temporibus sed tenetur aut quaerat doloribus error quasi!</p>
+        <h2 id="picture">Picture</h2>
+        <p><code>figure>picture>(source+img)</code></p>
+        <figure>
+          <picture>
+            <source srcset="chromecast.jpg" media="(max-width: 600px)">
+            <img src="550x350.jpg" alt="Example image inside picture element">
+          </picture>
+          <figcaption>The HTML figcaption or Figure Caption element represents a caption or legend describing the rest of the contents of its parent figure element</figcaption>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia deserunt, atque magnam quo? Ex at tenetur error quam doloremque sunt, a aliquid quo consequatur qui! Eveniet deserunt quaerat tempore dicta.</p>
       </article>
       <article>
         <h2 id="audio">Audio</h2>
         <p><code>audio</code></p>
-        <audio controls>
-          <source src="coffeehouse.mp3" type="audio/mpeg">
-          <source src="coffeehouse.ogg" type="audio/ogg">
-        </audio>
-        <br><br>
+        <figure>
+          <audio controls>
+            <source src="coffeehouse.mp3" type="audio/mpeg">
+            <source src="coffeehouse.ogg" type="audio/ogg">
+          </audio>
+          <figcaption>The HTML figcaption or Figure Caption element represents a caption or legend describing the rest of the contents of its parent figure element</figcaption>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quaerat eum amet enim, saepe pariatur ab vero. Laudantium voluptas soluta fuga praesentium dolore deserunt eos harum doloribus iusto, tempore, earum.</p>
       </article>
       <article>
         <h2 id="video">Video</h2>
@@ -33,19 +47,14 @@
           <source src="chromecast.mp4" type="video/mp4">
           Your browser does not support the <code>video</code> element.
         </video>
-        <br><br>
       </article>
       <article>
-        <h2 id="iframe">iframe</h2>
+        <h2 id="iframe">Iframe</h2>
         <p><code>iframe</code></p>
+        <ul>
+          <li>To make <code>iframe</code> responsive it requires a container and <a href="https://heyallan.github.io/hyper-properties-css/reference.html#aspect-ratio">aspect-ratio</a></li>
+        </ul>
         <iframe width="550" height="350" src="https://www.youtube.com/embed/zxT0wknZxic"></iframe>
-      </article>
-      <article>
-        <h2 id="aspect-ratio">Aspect ratio</h2>
-        <p><code>figure[style="--aspect-ratio:16/9"] > iframe</code></p>
-        <figure style="--aspect-ratio:16/9;">
-          <iframe src="https://www.youtube.com/embed/zxT0wknZxic"></iframe>
-        </figure>
       </article>
       <article>
         <h2 id="embed">Embed</h2>
@@ -58,36 +67,48 @@
       <article>
         <h2 id="canvas">Canvas</h2>
         <p><code>canvas</code></p>
-        <canvas id="canvasDemo" width="550" height="350">canvas</canvas>
+        <p><code>canvas</code> requires <code>[width]</code> and <code>[height]</code> attributes, otherwise browser will apply arbitrary dimensions</li></p>
+        <figure>
+          <canvas id="canvasDemo" width="550" height="350" style="outline: 2px dashed gray;">canvas</canvas>
+        </figure>
         <script>
           var canvas = document.getElementById('canvasDemo');
           if (canvas.getContext) {
-            var ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'rgb(230, 230, 250)';
-            ctx.fillRect(0, 0, 550, 350);
-            ctx.fillStyle = 'rgb(200, 0, 0)';
-            ctx.fillRect(20, 20, 150, 150);
-            ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-            ctx.fillRect(50, 50, 150, 150);
+            var context = canvas.getContext('2d');
+            context.fillStyle = 'rgb(230, 230, 250)';
+            context.fillRect(0, 0, 550, 350);
+            context.fillStyle = 'rgb(200, 0, 0)';
+            context.fillRect(20, 20, 150, 150);
+            context.fillStyle = 'rgba(0, 0, 200, 0.5)';
+            context.fillRect(50, 50, 150, 150);
           }
         </script>
-        <h2 id="svg">Inline SVG</h2>
+        <h2 id="svg">SVG</h2>
         <p><code>svg</code></p>
-        <svg width="550" height="350" viewBox="0 0 550 350" preserveAspectRatio="xMinYMin">
-          <rect x="0" y="0" width="550" height="350" fill= "rgb(230, 230, 250)"/>
-          <circle cx="95" cy="95" r="75" fill="rgb(200, 0, 0)"></circle>
-          <circle cx="115" cy="115" r="75" fill="rgba(0, 0, 200, 0.5)"></circle>
-        </svg>
+        <p>To make SVG responsive relative to its container: Add <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">viewBox="0 0 <em>&lt;width&gt;</em> <em>&lt;height&gt;"</em></a></code>, add <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio="xMidYMid meet"</a></code>, and remove <code>[width]</code> and <code>[height]</code> attributes</p>
+        <p>To make SVG responsive relative to its own <code>[width]</code> and <code>[height]</code> attributes: Apply CSS <code>max-width: 100%; height: auto;</code>, and preserve <code>[width]</code> and <code>[height]</code> attributes</p>
+        <p>SVG icons usually don't need to be responsive, so <code>[width]</code> and <code>[height]</code> attributes are usually enough</p>
+        <figure style="outline: 2px dashed gray; max-width: 550px;">
+          <svg viewBox="0 0 550 350" preserveAspectRatio="xMidYMid meet">
+            <rect x="0" y="0" width="550" height="350" fill= "rgb(230, 230, 250)"/>
+            <circle cx="95" cy="95" r="75" fill="rgb(200, 0, 0)"></circle>
+            <circle cx="115" cy="115" r="75" fill="rgba(0, 0, 200, 0.5)"></circle>
+          </svg>
+        </figure>
       </article>
       <article>
         <h2 id="meter">Meter</h2>
-        <p><code>meter["value"]</code></p>
-        <meter value="75" min="0" max="100">2 out of 10</meter>
+        <p><code>meter</code></p>
+        <p>
+          <meter min="0" max="100" value="75">75%</meter>
+        </p>
       </article>
       <article>
         <h2 id="progress">Progress</h2>
-        <p><code>progress["value"]</code></p>
-        <progress value="75" max="100">Progress</progress>
+        <p><code>progress</code></p>
+        <p>
+          <progress value="75" max="100">75%</progress>
+        </p>
         <p></p>
       </article>
     </section>

@@ -4,22 +4,22 @@
     <meta charset="utf-8">
     <title>{{ package.name }} - {{ package.description }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./{{ package.keyword }}.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/hyper-layout-css@latest"/>
-    <link rel="stylesheet" href="https://unpkg.com/hyper-properties-css@latest"/>
-    <link rel="stylesheet" href="https://unpkg.com/hyper-grid-css@latest"/>
+    <link rel="stylesheet" href="{{ package.keyword }}.min.css"/>
+    <link rel="stylesheet" href="layout.min.css"/>
+    <link rel="stylesheet" href="properties.min.css"/>
+    <link rel="stylesheet" href="grid.min.css"/>
   </head>
-  <body>
+  <body class="">
 
-    {% include "component-default-header.njk" %}
+    {% include "header.njk" %}
 
     {% block content %}
       {# content will be injected here #}
     {% endblock %}
 
-    {% include "component-default-footer.njk" %}
+    {% include "footer.njk" %}
 
-    {% include "component-scripts.njk" %}
+    {% include "scripts.njk" %}
 
   </body>
 </html>

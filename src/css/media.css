@@ -1,20 +1,27 @@
 img,
-canvas
+picture,
+canvas,
 svg,
 progress,
-audio,
-video {
+meter {
   display: inline-block;
+  vertical-align: middle;
 }
 
-img,
-canvas,
+audio, video {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 video {
-  max-width: 100%;
   height: auto;
 }
 
-svg {
+img,
+picture,
+canvas {
+  height: auto;
   max-width: 100%;
 }
 
@@ -29,46 +36,9 @@ embed {
 figure {
   margin: 0 0 1rem 0;
 }
+
 figcaption {
-  color: var(--color-text-muted);
-  font-size: 0.9em;
-}
-
-/* aspect ratio - container */
-figure.video,
-[style*="--aspect-ratio"] {
-  position: relative;
-}
-
-/* aspect ratio - size definition */
-figure.video:before,
-[style*="--aspect-ratio"]:before {
-  float: left;
-  content: "";
-  padding-top: calc(100% / (var(--aspect-ratio)));
-}
-
-/* aspect ratio - clearfix */
-figure.video:after,
-[style*="--aspect-ratio"]:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* aspect ratio - embedded element */
-figure.video iframe,
-figure.video video,
-[style*="--aspect-ratio"] iframe,
-[style*="--aspect-ratio"] video,
-[style*="--aspect-ratio"] object,
-[style*="--aspect-ratio"] embed {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
+  color: var(--color-muted);
+  font-size: 0.85em;
+  margin-top: 0.5rem;
 }

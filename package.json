@@ -1,12 +1,12 @@
 {
   "name": "hyper-reset-css",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "CSS reset",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heyallan/hyper-reset-css.git"
   },
-  "abstract": "Provides default styles for default elements. Specially useful for working with statically generated sites, like markdown-to-html, documentation sites, demos, etc. It can also be used as a reset on any branded website. It will provide a presentable layer of standard elements on which to build upon.",
+  "abstract": "Default styles for default elements. It will provide a presentable layer of elements on which to build upon.",
   "keywords": [
     "css",
     "hyper",
@@ -31,15 +31,14 @@
   "keyword": "reset",
   "scope": "@metacss",
   "devDependencies": {
-    "browser-sync": "^2.24.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-header": "^2.0.5",
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-header": "^2.0.7",
     "gulp-minify-css": "^1.2.4",
-    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-nunjucks-render": "^2.2.3",
     "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.4.0",
     "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.5.0"
+    "postcss-preset-env": "^6.6.0"
   }
 }

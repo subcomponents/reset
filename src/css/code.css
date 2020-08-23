@@ -1,15 +1,10 @@
-/* all code */
+/* all */
+pre,
 code,
 kbd,
-samp,
-pre {
-  font-family: var(--font-family-mono-space);
-}
-
-/* default code */
-code,
-pre {
-  background-color: var(--color-gray-light);
+samp {
+  font-family: var(--font-family-mono);
+  background-color: var(--code-background-color);
 }
 
 /* inline */
@@ -20,25 +15,13 @@ samp {
   border-radius: var(--border-radius-default);
 }
 
-kbd>kbd {
-  padding: 1px 3px;
-  border: var(--border-width-default), solid, currentColor;
-  white-space: nowrap;
-  font-family: Courier, "Courier New", monospace;
-}
-
 /* blocks */
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
-
   overflow: auto;
   tab-size: 2;
-
-  font-size: 1rem;
-  text-align: left;
-
   border-radius: var(--border-radius-default);
 }
 

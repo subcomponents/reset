@@ -1,0 +1,9 @@
+@media print {
+  :root {
+    --background-color-default: #fff;
+    --color-default: #000;
+    --font-size-default: 8pt;
+    --font-family-body: var(--font-family-default);
+    --font-family-heading: var(--font-family-default);
+  }
+}
