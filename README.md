@@ -1,4 +1,4 @@
-# @@subcomponents/reset
+# @subcomponents/reset
 
 ![License][LicenseBadgeURL]
 [![Donate][DonateBadgeURL]][DonateURL]
