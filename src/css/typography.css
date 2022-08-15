@@ -1,17 +1,24 @@
+/**
+ * font family:
+ * if font family does not exist go to next value (comma separated values)
+ * if custom property does not exist go to fallback value (nested values)
+ * heading inherits font family from body by default
+ */
+
 html {
+  color:       var(--color-default);
   font-size:   var(--font-size-default);
   font-family: var(--font-family-body, var(--font-family-default)), var(--font-family-default);
-  color:       var(--color-default);
   line-height: var(--line-height-default);
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading, var(--color-default));
   margin: 0 0 1rem;
   line-height: var(--line-height-heading);
   font-family: var(--font-family-heading, var(--font-family-body, var(--font-family-default))), var(--font-family-body, var(--font-family-default)), var(--font-family-default);
 }
 
-/* default sizes */
 h1 { font-size: var(--font-size-h1); }
 h2 { font-size: var(--font-size-h2); }
 h3 { font-size: var(--font-size-h3); }
@@ -28,14 +35,15 @@ a {
   color: var(--link-color);
   display: inline-block;
 }
+
 a:not(:hover):not(:focus) {
   text-decoration: none;
 }
 
 blockquote {
   margin: 0 0 1rem 0;
-  padding: 0.5rem 1.5rem;
-  border-left: var(--border-width-default) solid var(--blockquote-border-color);
+  padding: 0.5em 1.5em;
+  border-left: var(--border-width-default) solid var(--border-color-default);
 }
 
 blockquote p:last-child {

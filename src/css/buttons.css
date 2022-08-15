@@ -5,14 +5,13 @@ button,
 [type=submit] {
   display: inline-block;
   padding: var(--button-padding-y) var(--button-padding-x);
-
   border-radius: var(--button-border-rarius);
-  border-width:  var(--button-border-width);
-  border-style:  solid;
-  border-color:  var(--button-border-color);
-  background-color: var(--button-bg-color);
 
+  /* border is used mostly to match form fields */
+  border: var(--button-border-width) solid var(--button-border-color);
+  background-color: var(--button-bg-color);
   color: var(--button-text-color);
+
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -22,9 +21,9 @@ button,
   cursor: pointer;
 }
 
-button:hover,
-button:focus,
+ button:hover,
 .button:hover,
+ button:focus,
 .button:focus,
 [type=button]:hover,
 [type=button]:focus,
@@ -32,7 +31,8 @@ button:focus,
 [type=reset]:focus,
 [type=submit]:hover,
 [type=submit]:focus {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));
+  background-image: linear-gradient(to bottom, hsl(0deg 1% 100% / 8%), hsl(0deg 1% 100% / 8%));
+  text-decoration: underline;
 }
 
 /* form fields, and buttons */

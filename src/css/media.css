@@ -11,7 +11,7 @@ meter {
 audio, video {
   display: block;
   width: 100%;
-  margin-bottom: 1rem;
+  /* use figure (or container) for margin bottom */
 }
 
 video {
@@ -25,12 +25,16 @@ canvas {
   max-width: 100%;
 }
 
+iframe {
+  display: block;
+}
+
 iframe,
 object,
 embed {
   max-width: 100%;
-  margin-bottom: 1rem;
   border: 0;
+  /* use figure (or container) for margin bottom */
 }
 
 figure {

@@ -1,5 +1,12 @@
 # changelog
 
+## 3.1.0
+
+- [x] remove decorator colors
+- [x] remove display property for html5 elements
+- [x] simplify font family fallbacks
+- [x] remove margin from audio, video, iframe, object, embed
+
 ## 3.0.0
 
 - [x] refactor modules

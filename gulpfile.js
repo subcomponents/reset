@@ -2,7 +2,7 @@ var { gulp, src, dest, watch, series, parallel } = require('gulp');
 var postcss      = require('gulp-postcss');
 var presetEnv    = require('postcss-preset-env');
 var atImport     = require('postcss-import');
-var minify       = require('gulp-minify-css');
+var minify       = require('gulp-clean-css');
 var rename       = require('gulp-rename');
 var header       = require('gulp-header');
 var nunjucks     = require('gulp-nunjucks-render');
@@ -10,9 +10,13 @@ var pkgJson      = require('./package.json');
 var browserSync  = require('browser-sync').create();
 var banner       = ['/** <%= package.version %> <%= package.repo.url %> */\n'];
 
+var presetEnvOptions = {
+  // preserve: true,
+}
+
 function css() {
   return src('./src/css/bundle.css')
-    .pipe(postcss([atImport, presetEnv({ preserve: true })]))
+    .pipe(postcss([atImport, presetEnv(presetEnvOptions)]))
     .pipe(rename(pkgJson.keyword + '.css'))
     .pipe(header(banner, { package: pkgJson }))
     .pipe(dest('./dist')) // <-- deliver expanded for dist

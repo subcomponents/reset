@@ -10,7 +10,7 @@ table {
 }
 
 thead {
-  border-bottom: var(--border-width-default) solid var(--thead-border-color);
+  border-bottom: var(--border-width-default) solid var(--border-color-default);
 }
 
 th, tfoot td {
@@ -29,4 +29,8 @@ th, table caption {
 /* padding */
 th, td, table caption {
   padding: .4em .8em;
+}
+
+caption {
+  color: var(--color-muted);
 }

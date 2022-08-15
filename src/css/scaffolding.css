@@ -1,32 +1,27 @@
-*,
-*::before,
-*::after {
+html {
   box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**
+ * text size adjust
+ * prevent mobile browser from inflating font-size unnecessarily
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+ */
 html {
   text-size-adjust: 100%;
 }
+
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
 }
 
 body {
   background: var(--background-color-default);
-}
-
-main,
-section,
-article,
-aside,
-footer,
-header,
-nav,
-figure,
-figcaption {
-  display: block;
 }
 
 nav {

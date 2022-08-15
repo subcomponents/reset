@@ -12,7 +12,7 @@
   <body class="">
 
     <header>
-  <h1>@hyper-reset-css <span class="color-primary">v3.0.0</span></h1>
+  <h1>@hyper-reset-css <span class="color-primary">v3.1.0</span></h1>
   <nav>
   <a href="./">Home</a>
   ·
@@ -30,9 +30,12 @@
 
     
 
-  <hr>
+  <section class="marginb-bottom-5">
+    <h2>Typography</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
 
-  <div class="margin-bottom-1">
+  <section class="margin-bottom-5">
     <h2>Colors</h2>
     <div class="flex">
       <div class="width-auto width-6-md">
@@ -98,9 +101,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="margin-bottom-2">
+  <section class="margin-bottom-5">
     <h2>Buttons</h2>
     <ul>
       <li>variants are not included</li>
@@ -115,25 +118,45 @@
     </style>
     <p><code>[style]</code></p>
     <p>
-      <button>button (no attr)</button>
-      <button class="box-shadow" style="background-color: var(--color-primary); color: #fff;">primary</button>
-      <button class="box-shadow" style="background-color: var(--color-secondary); color: #fff;">secondary</button>
-      <button class="box-shadow" style="background-color: var(--color-tertiary); color: #fff;">tertiary</button>
-      <button class="box-shadow" style="background-color: var(--color-quaternary); color: #fff;">quaternary</button>
-      <button class="box-shadow" style="background-color: var(--color-complementary); color: #fff;">complementary</button>
+      <button>button (no style)</button>
+      <button style="background-color: var(--color-primary); color: #fff;">button</button>
+      <button style="background-color: var(--color-secondary); color: #fff;">button</button>
+      <button style="background-color: var(--color-tertiary); color: #fff;">button</button>
+      <button style="background-color: var(--color-quaternary); color: #000;">button</button>
+      <button style="background-color: var(--color-complementary); color: #fff;">button</button>
+      <button class="bg-transparent color-inherit box-shadow">trasparent</button>
+    </p>
+    <p class="bg-black padding-1">
+      <button>button (no style)</button>
+      <button style="background-color: var(--color-primary); color: #fff;">button</button>
+      <button style="background-color: var(--color-secondary); color: #fff;">button</button>
+      <button style="background-color: var(--color-tertiary); color: #fff;">button</button>
+      <button style="background-color: var(--color-quaternary); color: #000;">button</button>
+      <button style="background-color: var(--color-complementary); color: #fff;">button</button>
+      <button class="bg-transparent color-white box-shadow">trasparent</button>
     </p>
     <p><code>[class]</code></p>
     <p>
-      <button>button (no attr)</button>
-      <button class="box-shadow bg-primary color-white">primary</button>
-      <button class="box-shadow bg-secondary color-white">secondary</button>
-      <button class="box-shadow bg-tertiary color-white">tertiary</button>
-      <button class="box-shadow bg-quaternary color-white">quaternary</button>
-      <button class="box-shadow bg-complementary color-white">complementary</button>
+      <button>button (no class)</button>
+      <button class="bg-primary color-white">button</button>
+      <button class="bg-secondary color-white">button</button>
+      <button class="bg-tertiary color-white">button</button>
+      <button class="bg-quaternary color-black">button</button>
+      <button class="bg-complementary color-white">button</button>
+      <button class="bg-transparent color-inherit box-shadow">trasparent</button>
     </p>
-  </div>
+    <p class="bg-black padding-1">
+      <button>button (no class)</button>
+      <button class="bg-primary color-white">button</button>
+      <button class="bg-secondary color-white">button</button>
+      <button class="bg-tertiary color-white">button</button>
+      <button class="bg-quaternary color-black">button</button>
+      <button class="bg-complementary color-white">button</button>
+      <button class="bg-transparent color-white box-shadow">trasparent</button>
+    </p>
+  </section>
 
-  <div>
+  <section class="margin-bottom-5">
     <h2>Background</h2>
     <div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-red-light); border: 2px solid var(--color-red);">
       Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
@@ -287,7 +310,7 @@
     <p><code>mark</code> <mark>Mark represents highlighted text</mark></p>
     <p><code>var</code> <var>Var</var> represents a variable in a mathematical expression or a programming context</p>
     <p><code>time[datetime]</code> Time represents time on 24-hour clock (<time>22:00</time>), or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
-  </div>
+  </section>
 
 
 

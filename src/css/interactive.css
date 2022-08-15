@@ -1,0 +1,14 @@
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element#interactive_elements */
+
+details {
+  margin-bottom: 1rem;
+}
+
+details > ol,
+details > ul {
+  margin-top: 1rem;
+}
+
+summary {
+  cursor: pointer;
+}
