@@ -1,12 +1,12 @@
 {
-  "name": "hyper-reset-css",
+  "name": "@subcomponents/reset",
   "version": "3.1.0",
-  "description": "CSS reset",
+  "description": "CSS reset library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyallan/hyper-reset-css.git"
+    "url": "git+https://github.com/subcomponents/reset.git"
   },
-  "abstract": "Default styles for default elements. It will provide a presentable layer of elements on which to build upon.",
+  "introduction": "Default styles for default elements. It will provide a presentable layer of styles on which to build upon.",
   "keywords": [
     "css",
     "hyper",
@@ -21,15 +21,14 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyallan/hyper-reset-css/issues"
+    "url": "https://github.com/subcomponents/reset/issues"
   },
-  "homepage": "https://heyallan.github.io/hyper-reset-css",
+  "homepage": "https://subcomponents.github.io/reset",
   "main": "dist/reset.min.css",
   "repo": {
-    "url": "https://github.com/heyallan/hyper-reset-css"
+    "url": "https://github.com/subcomponents/reset"
   },
   "keyword": "reset",
-  "scope": "@metacss",
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.2",

@@ -1,13 +1,13 @@
-# @hyper-reset-css
+# @@subcomponents/reset
 
 ![License][LicenseBadgeURL]
 [![Donate][DonateBadgeURL]][DonateURL]
 
-> CSS reset
+> CSS reset library
 
 ## Documentation
 
-Docs and demo: <https://heyallan.github.io/hyper-reset-css>
+Docs and demo: <https://subcomponents.github.io/reset>
 
 ## Contribute
 
