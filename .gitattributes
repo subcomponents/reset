@@ -1,0 +1,2 @@
+*.html linguist-detectable=false
+*.njk linguist-detectable=false
