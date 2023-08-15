@@ -1,4 +1,4 @@
-/** 3.1.0 https://github.com/subcomponents/reset */
+/** 3.1.1 https://github.com/subcomponents/reset */
 :root {
   /* text */
   --color-default:              hsl(240 20% 16%);
@@ -43,9 +43,9 @@
   --font-size-current: var(--font-size-default);
 
   /* font family - fallbacks */
-  --font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  --font-family-serif: Times, "Times New Roman", Georgia, serif;
+  --font-family-default: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --font-family-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --font-family-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;;
 
   /* forms */
   --input-line-height:      var(--line-height-default);
@@ -71,23 +71,21 @@
 
 /* basic dark mode */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* text */
-    --color-default:              hsl(228 7% 95%);
-    --color-heading:              hsl(228 7% 95%);
-    --color-muted:                hsl(228 7% 95% / 0.7);
-    /* background */
-    --background-color-default:   hsl(225 6% 13%);
-    --background-color-highlight: hsl(220 7% 16%);
-    /* border */
-    --border-color-default:       hsl(220 7% 75% / 0.17);
-    --border-color-light:         hsl(220 7% 75% / 0.1);
-    /* other */
-    --line-height-default:        1.8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+.theme-dark {
+  /* text */
+  --color-default:              hsl(228 7% 95%);
+  --color-heading:              hsl(228 7% 95%);
+  --color-muted:                hsl(228 7% 95% / 0.7);
+  /* background */
+  --background-color-default:   hsl(225 6% 13%);
+  --background-color-highlight: hsl(220 7% 16%);
+  /* border */
+  --border-color-default:       hsl(220 7% 75% / 0.17);
+  --border-color-light:         hsl(220 7% 75% / 0.1);
+  /* other */
+  --line-height-default:        1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -137,12 +135,12 @@ time {
  * heading inherits font family from body by default
  */
 
-html {
+:root {
   color:       hsl(240 20% 16%);
   color:       var(--color-default);
   font-size:   18px;
   font-size:   var(--font-size-default);
-  font-family: var(--font-family-default), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-family-default), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
   font-family: var(--font-family-body, var(--font-family-default)), var(--font-family-default);
   line-height: 1.625;
   line-height: var(--line-height-default);
@@ -154,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem;
   line-height: calc(1.625 * 0.8);
   line-height: var(--line-height-heading);
-  font-family: var(--font-family-default), var(--font-family-default), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-family-default), var(--font-family-default), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
   font-family: var(--font-family-heading, var(--font-family-body, var(--font-family-default))), var(--font-family-body, var(--font-family-default)), var(--font-family-default);
 }
 
@@ -367,7 +365,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   font-family: var(--font-family-mono);
   background-color: hsl(240 10% 97%);
   background-color: var(--code-background-color);
@@ -552,28 +550,24 @@ button,
   cursor: pointer;
 }
 
-button:hover,
-.button:hover,
- button:focus,
-.button:focus,
-[type=button]:hover,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:focus {
+:is(button, .button, [type=button], [type=reset], [type=submit]):hover,
+:is(button, .button, [type=button], [type=reset], [type=submit]):focus {
   background-image: linear-gradient(to bottom, hsl(0deg 1% 100% / 8%), hsl(0deg 1% 100% / 8%));
   text-decoration: underline;
 }
 
+/* outline */
+
+:is(button, .button, [type=button], [type=reset], [type=submit]):focus,
+:is(button, .button, [type=button], [type=reset], [type=submit]):active {
+  outline-offset: 0;
+  outline: 2px solid hsl(208 98% 43%);
+  outline: 2px solid var(--color-primary);
+}
+
 /* form fields, and buttons */
 
-:disabled,
-button:disabled,
-.button:disabled,
-[type=button]:disabled,
-[type=reset]:disabled,
-[type=submit]:disabled {
+:disabled {
   cursor: not-allowed !important;
   text-decoration: none !important;
   opacity: 0.6 !important;

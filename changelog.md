@@ -1,5 +1,17 @@
 # changelog
 
+## Planned
+
+- [ ] create token library
+- [ ] add [autocomplete] attribute to form inputs
+
+## 3.1.1
+
+- [x] make dark mode optional
+- [x] update system fonts
+- [x] simplify button selectors
+- [x] update packageJson metadata
+
 ## 3.1.0
 
 - [x] remove decorator colors
@@ -31,7 +43,7 @@
 - make buttons inherit font-family (fix)
 - remove font-family-serif, use inherit
 - unify styles for code elements
-- move aspect-ratio to hyper-properties respository
+- move aspect-ratio to hyper-properties repository
 
 ## 2.2.1
 

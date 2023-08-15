@@ -5,7 +5,7 @@
  * heading inherits font family from body by default
  */
 
-html {
+:root {
   color:       var(--color-default);
   font-size:   var(--font-size-default);
   font-family: var(--font-family-body, var(--font-family-default)), var(--font-family-default);

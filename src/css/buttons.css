@@ -21,27 +21,21 @@ button,
   cursor: pointer;
 }
 
- button:hover,
-.button:hover,
- button:focus,
-.button:focus,
-[type=button]:hover,
-[type=button]:focus,
-[type=reset]:hover,
-[type=reset]:focus,
-[type=submit]:hover,
-[type=submit]:focus {
+:is(button, .button, [type=button], [type=reset], [type=submit]):hover,
+:is(button, .button, [type=button], [type=reset], [type=submit]):focus {
   background-image: linear-gradient(to bottom, hsl(0deg 1% 100% / 8%), hsl(0deg 1% 100% / 8%));
   text-decoration: underline;
 }
 
+/* outline */
+:is(button, .button, [type=button], [type=reset], [type=submit]):focus,
+:is(button, .button, [type=button], [type=reset], [type=submit]):active {
+  outline-offset: 0;
+  outline: 2px solid var(--color-primary);
+}
+
 /* form fields, and buttons */
-:disabled,
-button:disabled,
-.button:disabled,
-[type=button]:disabled,
-[type=reset]:disabled,
-[type=submit]:disabled {
+:disabled {
   cursor: not-allowed !important;
   text-decoration: none !important;
   opacity: 0.6 !important;

@@ -2,286 +2,223 @@
 
 {% block content %}
 
-  <section class="marginb-bottom-5">
-    <h2>Typography</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </section>
+	<ui-playground>
+		<form>
+			<fieldset style="border-color: var(--color-primary)">
+				<legend style="color: var(--color-primary)">Registration Form</legend>
+				<p>
+					<label for="input-username">Username</label>
+					<input id="input-username" type="text" autocomplete="on" placeholder="Username">
+					<span style="color: var(--color-primary); background: var(--color-primary-light); font-size: 0.6em; border-radius: 20px; padding: 0.3em; border: 1px solid var(--color-primary);">Required</span>
+				</p>
+				<p>
+					<label for="input-password">Password</label>
+					<input id="input-password" type="password" autocomplete="current-password" placeholder="Password">
+					<span style="color: var(--color-primary); background: var(--color-primary-light); font-size: 0.6em; border-radius: 20px; padding: 0.3em; border: 1px solid var(--color-primary);">Required</span>
+				</p>
+				<p>
+					<label for="input-url">URL</label>
+					<input id="input-url" type="url" placeholder="http://website.com">
+					<span style="color: var(--color-primary); background: var(--color-primary-light); font-size: 0.6em; border-radius: 20px; padding: 0.3em; border: 1px solid var(--color-primary);">Required</span>
+				</p>
+				<p>
+					<label for="input-email">Email</label>
+					<input id="input-email" type="email" autocomplete="email" placeholder="Email">
+					<span style="color: var(--color-primary); background: var(--color-primary-light); font-size: 0.6em; border-radius: 20px; padding: 0.3em; border: 1px solid var(--color-primary);">Required</span>
+				</p>
+				<p>
+					<button type="submit" style="background-color: var(--color-primary)">
+							Submit
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4M8 12h7"/></svg>
+					</button>
+				</p>
+			</fieldset>
+		</form>
+	</ui-playground>
 
-  <section class="margin-bottom-5">
-    <h2>Colors</h2>
-    <div class="flex">
-      <div class="width-auto width-6-md">
-        <div class="padding-1 border-dashed border-1" style="background-color: var(--background-color-default)">
-          <div>--background-color-default</div>
-        </div>
-      </div>
-      <div class="width-auto width-6-md">
-        <div class="padding-1" style="background-color: var(--background-color-highlight)">
-          <div>--background-color-highlight</div>
-        </div>
-      </div>
-      <div class="width-auto width-6-md">
-        <div class="padding-1" style="background-color: var(--color-default)">
-          <div style="color: var(--color-inverse)">--color-default --color-inverse</div>
-        </div>
-      </div>
-      <div class="width-auto width-6-md">
-        <div class="padding-1" style="background-color: var(--color-muted)">
-          <div>--color-muted (text)</div>
-        </div>
-      </div>
-      <div class="width-auto width-6-md">
-        <div class="padding-1" style="background-color: var(--border-color-default)">
-          <div>--border-color-default</div>
-        </div>
-      </div>
-      <div class="width-auto width-6-md">
-        <div class="padding-1 border-dashed border-1" style="background-color: var(--input-background-color)">
-          <div>--input-background-color</div>
-        </div>
-      </div>
-      <div class="width-auto width-3-md">
-        <div class="padding-1" style="background: var(--color-primary);">
-          <div>--color-primary</div>
-        </div>
-        <div class="padding-1" style="background: var(--color-primary-light);">
-          <div>--color-primary-light</div>
-        </div>
-      </div>
-      <div class="width-auto width-3-md">
-        <div class="padding-1" style="background: var(--color-green);">
-          <div>--color-green</div>
-        </div>
-        <div class="padding-1" style="background: var(--color-green-light);">
-          <div>--color-green-light</div>
-        </div>
-      </div>
-      <div class="width-auto width-3-md">
-        <div class="padding-1" style="background: var(--color-yellow);">
-          <div>--color-yellow</div>
-        </div>
-        <div class="padding-1" style="background: var(--color-yellow-light);">
-          <div>--color-yellow-light</div>
-        </div>
-      </div>
-      <div class="width-auto width-3-md">
-        <div class="padding-1" style="background: var(--color-red);">
-          <div>--color-red</div>
-        </div>
-        <div class="padding-1" style="background: var(--color-red-light);">
-          <div>--color-red-light</div>
-        </div>
-      </div>
-    </div>
-  </section>
+	<ui-playground>
+		<section>
+			<h1>Typography</h1>
+			<h2>Typography</h2>
+			<h3>Typography</h3>
+			<h4>Typography</h4>
+			<h5>Typography</h5>
+		</section>
+	</ui-playground>
 
-  <section class="margin-bottom-5">
-    <h2>Buttons</h2>
-    <ul>
-      <li>variants are not included</li>
-    </ul>
-    <style>
-      html {
-        --color-secondary: var(--color-red);
-        --color-tertiary: var(--color-green);
-        --color-quaternary: var(--color-yellow);
-        --color-complementary: blueviolet;
-      }
-    </style>
-    <p><code>[style]</code></p>
-    <p>
-      <button>button (no style)</button>
-      <button style="background-color: var(--color-primary); color: #fff;">button</button>
-      <button style="background-color: var(--color-secondary); color: #fff;">button</button>
-      <button style="background-color: var(--color-tertiary); color: #fff;">button</button>
-      <button style="background-color: var(--color-quaternary); color: #000;">button</button>
-      <button style="background-color: var(--color-complementary); color: #fff;">button</button>
-      <button class="bg-transparent color-inherit box-shadow">trasparent</button>
-    </p>
-    <p class="bg-black padding-1">
-      <button>button (no style)</button>
-      <button style="background-color: var(--color-primary); color: #fff;">button</button>
-      <button style="background-color: var(--color-secondary); color: #fff;">button</button>
-      <button style="background-color: var(--color-tertiary); color: #fff;">button</button>
-      <button style="background-color: var(--color-quaternary); color: #000;">button</button>
-      <button style="background-color: var(--color-complementary); color: #fff;">button</button>
-      <button class="bg-transparent color-white box-shadow">trasparent</button>
-    </p>
-    <p><code>[class]</code></p>
-    <p>
-      <button>button (no class)</button>
-      <button class="bg-primary color-white">button</button>
-      <button class="bg-secondary color-white">button</button>
-      <button class="bg-tertiary color-white">button</button>
-      <button class="bg-quaternary color-black">button</button>
-      <button class="bg-complementary color-white">button</button>
-      <button class="bg-transparent color-inherit box-shadow">trasparent</button>
-    </p>
-    <p class="bg-black padding-1">
-      <button>button (no class)</button>
-      <button class="bg-primary color-white">button</button>
-      <button class="bg-secondary color-white">button</button>
-      <button class="bg-tertiary color-white">button</button>
-      <button class="bg-quaternary color-black">button</button>
-      <button class="bg-complementary color-white">button</button>
-      <button class="bg-transparent color-white box-shadow">trasparent</button>
-    </p>
-  </section>
+	<ui-playground>
+		<div class="flex">
+			<div class="width-auto width-6-md">
+				<div class="padding-1 border-dashed border-1" style="background-color: var(--background-color-default)">
+					<div>--background-color-default</div>
+				</div>
+			</div>
+			<div class="width-auto width-6-md">
+				<div class="padding-1" style="background-color: var(--background-color-highlight)">
+					<div>--background-color-highlight</div>
+				</div>
+			</div>
+			<div class="width-auto width-6-md">
+				<div class="padding-1" style="background-color: var(--color-default)">
+					<div style="color: var(--color-inverse)">--color-default --color-inverse</div>
+				</div>
+			</div>
+			<div class="width-auto width-6-md">
+				<div class="padding-1" style="background-color: var(--color-muted)">
+					<div>--color-muted (text)</div>
+				</div>
+			</div>
+			<div class="width-auto width-6-md">
+				<div class="padding-1" style="background-color: var(--border-color-default)">
+					<div>--border-color-default</div>
+				</div>
+			</div>
+			<div class="width-auto width-6-md">
+				<div class="padding-1 border-dashed border-1" style="background-color: var(--input-background-color)">
+					<div>--input-background-color</div>
+				</div>
+			</div>
+			<div class="width-auto width-3-md">
+				<div class="padding-1" style="background: var(--color-primary);">
+					<div>--color-primary</div>
+				</div>
+				<div class="padding-1" style="background: var(--color-primary-light);">
+					<div>--color-primary-light</div>
+				</div>
+			</div>
+			<div class="width-auto width-3-md">
+				<div class="padding-1" style="background: var(--color-green);">
+					<div>--color-green</div>
+				</div>
+				<div class="padding-1" style="background: var(--color-green-light);">
+					<div>--color-green-light</div>
+				</div>
+			</div>
+			<div class="width-auto width-3-md">
+				<div class="padding-1" style="background: var(--color-yellow);">
+					<div>--color-yellow</div>
+				</div>
+				<div class="padding-1" style="background: var(--color-yellow-light);">
+					<div>--color-yellow-light</div>
+				</div>
+			</div>
+			<div class="width-auto width-3-md">
+				<div class="padding-1" style="background: var(--color-red);">
+					<div>--color-red</div>
+				</div>
+				<div class="padding-1" style="background: var(--color-red-light);">
+					<div>--color-red-light</div>
+				</div>
+			</div>
+		</div>
+	</ui-playground>
 
-  <section class="margin-bottom-5">
-    <h2>Background</h2>
-    <div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-red-light); border: 2px solid var(--color-red);">
-      Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
-      <span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam sunt, iure vero possimus commodi quam eius amet.</span>
-    </div>
-    <div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-green-light); border: 2px solid var(--color-green);">
-      Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
-      <span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat amet nam sed fuga adipisci laboriosam commodi.</span>
-    </div>
-    <div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-yellow-light); border: 2px solid var(--color-yellow);">
-      Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
-      <span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellat quo soluta eveniet, harum rerum, accusamus.</span>
-    </div>
-    <div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-primary-light); border: 2px solid var(--color-primary);">
-      Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
-      <span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maxime laboriosam inventore quidem quibusdam iste commodi nobis tempora.</span>
-    </div>
-    <div class="padding-1 border-radius margin-bottom-1" style="background: var(--background-color-highlight); border: 2px solid var(--border-color-default);">
-      Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
-      <span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis hic vero officiis quas, reiciendis id illum est!</span>
-    </div>
-    <div class="padding-2 border-radius margin-bottom-1" style="background: var(--background-color-highlight);">
-      Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
-      <span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora culpa praesentium et ipsam rerum, sequi quibusdam velit.</span>
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eaque explicabo quo ut. Corporis facere neque optio soluta, dolorum repellendus, harum? Quas, voluptatem. Vero, a cupiditate modi, non ipsum debitis.</p>
-    <p style="color: var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto impedit magnam dolorem esse minus quos eveniet, veritatis neque rem recusandae. Cum odit, eum ipsam repellendus quos maxime rem, expedita soluta.</p>
-    <div class="container">
-      <div class="flex">
-        <div class="width-4">
-          <div id="popupItem1" data-component="popup" class="small padding-1.5 border-1 border-radius box-shadow margin-bottom-1 bg-default" style="transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; position: relative;">
-            <p class="margin-bottom-0.5"><strong>🤖 Privacy Policy</strong></p>
-            <p>We use cookies to improve your experience. Find out more in our <a href="https://heyallan.com/kiii/privacy">privacy</a> page and <a href="https://heyallan.com/kiii/en/docs/popups">documentation</a> page.</p>
-            <button type="button" data-action="dismiss">Dismiss</button>
-            <button type="button" data-action="decline">Decline</button>
-            <button type="button" data-action="dismiss">Dismiss</button>
-          </div>
-        </div>
-        <div class="width-4">
-          <div id="popupItem1" data-component="popup" class="small padding-1.5 border-1 border-radius box-shadow margin-bottom-1 bg-highlight" style="transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; position: relative;">
-            <p class="margin-bottom-0.5"><strong>🤖 Privacy Policy</strong></p>
-            <p>We use cookies to improve your experience. Find out more in our <a href="https://heyallan.com/kiii/privacy">privacy</a> page and <a href="https://heyallan.com/kiii/en/docs/popups">documentation</a> page.</p>
-            <button type="button" data-action="dismiss">Dismiss</button>
-            <button type="button" data-action="decline">Decline</button>
-            <button type="button" data-action="dismiss">Dismiss</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h2>Lists</h2>
-    <ul>
-      <li>List item
-        <ul>
-          <li>Subitem</li>
-          <li>Subitem</li>
-        </ul>
-      </li>
-      <li>List item</li>
-      <li>List item</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, <a href="#!">consectetur adipisicing</a> elit. Porro, optio, quam dignissimos quia laboriosam ullam. Non error sapiente temporibus, et, voluptatibus doloribus sequi eum atque aliquid corporis nam, qui id!</p>
-    <figure>
-      <img width="500" src="550x350.jpg" alt="Example image">
-      <figcaption>Lorem ipsum dolor</figcaption>
-    </figure>
-    <table>
-      <caption>Caption specifies the caption or title of a table</caption>
-      <thead>
-        <tr>
-          <th>Header</th>
-          <th>Header</th>
-          <th>Header</th>
-          <th>Header</th>
-          <th>Header</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <td>Footer</td>
-          <td>Footer</td>
-          <td>Footer</td>
-          <td>Footer</td>
-          <td>Footer</td>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td>Datum</td>
-          <td>Datum</td>
-          <td>Datum</td>
-          <td>Datum</td>
-          <td>Datum</td>
-        </tr>
-        <tr>
-          <td>Datum for</td>
-          <td>Datum for</td>
-          <td>Datum for</td>
-          <td>Datum for</td>
-          <td>Datum for</td>
-        </tr>
-        <tr>
-          <td>Datum for table</td>
-          <td>Datum for table</td>
-          <td>Datum for table</td>
-          <td>Datum for table</td>
-          <td>Datum for table</td>
-        </tr>
-        <tr>
-          <td>Datum for table cell</td>
-          <td>Datum for table cell</td>
-          <td>Datum for table cell</td>
-          <td>Datum for table cell</td>
-          <td>Datum for table cell</td>
-        </tr>
-      </tbody>
-    </table>
-    <p><code>code</code></p>
-<pre><code>.ninja {
-  color: black;
-  visibility: hidden;
-}</code></pre>
-    <hr>
-    <fieldset>
-      <legend>Input fields</legend>
-      <p>
-        <label for="inline-input-email">Email field</label>
-        <input id="inline-input-email" type="text" placeholder="Email field">
-        <button type="submit">Button Submit</button>
-      </p>
-    </fieldset>
-    <blockquote>
-      <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
-      <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">The block quotation element</a> by Mozilla MDN</cite>
-    </blockquote>
-    <p><code>a</code> <a href="#!">Anchor defines a hyperlink to a location</a></p>
-    <p><code>strong</code> <strong>Strong is used to indicate importance</strong></p>
-    <p><code>b</code> <b>Bold is stylistically different from normal text</b> (not to be confused with <code>strong</code>)</p>
-    <p><code>em</code> <em>Emphasis marks text that has stress emphasis</em></p>
-    <p><code>i</code> <i>Italic is offset from the normal text</i> (not to be confused with <code>em</code>)</p>
-    <p><code>u</code> <u>Underline is text with an unarticulated, though explicitly rendered, non-textual annotation</u></p>
-    <p><code>del</code> <del>Deleted represents a range of text that has been deleted from a document</del></p>
-    <p><code>ins</code> <ins>Inserted represents a range of text that has been added to a document</ins></p>
-    <p><code>s</code> <s>Strikethrough renders text with a strikethrough</s></p>
-    <p><code>sup</code> Superscript <sup>(sup)</sup> defines a span of text that should be displayed higher and often smaller</p>
-    <p><code>sub</code> Subscript <sub>(sub)</sub> defines a span of text that should be displayed lower and often smaller</p>
-    <p><code>small</code> <small>Small makes the text font size one size smaller</small></p>
-    <p><code>abbr[title]</code> <abbr title="abbreviation">Abbr.</abbr> represents an abbreviation and optionally provides a full description for it</p>
-    <p><code>q[cite]</code> <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">Quote represents a short inline quotation</q></p>
-    <p><code>cite</code> <cite>Citation represents a reference to a creative work</cite></p>
-    <p><code>dfn</code> <dfn>Definition</dfn> represents the defining instance of a term</p>
-    <p><code>mark</code> <mark>Mark represents highlighted text</mark></p>
-    <p><code>var</code> <var>Var</var> represents a variable in a mathematical expression or a programming context</p>
-    <p><code>time[datetime]</code> Time represents time on 24-hour clock (<time>22:00</time>), or date (<time datetime="2001-05-15T19:00">May 15</time>) in Gregorian calendar</p>
-  </section>
+	<ui-playground>
+		<section>
+			<h2>Buttons</h2>
+			<style>
+				html {
+					--color-secondary: var(--color-red);
+					--color-tertiary: var(--color-green);
+					--color-quaternary: var(--color-yellow);
+					--color-complementary: blueviolet;
+				}
+			</style>
+			<p>
+				<code>[style]</code>
+			</p>
+			<p>
+				<button>button (no style)</button>
+				<button style="background-color: var(--color-primary); color: #fff;">button</button>
+				<button style="background-color: var(--color-secondary); color: #fff;">button</button>
+				<button style="background-color: var(--color-tertiary); color: #fff;">button</button>
+				<button style="background-color: var(--color-quaternary); color: #000;">button</button>
+				<button style="background-color: var(--color-complementary); color: #fff;">button</button>
+				<button class="bg-transparent color-inherit box-shadow">trasparent</button>
+			</p>
+			<p class="bg-black padding-1">
+				<button>button (no style)</button>
+				<button style="background-color: var(--color-primary); color: #fff;">button</button>
+				<button style="background-color: var(--color-secondary); color: #fff;">button</button>
+				<button style="background-color: var(--color-tertiary); color: #fff;">button</button>
+				<button style="background-color: var(--color-quaternary); color: #000;">button</button>
+				<button style="background-color: var(--color-complementary); color: #fff;">button</button>
+				<button class="bg-transparent color-white box-shadow">trasparent</button>
+			</p>
+			<p>
+				<code>[class]</code>
+			</p>
+			<p>
+				<button>button (no class)</button>
+				<button class="bg-primary color-white">button</button>
+				<button class="bg-secondary color-white">button</button>
+				<button class="bg-tertiary color-white">button</button>
+				<button class="bg-quaternary color-black">button</button>
+				<button class="bg-complementary color-white">button</button>
+				<button class="bg-transparent color-inherit box-shadow">trasparent</button>
+			</p>
+			<p class="bg-black padding-1">
+				<button>button (no class)</button>
+				<button class="bg-primary color-white">button</button>
+				<button class="bg-secondary color-white">button</button>
+				<button class="bg-tertiary color-white">button</button>
+				<button class="bg-quaternary color-black">button</button>
+				<button class="bg-complementary color-white">button</button>
+				<button class="bg-transparent color-white box-shadow">trasparent</button>
+			</p>
+		</section>
+	</ui-playground>
+
+	<ui-playground>
+		<section>
+			<h2>Background</h2>
+			<div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-red-light); border: 2px solid var(--color-red);">
+				Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
+				<span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam sunt, iure vero possimus commodi quam eius amet.</span>
+			</div>
+			<div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-green-light); border: 2px solid var(--color-green);">
+				Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
+				<span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat amet nam sed fuga adipisci laboriosam commodi.</span>
+			</div>
+			<div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-yellow-light); border: 2px solid var(--color-yellow);">
+				Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
+				<span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellat quo soluta eveniet, harum rerum, accusamus.</span>
+			</div>
+			<div class="padding-1 border-radius margin-bottom-1" style="background: var(--color-primary-light); border: 2px solid var(--color-primary);">
+				Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
+				<span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maxime laboriosam inventore quidem quibusdam iste commodi nobis tempora.</span>
+			</div>
+			<div class="padding-1 border-radius margin-bottom-1" style="background: var(--background-color-highlight); border: 2px solid var(--border-color-default);">
+				Lorem ipsum <a href="#!">dolor sit amet</a>, consectetur adipisicing elit. Tempore, ipsum sequi quasi deleniti sed itaque? Amet architecto fugiat ratione voluptas laboriosam molestiae.
+				<span style="color:var(--color-muted)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis hic vero officiis quas, reiciendis id illum est!</span>
+			</div>
+			<div class="container">
+				<div class="flex">
+					<div class="width-4">
+						<div id="popupItem1" data-component="popup" class="small padding-1.5 border-1 border-radius box-shadow margin-bottom-1 bg-default" style="transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; position: relative;">
+							<p class="margin-bottom-0.5">
+								<strong>🤖 Privacy Policy</strong>
+							</p>
+							<p>We use cookies to improve your experience. Find out more in our <a href="https://heyallan.com/kiii/privacy">privacy</a> page and <a href="https://heyallan.com/kiii/en/docs/popups">documentation</a> page.</p>
+							<button type="button" data-action="dismiss">Dismiss</button>
+							<button type="button" data-action="decline">Decline</button>
+							<button type="button" data-action="dismiss">Dismiss</button>
+						</div>
+					</div>
+					<div class="width-4">
+						<div id="popupItem1" data-component="popup" class="small padding-1.5 border-1 border-radius box-shadow margin-bottom-1 bg-highlight" style="transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; position: relative;">
+							<p class="margin-bottom-0.5">
+								<strong>🤖 Privacy Policy</strong>
+							</p>
+							<p>We use cookies to improve your experience. Find out more in our <a href="https://heyallan.com/kiii/privacy">privacy</a> page and <a href="https://heyallan.com/kiii/en/docs/popups">documentation</a> page.</p>
+							<button type="button" data-action="dismiss">Dismiss</button>
+							<button type="button" data-action="decline">Decline</button>
+							<button type="button" data-action="dismiss">Dismiss</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</ui-playground>
 
 {% endblock %}

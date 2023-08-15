@@ -7,30 +7,30 @@
         <h1 id="forms">Forms</h1>
         <article>
           <h2>Inline</h2>
-          <p><code>p>(label+input)</code></p>
+          <p><code>p&gt;(label+input)</code></p>
           <form>
             <p>
               <label for="inline-input-text">Text field</label>
-              <input id="inline-input-text" type="text" placeholder="Text field">
+              <input id="inline-input-text" type="text" autocomplete="on" placeholder="Text field">
               <label for="inline-input-email">Email field</label>
-              <input id="inline-input-email" type="text" placeholder="Email field">
+              <input id="inline-input-email" type="email" placeholder="Email field">
               <button type="submit">Button Submit</button>
             </p>
           </form>
           <h2>Block</h2>
-          <p><code>p>(label+input+label)</code></p>
+          <p><code>p&gt;(label+input+label)</code></p>
           <form>
             <p>
               <label for="default-input-text">Text field</label>
               <br/>
-              <input id="default-input-text" type="text" placeholder="Enter your text">
+              <input id="default-input-text" type="text" autocomplete="on" placeholder="Enter your text">
               <br/>
               <label for="default-input-text">Help text</label>
             </p>
             <p>
               <label for="default-input-email">Email field</label>
               <br/>
-              <input id="default-input-email" type="email" placeholder="Enter your email">
+              <input id="default-input-email" type="email" autocomplete="email" placeholder="Enter your email">
               <br/>
               <label for="default-input-email">Help text</label>
             </p>
@@ -39,21 +39,21 @@
             </p>
           </form>
           <h2>Fieldsets</h2>
-          <p><code>fieldset>p>(label+input+label)</code></p>
+          <p><code>fieldset>p&gt;(label+input+label)</code></p>
           <form>
             <fieldset id="form-inputs">
               <legend>Input fields</legend>
               <p>
                 <label for="justified-input-text">Text</label>
                 <br/>
-                <input id="justified-input-text" type="text" placeholder="Enter your text">
+                <input id="justified-input-text" type="text" autocomplete="on" placeholder="Enter your text">
                 <br/>
                 <label for="justified-input-text">Help text</label>
               </p>
               <p>
                 <label for="justified-input-password">Password</label>
                 <br/>
-                <input id="justified-input-password" type="password" placeholder="Enter your password">
+                <input id="justified-input-password" type="password" autocomplete="current-password" placeholder="Enter your password">
                 <br/>
                 <label for="justified-input-password">Help text</label>
               </p>
@@ -67,7 +67,7 @@
               <p>
                 <label for="justified-input-email">Email</label>
                 <br/>
-                <input id="justified-input-email" type="email" placeholder="name@email.com">
+                <input id="justified-input-email" type="email" autocomplete="email" placeholder="name@email.com">
                 <br/>
                 <label for="justified-input-email">Help text</label>
               </p>
@@ -202,20 +202,19 @@
             <fieldset id="form-buttons">
               <legend>Buttons</legend>
               <p>
-                <input type="submit" value="Input (submit)">
-                <input type="button" value="Input (button)">
-                <input type="reset" value="Input (reset)">
-                <input type="submit" value="Input (disabled)" disabled>
+                <input type="submit" value="Input [submit]">
+                <input type="button" value="Input [button]">
+                <input type="reset" value="Input [reset]">
+                <input type="submit" value="Input [disabled]" disabled>
               </p>
               <p>
-                <button type="submit">Button (submit)</button>
-                <button type="button">Button (button)</button>
-                <button type="reset">Button (reset)</button>
-                <button type="submit" disabled>Button (disabled)</button>
+                <button type="submit">Button [submit]</button>
+                <button type="button">Button [button]</button>
+                <button type="reset">Button [reset]</button>
+                <button type="submit" disabled>Button [disabled]</button>
               </p>
               <p>
-                <a href="#!"><button type="button">Link > Button</button></a>
-                <a href="#!" class="button">Link as Button</a>
+                <a href="#!" class="button">Link [href]</a>
               </p>
             </fieldset>
           </form>

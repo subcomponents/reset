@@ -42,9 +42,9 @@
   --font-size-current: var(--font-size-default);
 
   /* font family - fallbacks */
-  --font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  --font-family-serif: Times, "Times New Roman", Georgia, serif;
+  --font-family-default: system-ui, sans-serif;
+  --font-family-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --font-family-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;;
 
   /* forms */
   --input-line-height:      var(--line-height-default);
@@ -69,21 +69,19 @@
 }
 
 /* basic dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* text */
-    --color-default:              hsl(228 7% 95%);
-    --color-heading:              hsl(228 7% 95%);
-    --color-muted:                hsl(228 7% 95% / 0.7);
-    /* background */
-    --background-color-default:   hsl(225 6% 13%);
-    --background-color-highlight: hsl(220 7% 16%);
-    /* border */
-    --border-color-default:       hsl(220 7% 75% / 0.17);
-    --border-color-light:         hsl(220 7% 75% / 0.1);
-    /* other */
-    --line-height-default:        1.8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+.theme-dark {
+  /* text */
+  --color-default:              hsl(228 7% 95%);
+  --color-heading:              hsl(228 7% 95%);
+  --color-muted:                hsl(228 7% 95% / 0.7);
+  /* background */
+  --background-color-default:   hsl(225 6% 13%);
+  --background-color-highlight: hsl(220 7% 16%);
+  /* border */
+  --border-color-default:       hsl(220 7% 75% / 0.17);
+  --border-color-light:         hsl(220 7% 75% / 0.1);
+  /* other */
+  --line-height-default:        1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
