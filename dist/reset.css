@@ -1,91 +1,102 @@
-/** 3.1.1 https://github.com/subcomponents/reset */
+/** 3.1.2 https://github.com/subcomponents/reset */
 :root {
-  /* text */
-  --color-default:              hsl(240 20% 16%);
-  --color-heading:              hsl(240 20% 16%);
-  --color-muted:                hsl(240 20% 16% / 0.7);
-  --color-inverse:              var(--background-color-default);
-  /* other */
-  --color-primary:              hsl(208 98% 43%);
-  --color-primary-light:        hsl(208 98% 43% / 0.1);
-  --color-green:                hsl(142 64% 36%);
-  --color-green-light:          hsl(142 64% 36% / 0.1);
-  --color-red:                  hsl(0 100% 65%);
-  --color-red-light:            hsl(0 100% 65% / 0.1);
-  --color-yellow:               hsl(48 100% 72%);
-  --color-yellow-light:         hsl(48 100% 72% / 0.1);
-  /* background */
-  --background-color-default:   hsl(240 20% 100%);
-  --background-color-highlight: hsl(240 10% 97%);
-  --border-color-default:       hsl(240 50% 16% / 0.2);
-  --border-color-light:         hsl(240 50% 16% / 0.1);
+	/* text */
+	--color-default:              hsl(240 20% 16%);
+	--color-heading:              hsl(240 20% 16%);
+	--color-muted:                hsl(240 20% 16% / 0.7);
+	--color-inverse:              var(--background-color-default);
+	/* other */
+	--color-blue:                 hsl(208 98% 43%);
+	--color-blue-light:           hsl(208 98% 43% / 0.1);
+	--color-green:                hsl(142 64% 36%);
+	--color-green-light:          hsl(142 64% 36% / 0.1);
+	--color-red:                  hsl(0 100% 65%);
+	--color-red-light:            hsl(0 100% 65% / 0.1);
+	--color-yellow:               hsl(48 100% 72%);
+	--color-yellow-light:         hsl(48 100% 72% / 0.1);
+	/* background */
+	--background-color-default:   hsl(240 20% 100%);
+	--background-color-highlight: hsl(240 10% 97%);
+	--border-color-default:       hsl(240 50% 16% / 0.2);
+	--border-color-light:         hsl(240 50% 16% / 0.1);
+	/* brand colors */
+	--color-primary:              var(--color-blue);
+	--color-primary-light:        var(--color-blue-light);
+	--color-secondary:            var(--color-blue);
+	--color-secondary-light:      var(--color-blue-light);
+	--color-tertiary:             var(--color-blue);
+	--color-tertiary-light:       var(--color-blue-light);
+	--color-quaternary:           var(--color-blue);
+	--color-quaternary-light:     var(--color-blue-light);
+	--color-complementary:        var(--color-blue);
+	--color-complementary-light:  var(--color-blue-light);
 
-  /* border */
-  --border-width-default:  2px;
-  --border-radius-default: 2px;
+	/* border */
+	--border-width-default:  2px;
+	--border-radius-default: 2px;
 
-  /* typography */
-  --link-color:              var(--color-primary);
-  --code-background-color:   var(--background-color-highlight);
-  --line-height-default:     1.625;
-  --line-height-heading:     calc(var(--line-height-default) * 0.8);
-  --inline-text-padding:     0.1em 0.3em;
+	/* typography */
+	--link-color:              var(--color-primary);
+	--code-background-color:   var(--background-color-highlight);
+	--line-height-default:     1.625;
+	--line-height-heading:     calc(var(--line-height-default) * 0.8);
+	--inline-text-padding:     0.1em 0.3em;
 
-  /* font size */
-  --font-size-default: 18px;
-  --font-size-h1: 1.8rem;
-  --font-size-h2: 1.64rem;
-  --font-size-h3: 1.48rem;
-  --font-size-h4: 1.32rem;
-  --font-size-h5: 1.16rem;
-  --font-size-h6: 1rem;
-  /* pass current size as variable to allow local transformations */
-  --font-size-current: var(--font-size-default);
+	/* font size */
+	--font-size-default: 18px;
+	--font-size-h1: 1.8rem;
+	--font-size-h2: 1.64rem;
+	--font-size-h3: 1.48rem;
+	--font-size-h4: 1.32rem;
+	--font-size-h5: 1.16rem;
+	--font-size-h6: 1rem;
+	/* pass current size as variable to allow local transformations */
+	--font-size-current: var(--font-size-default);
 
-  /* font family - fallbacks */
-  --font-family-default: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-  --font-family-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  --font-family-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;;
+	/* font family - fallbacks */
+	--font-family-default: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+	--font-family-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--font-family-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;;
 
-  /* forms */
-  --input-line-height:      var(--line-height-default);
-  --input-border-width:     var(--border-width-default);
-  --input-border-color:     var(--border-color-default);
-  --input-border-radius:    var(--border-radius-default);
-  --input-background-color: var(--background-color-default);
-  --input-active-color:     var(--color-primary);
+	/* forms */
+	--input-line-height:      var(--line-height-default);
+	--input-border-width:     var(--border-width-default);
+	--input-border-color:     var(--border-color-default);
+	--input-border-radius:    var(--border-radius-default);
+	--input-background-color: var(--background-color-default);
+	--input-active-color:     var(--color-primary);
 
-  /* buttons */
-  --button-line-height:   var(--line-height-default);
-  --button-padding-y:     0.5em;
-  --button-padding-x:     1em;
-  --button-border-width:  var(--input-border-width);
-  --button-border-rarius: var(--border-radius-default);
-  --button-border-color:  transparent;
-  --button-bg-color:      hsl(220, 7%, 20%);
-  --button-text-color:    #fff;
+	/* buttons */
+	--button-line-height:   var(--line-height-default);
+	--button-padding-y:     0.5em;
+	--button-padding-x:     1em;
+	--button-border-width:  var(--input-border-width);
+	--button-border-rarius: var(--border-radius-default);
+	--button-border-color:  transparent;
+	--button-bg-color:      hsl(220, 7%, 20%);
+	--button-text-color:    #fff;
 
-  /* default media aspect ratio */
-  --aspect-ratio: 16/9;
+	/* default media aspect ratio */
+	--aspect-ratio: 16/9;
 }
 
 /* basic dark mode */
 
 .theme-dark {
-  /* text */
-  --color-default:              hsl(228 7% 95%);
-  --color-heading:              hsl(228 7% 95%);
-  --color-muted:                hsl(228 7% 95% / 0.7);
-  /* background */
-  --background-color-default:   hsl(225 6% 13%);
-  --background-color-highlight: hsl(220 7% 16%);
-  /* border */
-  --border-color-default:       hsl(220 7% 75% / 0.17);
-  --border-color-light:         hsl(220 7% 75% / 0.1);
-  /* other */
-  --line-height-default:        1.8;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* text */
+	--color-default:              hsl(228 7% 95%);
+	--color-heading:              hsl(228 7% 95%);
+	--color-muted:                hsl(228 7% 95% / 0.7);
+	/* background */
+	--background-color-default:   hsl(225 6% 13%);
+	--background-color-highlight: hsl(220 7% 16%);
+	/* border */
+	--border-color-default:       hsl(220 7% 75% / 0.17);
+	--border-color-light:         hsl(220 7% 75% / 0.1);
+	/* other */
+	--line-height-default:        1.8;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 html {
