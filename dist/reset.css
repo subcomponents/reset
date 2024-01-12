@@ -1,4 +1,4 @@
-/** 3.1.2 https://github.com/subcomponents/reset */
+/** 3.1.3 https://github.com/subcomponents/reset */
 :root {
 	/* text */
 	--color-default:              hsl(240 20% 16%);
@@ -22,14 +22,15 @@
 	/* brand colors */
 	--color-primary:              var(--color-blue);
 	--color-primary-light:        var(--color-blue-light);
-	--color-secondary:            var(--color-blue);
-	--color-secondary-light:      var(--color-blue-light);
-	--color-tertiary:             var(--color-blue);
-	--color-tertiary-light:       var(--color-blue-light);
-	--color-quaternary:           var(--color-blue);
-	--color-quaternary-light:     var(--color-blue-light);
-	--color-complementary:        var(--color-blue);
-	--color-complementary-light:  var(--color-blue-light);
+	/* contextual colors */
+	--color-info:                 var(--color-blue);
+	--color-info-light:           var(--color-blue-light);
+	--color-warning:              var(--color-yellow);
+	--color-warning-light:        var(--color-yellow-light);
+	--color-success:              var(--color-green);
+	--color-success-light:        var(--color-green-light);
+	--color-error:                var(--color-red);
+	--color-error-light:          var(--color-red-light);
 
 	/* border */
 	--border-width-default:  2px;
@@ -56,7 +57,7 @@
 	/* font family - fallbacks */
 	--font-family-default: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 	--font-family-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-	--font-family-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;;
+	--font-family-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 
 	/* forms */
 	--input-line-height:      var(--line-height-default);
