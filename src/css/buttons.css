@@ -1,3 +1,4 @@
+/* buttons, links, inputs */
 button,
 .button,
 [type=button],
@@ -6,15 +7,12 @@ button,
   display: inline-block;
   padding: var(--button-padding-y) var(--button-padding-x);
   border-radius: var(--button-border-rarius);
-
-  /* border is used mostly to match form fields */
   border: var(--button-border-width) solid var(--button-border-color);
+
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
 
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  font: inherit;
   line-height: var(--button-line-height);
   white-space: nowrap;
 
@@ -34,7 +32,7 @@ button,
   outline: 2px solid var(--color-primary);
 }
 
-/* form fields, and buttons */
+/* buttons, inputs */
 :disabled {
   cursor: not-allowed !important;
   text-decoration: none !important;

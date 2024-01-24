@@ -1,4 +1,4 @@
-/** 3.1.4 https://github.com/subcomponents/reset */
+/** 3.1.5 https://github.com/subcomponents/reset */
 :root {
 	/* text */
 	--color-default:              hsl(240 20% 16%);
@@ -100,12 +100,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-html {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
 }
 
 /**
@@ -541,6 +539,8 @@ textarea {
   padding: var(--button-padding-y) var(--button-padding-x);
 }
 
+/* buttons, links, inputs */
+
 button,
 .button,
 [type=button],
@@ -551,18 +551,16 @@ button,
   padding: var(--button-padding-y) var(--button-padding-x);
   border-radius: 2px;
   border-radius: var(--button-border-rarius);
-
-  /* border is used mostly to match form fields */
   border: 2px solid transparent;
   border: var(--button-border-width) solid var(--button-border-color);
+
   background-color: hsl(220, 7%, 20%);
+
   background-color: var(--button-bg-color);
   color: #fff;
   color: var(--button-text-color);
 
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  font: inherit;
   line-height: 1.625;
   line-height: var(--button-line-height);
   white-space: nowrap;
@@ -585,7 +583,7 @@ button,
   outline: 2px solid var(--color-primary);
 }
 
-/* form fields, and buttons */
+/* buttons, inputs */
 
 :disabled {
   cursor: not-allowed !important;
